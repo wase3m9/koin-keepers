@@ -63,48 +63,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Crypto Ticker */}
-      <div className="w-full overflow-hidden bg-white/5 backdrop-blur-sm py-8 relative">
-        <div className="flex space-x-16 animate-ticker whitespace-nowrap">
-          {[
-            { name: "Bitcoin", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Ethereum", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Cardano", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Binance", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Tether", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Uniswap", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Polkadot", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Dogecoin", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "XRP", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Chainlink", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-          ].map((crypto, index) => (
-            <div key={index} className="flex flex-col items-center space-y-2">
-              <img src={crypto.logo} alt={crypto.name} className="w-12 h-12" />
-              <span className="text-sm text-gray-300">{crypto.name}</span>
-            </div>
-          ))}
-        </div>
-        <div className="flex space-x-16 animate-ticker whitespace-nowrap" style={{ animationDelay: "10s" }}>
-          {[
-            { name: "Bitcoin", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Ethereum", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Cardano", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Binance", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Tether", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Uniswap", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Polkadot", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Dogecoin", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "XRP", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-            { name: "Chainlink", logo: "/lovable-uploads/ff9826d8-2138-41f9-b3d8-280cfb4d4c1a.png" },
-          ].map((crypto, index) => (
-            <div key={index} className="flex flex-col items-center space-y-2">
-              <img src={crypto.logo} alt={crypto.name} className="w-12 h-12" />
-              <span className="text-sm text-gray-300">{crypto.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Features Section */}
       <section className="py-20 bg-white/80 backdrop-blur-sm relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
