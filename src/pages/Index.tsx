@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Ethereum, DollarSign } from "lucide-react";
+import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign } from "lucide-react";
 
 const Index = () => {
   return (
@@ -23,7 +23,7 @@ const Index = () => {
           
           <div className="absolute top-40 -left-16 w-64 h-64 animate-float-medium">
             <div className="glass-card p-6 rounded-2xl transform -rotate-6 flex items-center gap-4">
-              <Ethereum className="w-12 h-12 text-purple-500" />
+              <Coins className="w-12 h-12 text-purple-500" />
               <div className="text-left">
                 <p className="font-bold">Ethereum</p>
                 <p className="text-sm text-gray-600">Smart Contracts</p>
