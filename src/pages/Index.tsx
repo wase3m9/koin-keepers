@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign } from "lucide-react";
+import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
 
 const Index = () => {
   return (
@@ -105,6 +105,51 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-semibold">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Client Stories Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-transparent relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+            What Our Clients Say
+          </h2>
+          
+          <div className="flex space-x-6 animate-scroll">
+            {[
+              {
+                quote: "CryptoTaxPro made my first crypto tax return easy and painless. Their team understood every aspect of my portfolio and saved me thousands in taxes!",
+                author: "Jane T.",
+                location: "London",
+                type: "Individual Investor"
+              },
+              {
+                quote: "The most knowledgeable crypto tax experts I've worked with. Highly recommend to anyone navigating DeFi or NFT taxes.",
+                author: "Peter S.",
+                location: "Manchester",
+                type: "DeFi Trader"
+              },
+              {
+                quote: "Outstanding service! They helped me understand my tax obligations for my mining operations and kept everything compliant.",
+                author: "Michael R.",
+                location: "Birmingham",
+                type: "Crypto Miner"
+              }
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="glass-card p-8 rounded-xl min-w-[350px] max-w-[350px] flex flex-col gap-4 transform transition-all duration-300 hover:scale-105"
+              >
+                <Quote className="w-10 h-10 text-primary/20" />
+                <p className="text-gray-600 italic">{testimonial.quote}</p>
+                <div className="mt-auto">
+                  <p className="font-semibold">{testimonial.author}</p>
+                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <p className="text-sm text-primary">{testimonial.type}</p>
+                </div>
               </div>
             ))}
           </div>
