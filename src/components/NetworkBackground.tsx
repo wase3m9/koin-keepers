@@ -18,54 +18,68 @@ const NetworkBackground = () => {
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Particle system
-    const particles: { x: number; y: number; vx: number; vy: number }[] = [];
-    const particleCount = 50;
-    const connectionDistance = 200; // Increased from 150
-    const particleSpeed = 1.2; // Increased from 0.5
+    // Node class
+    class Node {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
 
-    // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * particleSpeed,
-        vy: (Math.random() - 0.5) * particleSpeed,
-      });
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.size = Math.random() * 2 + 2;
+        this.color = `rgba(${Math.random() * 100 + 155}, 255, ${Math.random() * 100 + 155}, 0.8)`;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+      }
+
+      draw() {
+        if (!ctx) return;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
     }
+
+    // Create nodes
+    const nodes: Node[] = Array.from({ length: 50 }, () => new Node());
 
     // Animation loop
     const animate = () => {
+      if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Update and draw particles
-      particles.forEach((particle, i) => {
-        // Move particle
-        particle.x += particle.vx;
-        particle.y += particle.vy;
 
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+      // Update and draw nodes
+      nodes.forEach(node => {
+        node.update();
+        node.draw();
+      });
 
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, 3, 0, Math.PI * 2); // Increased particle size from 2
-        ctx.fillStyle = 'rgba(20, 184, 166, 0.7)'; // Increased opacity from 0.5
-        ctx.fill();
-
-        // Draw connections
-        particles.slice(i + 1).forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
+      // Draw connections
+      nodes.forEach((node1, i) => {
+        nodes.slice(i + 1).forEach(node2 => {
+          const dx = node1.x - node2.x;
+          const dy = node1.y - node2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < connectionDistance) {
+          if (distance < 150) {
             ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.lineWidth = 2; // Increased from default 1
-            ctx.strokeStyle = `rgba(20, 184, 166, ${0.4 * (1 - distance / connectionDistance)})`; // Increased opacity from 0.2
+            ctx.moveTo(node1.x, node1.y);
+            ctx.lineTo(node2.x, node2.y);
+            ctx.strokeStyle = `rgba(0, 255, 200, ${(150 - distance) / 150 * 0.2})`;
+            ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
@@ -85,7 +99,7 @@ const NetworkBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full"
-      style={{ background: 'rgba(0, 0, 0, 0.97)' }}
+      style={{ background: 'transparent' }}
     />
   );
 };
