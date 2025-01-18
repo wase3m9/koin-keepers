@@ -58,39 +58,6 @@ const Index = () => {
           <NetworkBackground />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0 mix-blend-overlay" />
           
-          {/* Floating Glass Panels */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 -right-20 w-72 h-72 animate-float-slow">
-              <div className="glass-card p-6 rounded-2xl transform rotate-12 flex items-center gap-4">
-                <Bitcoin className="w-12 h-12 text-orange-500" />
-                <div className="text-left">
-                  <p className="font-bold text-white">Bitcoin</p>
-                  <p className="text-sm text-gray-300">Most Popular</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute top-40 -left-16 w-64 h-64 animate-float-medium">
-              <div className="glass-card p-6 rounded-2xl transform -rotate-6 flex items-center gap-4">
-                <Coins className="w-12 h-12 text-purple-500" />
-                <div className="text-left">
-                  <p className="font-bold text-white">Ethereum</p>
-                  <p className="text-sm text-gray-300">Smart Contracts</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute bottom-20 right-32 w-60 h-60 animate-float-fast">
-              <div className="glass-card p-6 rounded-2xl transform rotate-3 flex items-center gap-4">
-                <DollarSign className="w-12 h-12 text-green-500" />
-                <div className="text-left">
-                  <p className="font-bold text-white">Stablecoins</p>
-                  <p className="text-sm text-gray-300">USDT, USDC</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Main Content */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
