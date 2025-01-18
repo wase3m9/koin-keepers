@@ -159,6 +159,46 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-20 bg-white/80 backdrop-blur-sm relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+            Partnered with
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            <div className="w-48 h-24 relative flex items-center justify-center transform transition-transform hover:scale-105">
+              <img
+                src="/lovable-uploads/63cbe847-a138-490e-8d81-bec625ec428d.png"
+                alt="CoinTracking"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div className="w-48 h-24 relative flex items-center justify-center transform transition-transform hover:scale-105">
+              <img
+                src="/lovable-uploads/2f400325-9009-4b45-b977-50ed4c5a1b44.png"
+                alt="Koinly"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div className="w-48 h-24 relative flex items-center justify-center transform transition-transform hover:scale-105">
+              <img
+                src="/lovable-uploads/72ab391d-123f-465a-a81f-d506c774d874.png"
+                alt="CoinTracker"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <div className="w-48 h-24 relative flex items-center justify-center transform transition-transform hover:scale-105">
+              <img
+                src="/lovable-uploads/6d5cc718-dcf7-45c4-aedc-5531bd68ca06.png"
+                alt="QuickBooks"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-white/80 backdrop-blur-sm relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
