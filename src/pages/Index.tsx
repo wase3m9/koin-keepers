@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote, FileText, BookOpen, ShieldCheck } from "lucide-react";
+import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
 import FAQ from "./FAQ";
 import NetworkBackground from "@/components/NetworkBackground";
 
@@ -62,41 +62,128 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quick Services Overview */}
-      <section className="py-16 bg-white/80 backdrop-blur-sm relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-              Our Services
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {[
-              { icon: FileText, title: "Crypto Tax Report" },
-              { icon: ShieldCheck, title: "Crypto Tax Review" },
-              { icon: Calculator, title: "Tax Return" },
-              { icon: BookOpen, title: "Tax Advisory" }
-            ].map((service, index) => (
-              <Link
-                key={index}
-                to="/services"
-                className="group p-4 text-center hover:bg-primary/5 rounded-lg transition-all duration-300"
-              >
-                <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center mb-2 group-hover:bg-primary/20">
-                  <service.icon className="w-6 h-6 text-primary" />
+      {/* Crypto Ticker Section */}
+      <section className="py-8 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+        {/* First row - Original direction */}
+        <div className="flex gap-8 animate-scroll whitespace-nowrap mb-8">
+          {[...Array(2)].map((_, i) => (
+            <div key={`row1-${i}`} className="flex gap-8">
+              {[
+                { image: "/lovable-uploads/81eacbf3-1cdc-4827-b97c-22fd32b879e2.png", name: "Cardano" },
+                { image: "/lovable-uploads/9ec99aa3-7760-42ba-81f9-19058794a47d.png", name: "Bitcoin" },
+                { image: "/lovable-uploads/50f7c216-610e-487a-a729-139aa9fc4a34.png", name: "XRP" },
+                { image: "/lovable-uploads/9c3765b8-51e2-40f0-b15d-e569deb03294.png", name: "USDC" },
+                { image: "/lovable-uploads/d94d194e-f7e1-49ff-bb39-17e748b9e72b.png", name: "Hedera" },
+                { image: "/lovable-uploads/4eb3248a-df60-4584-a615-e370ba34ad15.png", name: "Polygon" },
+                { image: "/lovable-uploads/8847619e-dce7-47ef-8329-277976fd173c.png", name: "Ethereum" },
+                { image: "/lovable-uploads/3b843ca0-7b7c-4458-9c4d-49f18fdfd1a1.png", name: "Solana" }
+              ].map((crypto, index) => (
+                <div
+                  key={`row1-${i}-${index}`}
+                  className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
+                    index % 3 === 0 ? 'animate-float-slow' :
+                    index % 3 === 1 ? 'animate-float-medium' :
+                    'animate-float-fast'
+                  }`}
+                >
+                  <img 
+                    src={crypto.image} 
+                    alt={crypto.name}
+                    className="w-12 h-12 object-contain"
+                  />
+                  <span className="text-sm font-medium text-white">
+                    {crypto.name}
+                  </span>
                 </div>
-                <h3 className="text-sm font-medium text-gray-900">{service.title}</h3>
-              </Link>
-            ))}
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Second row - Reverse direction */}
+        <div className="flex gap-8 animate-scroll-reverse whitespace-nowrap">
+          {[...Array(2)].map((_, i) => (
+            <div key={`row2-${i}`} className="flex gap-8">
+              {[
+                { image: "/lovable-uploads/3b843ca0-7b7c-4458-9c4d-49f18fdfd1a1.png", name: "Solana" },
+                { image: "/lovable-uploads/8847619e-dce7-47ef-8329-277976fd173c.png", name: "Ethereum" },
+                { image: "/lovable-uploads/4eb3248a-df60-4584-a615-e370ba34ad15.png", name: "Polygon" },
+                { image: "/lovable-uploads/d94d194e-f7e1-49ff-bb39-17e748b9e72b.png", name: "Hedera" },
+                { image: "/lovable-uploads/9c3765b8-51e2-40f0-b15d-e569deb03294.png", name: "USDC" },
+                { image: "/lovable-uploads/50f7c216-610e-487a-a729-139aa9fc4a34.png", name: "XRP" },
+                { image: "/lovable-uploads/9ec99aa3-7760-42ba-81f9-19058794a47d.png", name: "Bitcoin" },
+                { image: "/lovable-uploads/81eacbf3-1cdc-4827-b97c-22fd32b879e2.png", name: "Cardano" }
+              ].map((crypto, index) => (
+                <div
+                  key={`row2-${i}-${index}`}
+                  className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
+                    index % 3 === 0 ? 'animate-float-fast' :
+                    index % 3 === 1 ? 'animate-float-medium' :
+                    'animate-float-slow'
+                  }`}
+                >
+                  <img 
+                    src={crypto.image} 
+                    alt={crypto.name}
+                    className="w-12 h-12 object-contain"
+                  />
+                  <span className="text-sm font-medium text-white">
+                    {crypto.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white/80 backdrop-blur-sm relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+              Your Trusted Partner Since 2017
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our team of dedicated crypto tax specialists and accountants is here
+              to guide you through every aspect of managing your cryptocurrency tax
+              obligations.
+            </p>
           </div>
-          
-          <div className="text-center">
-            <Button asChild variant="outline" size="lg">
-              <Link to="/services">
-                View All Services <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Shield,
+                title: "Expert Guidance",
+                description:
+                  "Professional advice from certified crypto tax specialists",
+              },
+              {
+                icon: Calculator,
+                title: "Accurate Calculations",
+                description:
+                  "Precise tax computations following HMRC guidelines",
+              },
+              {
+                icon: Clock,
+                title: "Time Saving",
+                description:
+                  "Focus on your investments while we handle the paperwork",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 rounded-xl text-center space-y-4 transform transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
+                  <feature.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
