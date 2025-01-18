@@ -309,8 +309,8 @@ const Index = () => {
             </div>
             <div className="w-48 h-24 relative flex items-center justify-center transform transition-transform hover:scale-105">
               <img
-                src="/lovable-uploads/6d5cc718-dcf7-45c4-aedc-5531bd68ca06.png"
-                alt="QuickBooks"
+                src="/lovable-uploads/1b3a283e-9141-4e90-ab54-60896cbc1edc.png"
+                alt="New Partner"
                 className="max-w-full max-h-full object-contain"
               />
             </div>
