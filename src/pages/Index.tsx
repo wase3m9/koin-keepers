@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
+import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote, FileText, BookOpen, ShieldCheck } from "lucide-react";
 import FAQ from "./FAQ";
 import NetworkBackground from "@/components/NetworkBackground";
 
@@ -62,8 +62,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Quick Services Overview */}
+      <section className="py-16 bg-white/80 backdrop-blur-sm relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+              Our Services
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {[
+              { icon: FileText, title: "Crypto Tax Report" },
+              { icon: ShieldCheck, title: "Crypto Tax Review" },
+              { icon: Calculator, title: "Tax Return" },
+              { icon: BookOpen, title: "Tax Advisory" }
+            ].map((service, index) => (
+              <Link
+                key={index}
+                to="/services"
+                className="group p-4 text-center hover:bg-primary/5 rounded-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center mb-2 group-hover:bg-primary/20">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-sm font-medium text-gray-900">{service.title}</h3>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Button asChild variant="outline" size="lg">
+              <Link to="/services">
+                View All Services <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Crypto Ticker Section */}
-      <section className="py-8 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+      <section className="py-8 bg-white/80 backdrop-blur-sm relative">
         {/* First row - Original direction */}
         <div className="flex gap-8 animate-scroll whitespace-nowrap mb-8">
           {[...Array(2)].map((_, i) => (
