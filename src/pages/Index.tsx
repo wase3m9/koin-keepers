@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
+import FAQ from "./FAQ";
 
 const Index = () => {
   return (
@@ -154,6 +155,12 @@ const Index = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white/80 backdrop-blur-sm relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
+        <FAQ />
       </section>
 
       {/* CTA Section */}
