@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
+import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote, FileText, BookOpen } from "lucide-react";
 import FAQ from "./FAQ";
 import NetworkBackground from "@/components/NetworkBackground";
 
 const Index = () => {
   return (
     <div className="animate-fade-in">
+      {/* Hero Section */}
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <NetworkBackground />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0 mix-blend-overlay" />
@@ -183,6 +184,55 @@ const Index = () => {
                 <h3 className="text-xl font-semibold">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Services Overview */}
+      <section className="py-12 bg-white/80 backdrop-blur-sm relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              {
+                icon: FileText,
+                title: "Crypto Tax Report",
+                description: "Comprehensive reporting of your crypto transactions",
+                color: "text-blue-500"
+              },
+              {
+                icon: Shield,
+                title: "Crypto Tax Review",
+                description: "Expert review of your crypto tax documentation",
+                color: "text-green-500"
+              },
+              {
+                icon: Calculator,
+                title: "Tax Return",
+                description: "Professional preparation and filing",
+                color: "text-purple-500"
+              },
+              {
+                icon: BookOpen,
+                title: "Tax Advisory",
+                description: "Strategic tax planning and consultation",
+                color: "text-orange-500"
+              }
+            ].map((service, index) => (
+              <Link
+                key={index}
+                to="/services"
+                className="glass-card p-4 rounded-xl text-center transform transition-all duration-300 hover:scale-105 cursor-pointer"
+              >
+                <div className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center ${service.color} bg-white/10 mb-3`}>
+                  <service.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-sm font-semibold mb-1">{service.title}</h3>
+                <p className="text-xs text-gray-500">{service.description}</p>
+              </Link>
             ))}
           </div>
         </div>
