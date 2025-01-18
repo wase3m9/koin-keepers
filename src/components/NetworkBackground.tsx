@@ -10,7 +10,6 @@ const NetworkBackground = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -18,97 +17,89 @@ const NetworkBackground = () => {
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Hexagon class
-    class Hexagon {
+    class Node {
       x: number;
       y: number;
-      size: number;
-      angle: number;
+      radius: number;
+      color: string;
+      vx: number;
+      vy: number;
       pulsePhase: number;
-      glowIntensity: number;
 
-      constructor(x: number, y: number, size: number) {
-        this.x = x;
-        this.y = y;
-        this.size = size;
-        this.angle = 0;
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 2 + 1;
+        this.color = Math.random() > 0.5 ? '#9b87f5' : '#F97316';
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
         this.pulsePhase = Math.random() * Math.PI * 2;
-        this.glowIntensity = Math.random() * 0.5 + 0.5;
       }
 
       draw(ctx: CanvasRenderingContext2D, time: number) {
-        const pulse = Math.sin(time * 0.001 + this.pulsePhase) * 0.2 + 0.8;
-        const size = this.size * pulse;
-        
-        ctx.beginPath();
-        for (let i = 0; i < 6; i++) {
-          const angle = (i * Math.PI) / 3 + this.angle;
-          const x = this.x + size * Math.cos(angle);
-          const y = this.y + size * Math.sin(angle);
-          if (i === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
-        }
-        ctx.closePath();
-        
+        const pulse = Math.sin(time * 0.001 + this.pulsePhase) * 0.5 + 1;
+        const currentRadius = this.radius * pulse;
+
         // Create gradient for glow effect
         const gradient = ctx.createRadialGradient(
           this.x, this.y, 0,
-          this.x, this.y, size * 2
+          this.x, this.y, currentRadius * 4
         );
-        const alpha = 0.1 * this.glowIntensity * pulse;
-        gradient.addColorStop(0, `rgba(0, 255, 200, ${alpha})`);
-        gradient.addColorStop(1, 'rgba(0, 255, 200, 0)');
-        
+        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, currentRadius * 2, 0, Math.PI * 2);
         ctx.fillStyle = gradient;
         ctx.fill();
-        
-        ctx.strokeStyle = `rgba(0, 255, 200, ${0.3 * pulse})`;
-        ctx.lineWidth = 2;
-        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, currentRadius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
       }
     }
 
-    // Create hexagon grid
-    const hexagons: Hexagon[] = [];
-    const hexSize = 50;
-    const horizontalSpacing = hexSize * Math.sqrt(3);
-    const verticalSpacing = hexSize * 1.5;
-    
-    for (let row = 0; row < canvas.height / verticalSpacing + 2; row++) {
-      for (let col = 0; col < canvas.width / horizontalSpacing + 2; col++) {
-        const x = col * horizontalSpacing + (row % 2) * (horizontalSpacing / 2);
-        const y = row * verticalSpacing;
-        hexagons.push(new Hexagon(x, y, hexSize));
-      }
-    }
+    const nodes: Node[] = Array.from({ length: 100 }, () => new Node());
 
-    // Animation loop
     let animationFrame: number;
     const animate = (time: number) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw hexagons
-      hexagons.forEach(hexagon => {
-        hexagon.draw(ctx, time);
+      // Draw nodes
+      nodes.forEach(node => {
+        node.update();
+        node.draw(ctx, time);
       });
 
-      // Draw connecting lines
-      hexagons.forEach((hex1, i) => {
-        hexagons.slice(i + 1).forEach(hex2 => {
-          const dx = hex1.x - hex2.x;
-          const dy = hex1.y - hex2.y;
+      // Draw connections
+      nodes.forEach((node1, i) => {
+        nodes.slice(i + 1).forEach(node2 => {
+          const dx = node1.x - node2.x;
+          const dy = node1.y - node2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < hexSize * 3) {
-            const alpha = (1 - distance / (hexSize * 3)) * 0.15;
+          if (distance < 150) {
+            const opacity = (150 - distance) / 150 * 0.5;
+            const gradient = ctx.createLinearGradient(
+              node1.x, node1.y, node2.x, node2.y
+            );
+            gradient.addColorStop(0, `${node1.color}${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`);
+            gradient.addColorStop(1, `${node2.color}${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`);
+
             ctx.beginPath();
-            ctx.moveTo(hex1.x, hex1.y);
-            ctx.lineTo(hex2.x, hex2.y);
-            ctx.strokeStyle = `rgba(0, 255, 200, ${alpha})`;
-            ctx.lineWidth = 1;
+            ctx.moveTo(node1.x, node1.y);
+            ctx.lineTo(node2.x, node2.y);
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 2;
             ctx.stroke();
           }
         });
