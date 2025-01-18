@@ -80,7 +80,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-350px * 3));
+    transform: translateX(calc(-120px * 6));
   }
 }
 
@@ -101,7 +101,7 @@
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  animation: scroll 20s linear infinite;
   &:hover {
     animation-play-state: paused;
   }

@@ -63,6 +63,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Crypto Ticker Section */}
+      <section className="py-8 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+        <div className="flex gap-8 animate-scroll whitespace-nowrap">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex gap-8">
+              {[
+                { icon: Bitcoin, name: "Bitcoin", color: "text-orange-500" },
+                { icon: Coins, name: "Ethereum", color: "text-purple-500" },
+                { icon: DollarSign, name: "USDT", color: "text-green-500" },
+                { icon: Bitcoin, name: "BNB", color: "text-yellow-500" },
+                { icon: Coins, name: "XRP", color: "text-blue-500" },
+                { icon: DollarSign, name: "USDC", color: "text-blue-400" },
+              ].map((crypto, index) => (
+                <div
+                  key={`${i}-${index}`}
+                  className="flex flex-col items-center justify-center min-w-[120px]"
+                >
+                  <crypto.icon className={`w-12 h-12 ${crypto.color}`} />
+                  <span className="mt-2 text-sm font-medium text-gray-600">
+                    {crypto.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-white/80 backdrop-blur-sm relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
