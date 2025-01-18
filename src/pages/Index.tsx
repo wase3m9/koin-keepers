@@ -65,9 +65,10 @@ const Index = () => {
 
       {/* Crypto Ticker Section */}
       <section className="py-8 bg-white/80 backdrop-blur-sm relative overflow-hidden">
-        <div className="flex gap-8 animate-scroll whitespace-nowrap">
+        {/* First row - Original direction */}
+        <div className="flex gap-8 animate-scroll whitespace-nowrap mb-8">
           {[...Array(2)].map((_, i) => (
-            <div key={i} className="flex gap-8">
+            <div key={`row1-${i}`} className="flex gap-8">
               {[
                 { image: "/lovable-uploads/0dd84793-7ce1-45d2-a054-ea3890053c13.png", name: "Bitcoin" },
                 { image: "/lovable-uploads/abd357f3-6a74-48d0-8314-36d68c9e9e60.png", name: "Ethereum" },
@@ -79,11 +80,47 @@ const Index = () => {
                 { image: "/lovable-uploads/1e57ce5b-236a-4864-a6f7-e7ab535f6e96.png", name: "Cardano" }
               ].map((crypto, index) => (
                 <div
-                  key={`${i}-${index}`}
+                  key={`row1-${i}-${index}`}
                   className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
                     index % 3 === 0 ? 'animate-float-slow' :
                     index % 3 === 1 ? 'animate-float-medium' :
                     'animate-float-fast'
+                  }`}
+                >
+                  <img 
+                    src={crypto.image} 
+                    alt={crypto.name}
+                    className="w-12 h-12 object-contain"
+                  />
+                  <span className="text-sm font-medium text-white">
+                    {crypto.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Second row - Reverse direction */}
+        <div className="flex gap-8 animate-scroll-reverse whitespace-nowrap">
+          {[...Array(2)].map((_, i) => (
+            <div key={`row2-${i}`} className="flex gap-8">
+              {[
+                { image: "/lovable-uploads/1e57ce5b-236a-4864-a6f7-e7ab535f6e96.png", name: "Cardano" },
+                { image: "/lovable-uploads/8bdb43ff-a1b6-45f9-ac65-b4d0b8f4a477.png", name: "Polygon" },
+                { image: "/lovable-uploads/2ac69fff-6946-4ab1-8910-40c3a47e06b2.png", name: "Hedera" },
+                { image: "/lovable-uploads/8a8b90bb-d2ab-4bfb-a961-df8eb2b75e8c.png", name: "USDC" },
+                { image: "/lovable-uploads/11d87f3d-718f-42fd-b498-65fbc9948924.png", name: "Binance" },
+                { image: "/lovable-uploads/2767dcee-eac0-446e-8d21-f4fd14a728d7.png", name: "XRP" },
+                { image: "/lovable-uploads/abd357f3-6a74-48d0-8314-36d68c9e9e60.png", name: "Ethereum" },
+                { image: "/lovable-uploads/0dd84793-7ce1-45d2-a054-ea3890053c13.png", name: "Bitcoin" }
+              ].map((crypto, index) => (
+                <div
+                  key={`row2-${i}-${index}`}
+                  className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
+                    index % 3 === 0 ? 'animate-float-fast' :
+                    index % 3 === 1 ? 'animate-float-medium' :
+                    'animate-float-slow'
                   }`}
                 >
                   <img 

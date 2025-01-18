@@ -84,6 +84,15 @@
   }
 }
 
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(calc(-120px * 8));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -102,6 +111,13 @@
 
 .animate-scroll {
   animation: scroll 20s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 20s linear infinite;
   &:hover {
     animation-play-state: paused;
   }
