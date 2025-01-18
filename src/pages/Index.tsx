@@ -198,7 +198,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               {
-                icon: FileText,
+                icon: Calculator,
                 title: "Crypto Tax Report",
                 description: "Comprehensive reporting of your crypto transactions",
                 color: "text-blue-500"
@@ -210,13 +210,13 @@ const Index = () => {
                 color: "text-green-500"
               },
               {
-                icon: Calculator,
+                icon: DollarSign,
                 title: "Tax Return",
                 description: "Professional preparation and filing",
                 color: "text-purple-500"
               },
               {
-                icon: BookOpen,
+                icon: Clock,
                 title: "Tax Advisory",
                 description: "Strategic tax planning and consultation",
                 color: "text-orange-500"
