@@ -80,14 +80,18 @@ const Index = () => {
               ].map((crypto, index) => (
                 <div
                   key={`${i}-${index}`}
-                  className="flex flex-col items-center justify-center min-w-[120px]"
+                  className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
+                    index % 3 === 0 ? 'animate-float-slow' :
+                    index % 3 === 1 ? 'animate-float-medium' :
+                    'animate-float-fast'
+                  }`}
                 >
                   <img 
                     src={crypto.image} 
                     alt={crypto.name}
                     className="w-12 h-12 object-contain"
                   />
-                  <span className="mt-2 text-sm font-medium text-gray-600">
+                  <span className="text-sm font-medium text-white">
                     {crypto.name}
                   </span>
                 </div>
