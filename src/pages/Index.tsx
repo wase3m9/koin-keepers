@@ -69,18 +69,24 @@ const Index = () => {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-8">
               {[
-                { icon: Bitcoin, name: "Bitcoin", color: "text-orange-500" },
-                { icon: Coins, name: "Ethereum", color: "text-purple-500" },
-                { icon: DollarSign, name: "USDT", color: "text-green-500" },
-                { icon: Bitcoin, name: "BNB", color: "text-yellow-500" },
-                { icon: Coins, name: "XRP", color: "text-blue-500" },
-                { icon: DollarSign, name: "USDC", color: "text-blue-400" },
+                { image: "/lovable-uploads/0dd84793-7ce1-45d2-a054-ea3890053c13.png", name: "Bitcoin" },
+                { image: "/lovable-uploads/abd357f3-6a74-48d0-8314-36d68c9e9e60.png", name: "Ethereum" },
+                { image: "/lovable-uploads/2767dcee-eac0-446e-8d21-f4fd14a728d7.png", name: "XRP" },
+                { image: "/lovable-uploads/11d87f3d-718f-42fd-b498-65fbc9948924.png", name: "Binance" },
+                { image: "/lovable-uploads/8a8b90bb-d2ab-4bfb-a961-df8eb2b75e8c.png", name: "USDC" },
+                { image: "/lovable-uploads/2ac69fff-6946-4ab1-8910-40c3a47e06b2.png", name: "Hedera" },
+                { image: "/lovable-uploads/8bdb43ff-a1b6-45f9-ac65-b4d0b8f4a477.png", name: "Polygon" },
+                { image: "/lovable-uploads/1e57ce5b-236a-4864-a6f7-e7ab535f6e96.png", name: "Cardano" }
               ].map((crypto, index) => (
                 <div
                   key={`${i}-${index}`}
                   className="flex flex-col items-center justify-center min-w-[120px]"
                 >
-                  <crypto.icon className={`w-12 h-12 ${crypto.color}`} />
+                  <img 
+                    src={crypto.image} 
+                    alt={crypto.name}
+                    className="w-12 h-12 object-contain"
+                  />
                   <span className="mt-2 text-sm font-medium text-gray-600">
                     {crypto.name}
                   </span>
