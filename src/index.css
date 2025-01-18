@@ -37,6 +37,19 @@
   }
 }
 
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 20s linear infinite;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
