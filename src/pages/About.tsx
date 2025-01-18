@@ -1,9 +1,171 @@
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Users, Trophy, Clock, Building } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <h1 className="text-4xl font-bold mb-8">About Us</h1>
-      {/* Add about content here */}
-    </div>
+    <>
+      <Helmet>
+        <title>About Xrypto - Your Trusted Cryptocurrency Tax Partner</title>
+        <meta name="description" content="Learn about Xrypto's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
+        <meta name="keywords" content="crypto tax experts, cryptocurrency accounting, blockchain tax specialists, crypto tax company, about xrypto" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://xrypto.com/about" />
+        <meta property="og:title" content="About Xrypto - Your Trusted Cryptocurrency Tax Partner" />
+        <meta property="og:description" content="Learn about Xrypto's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
+        <meta property="og:image" content="/og-image.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://xrypto.com/about" />
+        <meta property="twitter:title" content="About Xrypto - Your Trusted Cryptocurrency Tax Partner" />
+        <meta property="twitter:description" content="Learn about Xrypto's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
+        <meta property="twitter:image" content="/og-image.png" />
+      </Helmet>
+
+      <div className="animate-fade-in">
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-transparent">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                About Xrypto
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+                Since 2017, we've been helping traders and investors navigate the complex world of cryptocurrency taxation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="text-center">
+                <div className="flex justify-center">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <h2 className="mt-4 text-3xl font-bold">10,000+</h2>
+                <p className="mt-2 text-gray-600">Happy Clients</p>
+              </div>
+              <div className="text-center">
+                <div className="flex justify-center">
+                  <Trophy className="h-8 w-8 text-primary" />
+                </div>
+                <h2 className="mt-4 text-3xl font-bold">98%</h2>
+                <p className="mt-2 text-gray-600">Success Rate</p>
+              </div>
+              <div className="text-center">
+                <div className="flex justify-center">
+                  <Clock className="h-8 w-8 text-primary" />
+                </div>
+                <h2 className="mt-4 text-3xl font-bold">6+ Years</h2>
+                <p className="mt-2 text-gray-600">Experience</p>
+              </div>
+              <div className="text-center">
+                <div className="flex justify-center">
+                  <Building className="h-8 w-8 text-primary" />
+                </div>
+                <h2 className="mt-4 text-3xl font-bold">5</h2>
+                <p className="mt-2 text-gray-600">Global Offices</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+                <p className="text-gray-600 mb-6">
+                  At Xrypto, we believe that cryptocurrency taxation shouldn't be a barrier to investment and innovation. Our mission is to make crypto tax compliance simple, accurate, and stress-free for everyone.
+                </p>
+                <p className="text-gray-600">
+                  We combine deep expertise in both cryptocurrency and taxation with cutting-edge technology to provide solutions that save you time, money, and peace of mind.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
+                  <h3 className="text-xl font-semibold mb-3">Expertise</h3>
+                  <p className="text-gray-600">Certified tax professionals with deep crypto knowledge</p>
+                </div>
+                <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
+                  <h3 className="text-xl font-semibold mb-3">Technology</h3>
+                  <p className="text-gray-600">Advanced software for accurate calculations</p>
+                </div>
+                <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
+                  <h3 className="text-xl font-semibold mb-3">Support</h3>
+                  <p className="text-gray-600">Dedicated team for personalized assistance</p>
+                </div>
+                <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
+                  <h3 className="text-xl font-semibold mb-3">Global</h3>
+                  <p className="text-gray-600">International tax compliance expertise</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Meet the experts who are revolutionizing cryptocurrency tax compliance
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Sarah Johnson",
+                  role: "CEO & Founder",
+                  bio: "Former Big Four tax partner with 15 years of crypto experience"
+                },
+                {
+                  name: "Michael Chen",
+                  role: "Chief Technology Officer",
+                  bio: "Blockchain developer and cryptocurrency expert"
+                },
+                {
+                  name: "Emma Williams",
+                  role: "Head of Tax Advisory",
+                  bio: "Certified tax specialist with focus on DeFi and NFTs"
+                }
+              ].map((member) => (
+                <div key={member.name} className="text-center">
+                  <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-4" />
+                  <h3 className="text-xl font-semibold">{member.name}</h3>
+                  <p className="text-primary mb-2">{member.role}</p>
+                  <p className="text-gray-600">{member.bio}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-br from-primary/10 to-transparent">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Simplify Your Crypto Taxes?</h2>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              Join thousands of satisfied clients who trust Xrypto with their cryptocurrency tax compliance
+            </p>
+            <Button asChild size="lg" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary">
+              <Link to="/contact">
+                Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
