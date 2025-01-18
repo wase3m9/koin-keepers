@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Xrypto</h3>
             <p className="text-sm text-gray-600">
-              Your trusted partner for crypto tax solutions since 2017.
+              Your trusted partner for crypto tax solutions.
             </p>
           </div>
 
