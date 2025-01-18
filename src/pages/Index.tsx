@@ -2,13 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
 import FAQ from "./FAQ";
+import NetworkBackground from "@/components/NetworkBackground";
 
 const Index = () => {
   return (
     <div className="animate-fade-in">
-      {/* Hero Section with Floating Crypto Panels */}
+      {/* Hero Section with Network Background */}
       <section className="relative py-20 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0" />
+        <NetworkBackground />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0 mix-blend-overlay" />
         
         {/* Floating Glass Panels */}
         <div className="absolute inset-0 overflow-hidden">
@@ -16,8 +18,8 @@ const Index = () => {
             <div className="glass-card p-6 rounded-2xl transform rotate-12 flex items-center gap-4">
               <Bitcoin className="w-12 h-12 text-orange-500" />
               <div className="text-left">
-                <p className="font-bold">Bitcoin</p>
-                <p className="text-sm text-gray-600">Most Popular</p>
+                <p className="font-bold text-white">Bitcoin</p>
+                <p className="text-sm text-gray-300">Most Popular</p>
               </div>
             </div>
           </div>
@@ -26,8 +28,8 @@ const Index = () => {
             <div className="glass-card p-6 rounded-2xl transform -rotate-6 flex items-center gap-4">
               <Coins className="w-12 h-12 text-purple-500" />
               <div className="text-left">
-                <p className="font-bold">Ethereum</p>
-                <p className="text-sm text-gray-600">Smart Contracts</p>
+                <p className="font-bold text-white">Ethereum</p>
+                <p className="text-sm text-gray-300">Smart Contracts</p>
               </div>
             </div>
           </div>
@@ -36,8 +38,8 @@ const Index = () => {
             <div className="glass-card p-6 rounded-2xl transform rotate-3 flex items-center gap-4">
               <DollarSign className="w-12 h-12 text-green-500" />
               <div className="text-left">
-                <p className="font-bold">Stablecoins</p>
-                <p className="text-sm text-gray-600">USDT, USDC</p>
+                <p className="font-bold text-white">Stablecoins</p>
+                <p className="text-sm text-gray-300">USDT, USDC</p>
               </div>
             </div>
           </div>
@@ -45,10 +47,10 @@ const Index = () => {
 
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
             We Do Your Crypto Taxes For You
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             No more tax software hassles or compliance headaches. We remove all the
             stress and uncertainty caused by constantly changing crypto tax
             regulations.
