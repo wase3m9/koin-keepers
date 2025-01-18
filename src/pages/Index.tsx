@@ -1,14 +1,50 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Calculator, Clock } from "lucide-react";
+import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Ethereum, DollarSign } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="animate-fade-in">
-      {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 bg-gradient-to-b from-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+      {/* Hero Section with Floating Crypto Panels */}
+      <section className="relative py-20 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0" />
+        
+        {/* Floating Glass Panels */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 -right-20 w-72 h-72 animate-float-slow">
+            <div className="glass-card p-6 rounded-2xl transform rotate-12 flex items-center gap-4">
+              <Bitcoin className="w-12 h-12 text-orange-500" />
+              <div className="text-left">
+                <p className="font-bold">Bitcoin</p>
+                <p className="text-sm text-gray-600">Most Popular</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="absolute top-40 -left-16 w-64 h-64 animate-float-medium">
+            <div className="glass-card p-6 rounded-2xl transform -rotate-6 flex items-center gap-4">
+              <Ethereum className="w-12 h-12 text-purple-500" />
+              <div className="text-left">
+                <p className="font-bold">Ethereum</p>
+                <p className="text-sm text-gray-600">Smart Contracts</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="absolute bottom-20 right-32 w-60 h-60 animate-float-fast">
+            <div className="glass-card p-6 rounded-2xl transform rotate-3 flex items-center gap-4">
+              <DollarSign className="w-12 h-12 text-green-500" />
+              <div className="text-left">
+                <p className="font-bold">Stablecoins</p>
+                <p className="text-sm text-gray-600">USDT, USDC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
             We Do Your Crypto Taxes For You
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -16,7 +52,7 @@ const Index = () => {
             stress and uncertainty caused by constantly changing crypto tax
             regulations.
           </p>
-          <Button asChild size="lg" className="animate-fade-in">
+          <Button asChild size="lg" className="animate-fade-in bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary">
             <Link to="/contact">
               Book a Consultation <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -25,10 +61,11 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/80 backdrop-blur-sm relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
               Your Trusted Partner Since 2017
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -61,7 +98,7 @@ const Index = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="glass-card p-6 rounded-xl text-center space-y-4"
+                className="glass-card p-6 rounded-xl text-center space-y-4 transform transition-all duration-300 hover:scale-105"
               >
                 <div className="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
                   <feature.icon className="h-6 w-6 text-primary" />
@@ -75,16 +112,17 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
             Ready to Simplify Your Crypto Taxes?
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Get started with a free consultation and let us help you navigate your
             crypto tax obligations.
           </p>
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary">
             <Link to="/contact">
               Book Your Free Consultation{" "}
               <ArrowRight className="ml-2 h-4 w-4" />
