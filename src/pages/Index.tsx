@@ -7,7 +7,6 @@ import NetworkBackground from "@/components/NetworkBackground";
 const Index = () => {
   return (
     <div className="animate-fade-in">
-      {/* Hero Section with Network Background */}
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <NetworkBackground />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0 mix-blend-overlay" />
@@ -70,14 +69,14 @@ const Index = () => {
           {[...Array(2)].map((_, i) => (
             <div key={`row1-${i}`} className="flex gap-8">
               {[
-                { image: "/lovable-uploads/0dd84793-7ce1-45d2-a054-ea3890053c13.png", name: "Bitcoin" },
-                { image: "/lovable-uploads/abd357f3-6a74-48d0-8314-36d68c9e9e60.png", name: "Ethereum" },
-                { image: "/lovable-uploads/2767dcee-eac0-446e-8d21-f4fd14a728d7.png", name: "XRP" },
-                { image: "/lovable-uploads/11d87f3d-718f-42fd-b498-65fbc9948924.png", name: "Binance" },
-                { image: "/lovable-uploads/8a8b90bb-d2ab-4bfb-a961-df8eb2b75e8c.png", name: "USDC" },
-                { image: "/lovable-uploads/2ac69fff-6946-4ab1-8910-40c3a47e06b2.png", name: "Hedera" },
-                { image: "/lovable-uploads/8bdb43ff-a1b6-45f9-ac65-b4d0b8f4a477.png", name: "Polygon" },
-                { image: "/lovable-uploads/1e57ce5b-236a-4864-a6f7-e7ab535f6e96.png", name: "Cardano" }
+                { image: "/lovable-uploads/81eacbf3-1cdc-4827-b97c-22fd32b879e2.png", name: "Cardano" },
+                { image: "/lovable-uploads/9ec99aa3-7760-42ba-81f9-19058794a47d.png", name: "Bitcoin" },
+                { image: "/lovable-uploads/50f7c216-610e-487a-a729-139aa9fc4a34.png", name: "XRP" },
+                { image: "/lovable-uploads/9c3765b8-51e2-40f0-b15d-e569deb03294.png", name: "USDC" },
+                { image: "/lovable-uploads/d94d194e-f7e1-49ff-bb39-17e748b9e72b.png", name: "Hedera" },
+                { image: "/lovable-uploads/4eb3248a-df60-4584-a615-e370ba34ad15.png", name: "Polygon" },
+                { image: "/lovable-uploads/8847619e-dce7-47ef-8329-277976fd173c.png", name: "Ethereum" },
+                { image: "/lovable-uploads/3b843ca0-7b7c-4458-9c4d-49f18fdfd1a1.png", name: "Solana" }
               ].map((crypto, index) => (
                 <div
                   key={`row1-${i}-${index}`}
@@ -106,14 +105,14 @@ const Index = () => {
           {[...Array(2)].map((_, i) => (
             <div key={`row2-${i}`} className="flex gap-8">
               {[
-                { image: "/lovable-uploads/1e57ce5b-236a-4864-a6f7-e7ab535f6e96.png", name: "Cardano" },
-                { image: "/lovable-uploads/8bdb43ff-a1b6-45f9-ac65-b4d0b8f4a477.png", name: "Polygon" },
-                { image: "/lovable-uploads/2ac69fff-6946-4ab1-8910-40c3a47e06b2.png", name: "Hedera" },
-                { image: "/lovable-uploads/8a8b90bb-d2ab-4bfb-a961-df8eb2b75e8c.png", name: "USDC" },
-                { image: "/lovable-uploads/11d87f3d-718f-42fd-b498-65fbc9948924.png", name: "Binance" },
-                { image: "/lovable-uploads/2767dcee-eac0-446e-8d21-f4fd14a728d7.png", name: "XRP" },
-                { image: "/lovable-uploads/abd357f3-6a74-48d0-8314-36d68c9e9e60.png", name: "Ethereum" },
-                { image: "/lovable-uploads/0dd84793-7ce1-45d2-a054-ea3890053c13.png", name: "Bitcoin" }
+                { image: "/lovable-uploads/3b843ca0-7b7c-4458-9c4d-49f18fdfd1a1.png", name: "Solana" },
+                { image: "/lovable-uploads/8847619e-dce7-47ef-8329-277976fd173c.png", name: "Ethereum" },
+                { image: "/lovable-uploads/4eb3248a-df60-4584-a615-e370ba34ad15.png", name: "Polygon" },
+                { image: "/lovable-uploads/d94d194e-f7e1-49ff-bb39-17e748b9e72b.png", name: "Hedera" },
+                { image: "/lovable-uploads/9c3765b8-51e2-40f0-b15d-e569deb03294.png", name: "USDC" },
+                { image: "/lovable-uploads/50f7c216-610e-487a-a729-139aa9fc4a34.png", name: "XRP" },
+                { image: "/lovable-uploads/9ec99aa3-7760-42ba-81f9-19058794a47d.png", name: "Bitcoin" },
+                { image: "/lovable-uploads/81eacbf3-1cdc-4827-b97c-22fd32b879e2.png", name: "Cardano" }
               ].map((crypto, index) => (
                 <div
                   key={`row2-${i}-${index}`}
