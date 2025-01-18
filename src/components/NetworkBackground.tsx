@@ -18,80 +18,110 @@ const NetworkBackground = () => {
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Node class
-    class Node {
+    // Hexagon class
+    class Hexagon {
       x: number;
       y: number;
-      vx: number;
-      vy: number;
       size: number;
-      color: string;
+      angle: number;
+      pulsePhase: number;
+      glowIntensity: number;
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 2;
-        this.color = `rgba(${Math.random() * 100 + 155}, 255, ${Math.random() * 100 + 155}, 0.8)`;
+      constructor(x: number, y: number, size: number) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.angle = 0;
+        this.pulsePhase = Math.random() * Math.PI * 2;
+        this.glowIntensity = Math.random() * 0.5 + 0.5;
       }
 
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-      }
-
-      draw() {
-        if (!ctx) return;
+      draw(ctx: CanvasRenderingContext2D, time: number) {
+        const pulse = Math.sin(time * 0.001 + this.pulsePhase) * 0.2 + 0.8;
+        const size = this.size * pulse;
+        
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
+        for (let i = 0; i < 6; i++) {
+          const angle = (i * Math.PI) / 3 + this.angle;
+          const x = this.x + size * Math.cos(angle);
+          const y = this.y + size * Math.sin(angle);
+          if (i === 0) {
+            ctx.moveTo(x, y);
+          } else {
+            ctx.lineTo(x, y);
+          }
+        }
+        ctx.closePath();
+        
+        // Create gradient for glow effect
+        const gradient = ctx.createRadialGradient(
+          this.x, this.y, 0,
+          this.x, this.y, size * 2
+        );
+        const alpha = 0.1 * this.glowIntensity * pulse;
+        gradient.addColorStop(0, `rgba(0, 255, 200, ${alpha})`);
+        gradient.addColorStop(1, 'rgba(0, 255, 200, 0)');
+        
+        ctx.fillStyle = gradient;
         ctx.fill();
+        
+        ctx.strokeStyle = `rgba(0, 255, 200, ${0.3 * pulse})`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
       }
     }
 
-    // Create nodes
-    const nodes: Node[] = Array.from({ length: 50 }, () => new Node());
+    // Create hexagon grid
+    const hexagons: Hexagon[] = [];
+    const hexSize = 50;
+    const horizontalSpacing = hexSize * Math.sqrt(3);
+    const verticalSpacing = hexSize * 1.5;
+    
+    for (let row = 0; row < canvas.height / verticalSpacing + 2; row++) {
+      for (let col = 0; col < canvas.width / horizontalSpacing + 2; col++) {
+        const x = col * horizontalSpacing + (row % 2) * (horizontalSpacing / 2);
+        const y = row * verticalSpacing;
+        hexagons.push(new Hexagon(x, y, hexSize));
+      }
+    }
 
     // Animation loop
-    const animate = () => {
-      if (!ctx) return;
+    let animationFrame: number;
+    const animate = (time: number) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw nodes
-      nodes.forEach(node => {
-        node.update();
-        node.draw();
+      // Draw hexagons
+      hexagons.forEach(hexagon => {
+        hexagon.draw(ctx, time);
       });
 
-      // Draw connections
-      nodes.forEach((node1, i) => {
-        nodes.slice(i + 1).forEach(node2 => {
-          const dx = node1.x - node2.x;
-          const dy = node1.y - node2.y;
+      // Draw connecting lines
+      hexagons.forEach((hex1, i) => {
+        hexagons.slice(i + 1).forEach(hex2 => {
+          const dx = hex1.x - hex2.x;
+          const dy = hex1.y - hex2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
+          if (distance < hexSize * 3) {
+            const alpha = (1 - distance / (hexSize * 3)) * 0.15;
             ctx.beginPath();
-            ctx.moveTo(node1.x, node1.y);
-            ctx.lineTo(node2.x, node2.y);
-            ctx.strokeStyle = `rgba(0, 255, 200, ${(150 - distance) / 150 * 0.2})`;
+            ctx.moveTo(hex1.x, hex1.y);
+            ctx.lineTo(hex2.x, hex2.y);
+            ctx.strokeStyle = `rgba(0, 255, 200, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
       });
 
-      requestAnimationFrame(animate);
+      animationFrame = requestAnimationFrame(animate);
     };
 
-    animate();
+    animate(0);
 
     return () => {
       window.removeEventListener('resize', setCanvasSize);
+      cancelAnimationFrame(animationFrame);
     };
   }, []);
 
