@@ -21,8 +21,8 @@ const NetworkBackground = () => {
     // Particle system
     const particles: { x: number; y: number; vx: number; vy: number }[] = [];
     const particleCount = 50;
-    const connectionDistance = 150;
-    const particleSpeed = 0.5;
+    const connectionDistance = 200; // Increased from 150
+    const particleSpeed = 1.2; // Increased from 0.5
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
@@ -50,8 +50,8 @@ const NetworkBackground = () => {
 
         // Draw particle
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(20, 184, 166, 0.5)';
+        ctx.arc(particle.x, particle.y, 3, 0, Math.PI * 2); // Increased particle size from 2
+        ctx.fillStyle = 'rgba(20, 184, 166, 0.7)'; // Increased opacity from 0.5
         ctx.fill();
 
         // Draw connections
@@ -64,7 +64,8 @@ const NetworkBackground = () => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(20, 184, 166, ${0.2 * (1 - distance / connectionDistance)})`;
+            ctx.lineWidth = 2; // Increased from default 1
+            ctx.strokeStyle = `rgba(20, 184, 166, ${0.4 * (1 - distance / connectionDistance)})`; // Increased opacity from 0.2
             ctx.stroke();
           }
         });
