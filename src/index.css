@@ -75,6 +75,18 @@
   }
 }
 
+@keyframes jiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -107,6 +119,14 @@
 
 .animate-float-fast {
   animation: float-fast 4s ease-in-out infinite;
+}
+
+.animate-jiggle {
+  animation: jiggle 0.3s ease-in-out;
+}
+
+.hover-jiggle:hover {
+  animation: jiggle 0.3s ease-in-out;
 }
 
 .animate-scroll {
