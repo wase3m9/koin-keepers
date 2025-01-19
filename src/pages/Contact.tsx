@@ -126,7 +126,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-2">Phone</h3>
-                  <p className="text-gray-600">+44 (0) 20 1234 5678</p>
+                  <p className="text-gray-600">+44 207 118 9799</p>
                 </div>
                 <div>
                   <h3 className="font-medium mb-2">Location</h3>
