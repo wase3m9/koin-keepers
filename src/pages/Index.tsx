@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Calculator, Clock, Bitcoin, Coins, DollarSign, Quote } from "lucide-react";
 import { Helmet } from 'react-helmet-async';
 import FAQ from "./FAQ";
-import NetworkBackground from "@/components/NetworkBackground";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
   return (
@@ -55,7 +55,7 @@ const Index = () => {
       <div className="animate-fade-in">
         {/* Hero Section */}
         <section className="relative py-20 sm:py-32 overflow-hidden">
-          <NetworkBackground />
+          <ParticleBackground />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 z-0 mix-blend-overlay" />
           
           {/* Main Content */}
