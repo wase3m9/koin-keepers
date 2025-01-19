@@ -36,6 +36,7 @@ const ParticleBackground = () => {
 
       p.draw = () => {
         p.clear();
+        p.background(26, 31, 44, 240); // Dark background #1A1F2C with alpha
         
         // Update and draw particles
         for (let i = 0; i < particles.length; i++) {
@@ -71,12 +72,12 @@ const ParticleBackground = () => {
           if (particle.y < 0) particle.y = p.height;
           if (particle.y > p.height) particle.y = 0;
 
-          // Draw particle
-          p.fill(255, 255, 255, 50);
+          // Draw particle with higher opacity
+          p.fill(255, 255, 255, 180); // Increased opacity from 50 to 180
           p.noStroke();
           p.ellipse(particle.x, particle.y, 4, 4);
 
-          // Draw connections
+          // Draw connections with higher opacity
           for (let j = i + 1; j < particles.length; j++) {
             const other = particles[j];
             const dx = other.x - particle.x;
@@ -85,7 +86,7 @@ const ParticleBackground = () => {
 
             if (distance < connectionDistance) {
               const alpha = p.map(distance, 0, connectionDistance, 255, 0);
-              p.stroke(255, 255, 255, alpha * 0.5);
+              p.stroke(255, 255, 255, alpha * 0.8); // Increased opacity multiplier from 0.5 to 0.8
               p.line(particle.x, particle.y, other.x, other.y);
             }
           }
