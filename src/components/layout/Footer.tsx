@@ -11,7 +11,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Coins className="h-6 w-6 text-primary" />
-              <h3 className="text-lg font-semibold">CoinKeepers</h3>
+              <h3 className="text-lg font-semibold text-[#403E43]">CoinKeepers</h3>
             </div>
             <p className="text-sm text-gray-600">
               Your trusted partner for crypto tax solutions.
