@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Xrypto Tax Services</title>
+        <title>Contact Us - CoinKeepers Tax Services</title>
         <meta name="description" content="Get in touch with our crypto tax experts. We're here to help you with all your cryptocurrency tax needs." />
         <meta name="keywords" content="crypto tax contact, cryptocurrency tax help, crypto tax consultation, crypto tax support" />
       </Helmet>
