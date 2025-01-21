@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Coins } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
@@ -19,7 +19,8 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold">Xrypto</span>
+            <Coins className="h-6 w-6 text-primary" />
+            <span className="text-xl font-bold">CoinKeepers</span>
           </Link>
 
           {/* Desktop Navigation */}
