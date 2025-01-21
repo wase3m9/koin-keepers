@@ -130,8 +130,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-2">Location</h3>
-                  <p className="text-gray-600">123 Crypto Street</p>
-                  <p className="text-gray-600">London, UK EC4A 2BB</p>
+                  <p className="text-gray-600">124 City Road</p>
+                  <p className="text-gray-600">London, EC1V 2NX</p>
                 </div>
               </div>
             </div>
