@@ -12,7 +12,7 @@ export const Footer = () => {
               <img 
                 src="/lovable-uploads/cb8f544b-cbf1-4653-be17-84c0f78fc2f1.png" 
                 alt="CoinKeepers Logo" 
-                className="h-8 w-8 object-contain"
+                className="h-12 w-12 object-contain"
               />
               <h3 className="text-lg font-semibold text-[#403E43]">CoinKeepers</h3>
             </div>

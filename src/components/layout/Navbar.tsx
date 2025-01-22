@@ -22,7 +22,7 @@ export const Navbar = () => {
             <img 
               src="/lovable-uploads/cb8f544b-cbf1-4653-be17-84c0f78fc2f1.png" 
               alt="CoinKeepers Logo" 
-              className="h-8 w-8 object-contain"
+              className="h-12 w-12 object-contain"
             />
             <span className="text-xl font-bold text-[#403E43]">CoinKeepers</span>
           </Link>
