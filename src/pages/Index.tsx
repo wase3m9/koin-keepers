@@ -391,10 +391,10 @@ const Index = () => {
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+            <h2 className="text-3xl font-bold mb-4 text-white">
               Ready to Simplify Your Crypto Taxes?
             </h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-white/80 mb-8 max-w-2xl mx-auto">
               Get started with a free consultation and let us help you navigate your
               crypto tax obligations.
             </p>
