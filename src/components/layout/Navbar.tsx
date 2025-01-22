@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Coins } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
@@ -19,7 +19,11 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <Coins className="h-6 w-6 text-primary" />
+            <img 
+              src="/lovable-uploads/c1e8f4a1-5e9c-4af4-994f-55b4a7358498.png" 
+              alt="CoinKeepers Logo" 
+              className="h-8 w-8 object-contain"
+            />
             <span className="text-xl font-bold text-[#403E43]">CoinKeepers</span>
           </Link>
 

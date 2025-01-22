@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Coins } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +9,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Coins className="h-6 w-6 text-primary" />
+              <img 
+                src="/lovable-uploads/c1e8f4a1-5e9c-4af4-994f-55b4a7358498.png" 
+                alt="CoinKeepers Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <h3 className="text-lg font-semibold text-[#403E43]">CoinKeepers</h3>
             </div>
             <p className="text-sm text-gray-600">
