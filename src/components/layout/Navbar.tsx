@@ -20,7 +20,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/f9276c11-f67c-4232-b6ba-b00fa927b39f.png" 
+              src="/lovable-uploads/cb8f544b-cbf1-4653-be17-84c0f78fc2f1.png" 
               alt="CoinKeepers Logo" 
               className="h-8 w-8 object-contain"
             />
