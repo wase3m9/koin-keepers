@@ -18,11 +18,11 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFD700] border-b border-black/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center justify-center flex-shrink-0">
             <img 
               src="/lovable-uploads/dee6891c-3b27-4d2d-9f51-2188e70c2919.png" 
               alt="KoinKeepers Logo" 
-              className="h-32 object-contain transition-all duration-300 hover:brightness-75 hover:scale-105"
+              className="h-40 object-contain transition-all duration-300 hover:brightness-75 hover:scale-105 -my-2"
             />
           </Link>
 
