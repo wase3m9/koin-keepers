@@ -10,11 +10,10 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/cb8f544b-cbf1-4653-be17-84c0f78fc2f1.png" 
+                src="/lovable-uploads/a20a1d4a-4223-408f-add6-c4e465311f69.png" 
                 alt="CoinKeepers Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-8 object-contain"
               />
-              <h3 className="text-lg font-semibold text-white">CoinKeepers</h3>
             </div>
             <p className="text-sm text-white/60">
               Your trusted partner for crypto tax solutions.

@@ -20,11 +20,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/cb8f544b-cbf1-4653-be17-84c0f78fc2f1.png" 
+              src="/lovable-uploads/a20a1d4a-4223-408f-add6-c4e465311f69.png" 
               alt="CoinKeepers Logo" 
-              className="h-12 w-12 object-contain"
+              className="h-8 object-contain"
             />
-            <span className="text-xl font-bold text-white">CoinKeepers</span>
           </Link>
 
           {/* Desktop Navigation */}
