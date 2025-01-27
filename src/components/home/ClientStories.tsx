@@ -68,9 +68,9 @@ export const ClientStories = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-transparent relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground">
+        <h2 className="text-3xl font-bold mb-12 text-center text-black">
           What Our Clients Say
         </h2>
         
@@ -78,13 +78,13 @@ export const ClientStories = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`glass-card p-8 rounded-xl min-w-[350px] max-w-[350px] flex flex-col gap-4 transform transition-all duration-300 hover:scale-105 bg-gradient-to-br ${testimonial.bgColor}`}
+              className={`glass-card p-8 rounded-xl min-w-[350px] max-w-[350px] flex flex-col gap-4 transform transition-all duration-300 hover:scale-105 bg-gradient-to-br ${testimonial.bgColor} shadow-lg`}
             >
-              <Quote className="w-10 h-10 text-primary/20" />
-              <p className="text-gray-600 italic">{testimonial.quote}</p>
+              <Quote className="w-10 h-10 text-primary" />
+              <p className="text-gray-800">{testimonial.quote}</p>
               <div className="mt-auto">
-                <p className="font-semibold">{testimonial.author}</p>
-                <p className="text-sm text-gray-500">{testimonial.location}</p>
+                <p className="font-semibold text-black">{testimonial.author}</p>
+                <p className="text-sm text-gray-600">{testimonial.location}</p>
                 <p className="text-sm text-primary">{testimonial.type}</p>
               </div>
             </div>
