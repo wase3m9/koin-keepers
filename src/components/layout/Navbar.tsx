@@ -22,7 +22,7 @@ export const Navbar = () => {
             <img 
               src="/lovable-uploads/dee6891c-3b27-4d2d-9f51-2188e70c2919.png" 
               alt="KoinKeepers Logo" 
-              className="h-32 object-contain"
+              className="h-32 object-contain transition-all duration-300 hover:brightness-75 hover:scale-105"
             />
           </Link>
 
@@ -33,7 +33,10 @@ export const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <Button asChild>
+            <Button 
+              asChild
+              className="bg-black text-[#FFD700] hover:bg-black/80 hover:text-[#FFD700]"
+            >
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -63,7 +66,10 @@ export const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button asChild className="w-full mt-4">
+              <Button 
+                asChild 
+                className="w-full mt-4 bg-black text-[#FFD700] hover:bg-black/80 hover:text-[#FFD700]"
+              >
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Contact Us
                 </Link>
