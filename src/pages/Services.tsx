@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft } from 'lucide-react';
+import { Receipt, Calculator, ShieldCheck, LineChart, CreditCard, HeadphonesIcon } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const Services = () => {
@@ -7,32 +7,32 @@ const Services = () => {
     {
       title: "Tax Preparation",
       description: "Comprehensive cryptocurrency tax preparation services tailored to your portfolio.",
-      icon: <ArrowRight className="h-8 w-8 text-primary" />
+      icon: <Receipt className="h-8 w-8 text-primary" />
     },
     {
       title: "Tax Planning",
       description: "Strategic tax planning to optimize your crypto investments and minimize liabilities.",
-      icon: <ArrowDown className="h-8 w-8 text-primary" />
+      icon: <Calculator className="h-8 w-8 text-primary" />
     },
     {
       title: "Compliance Services",
       description: "Stay compliant with all cryptocurrency tax regulations and requirements.",
-      icon: <ArrowUp className="h-8 w-8 text-primary" />
+      icon: <ShieldCheck className="h-8 w-8 text-primary" />
     },
     {
       title: "Transaction Analysis",
       description: "Detailed analysis of your cryptocurrency transactions for accurate reporting.",
-      icon: <ArrowLeft className="h-8 w-8 text-primary" />
+      icon: <LineChart className="h-8 w-8 text-primary" />
     },
     {
       title: "Payment Solutions",
       description: "Flexible payment options for all our cryptocurrency tax services.",
-      icon: <ArrowRight className="h-8 w-8 text-primary" />
+      icon: <CreditCard className="h-8 w-8 text-primary" />
     },
     {
       title: "Technical Support",
       description: "Expert technical support for all your cryptocurrency tax needs.",
-      icon: <ArrowDown className="h-8 w-8 text-primary" />
+      icon: <HeadphonesIcon className="h-8 w-8 text-primary" />
     }
   ];
 
