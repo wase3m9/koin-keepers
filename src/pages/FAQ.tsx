@@ -1,52 +1,46 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Helmet } from 'react-helmet-async';
 
 const FAQ = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
-      <h2 className="text-3xl font-bold mb-12 text-center text-black">
-        Frequently Asked Questions
-      </h2>
-      <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>How do you handle cryptocurrency tax calculations?</AccordionTrigger>
-          <AccordionContent>
-            We use advanced tracking software combined with expert analysis to calculate your crypto taxes. This includes tracking trades, mining income, staking rewards, and DeFi transactions across multiple platforms and blockchains.
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem value="item-2">
-          <AccordionTrigger>What information do I need to provide?</AccordionTrigger>
-          <AccordionContent>
-            You'll need to provide your exchange API keys or transaction history exports, wallet addresses, and any records of crypto-to-fiat conversions. We'll guide you through the exact requirements during our initial consultation.
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem value="item-3">
-          <AccordionTrigger>How do you handle DeFi and NFT transactions?</AccordionTrigger>
-          <AccordionContent>
-            We have specialized tools and expertise for DeFi protocols and NFT marketplaces. We track liquidity pools, yield farming, NFT trades, and other complex DeFi transactions to ensure accurate tax reporting.
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem value="item-4">
-          <AccordionTrigger>What tax forms do you provide?</AccordionTrigger>
-          <AccordionContent>
-            We provide all necessary tax forms including Schedule D, Form 8949, and any other required documentation for crypto tax reporting. Our service includes both UK and international tax compliance.
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem value="item-5">
-          <AccordionTrigger>How do you ensure accuracy?</AccordionTrigger>
-          <AccordionContent>
-            We employ a multi-step verification process, cross-referencing data from multiple sources and using industry-leading tax calculation methods. Our team of experts reviews each case to ensure compliance and accuracy.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-3xl font-bold mb-12 text-center text-black">
+          Frequently Asked Questions
+        </h2>
+        <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>What is cryptocurrency tax?</AccordionTrigger>
+            <AccordionContent>
+              Cryptocurrency tax refers to the taxation of profits made from trading or investing in cryptocurrencies. This includes capital gains tax on profits from selling cryptocurrencies and income tax on earnings from mining or staking.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>How do I report my crypto taxes?</AccordionTrigger>
+            <AccordionContent>
+              You report your crypto taxes by calculating your capital gains and losses from your trades and reporting them on your tax return. It's important to keep accurate records of all your transactions.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>What happens if I don't report my crypto taxes?</AccordionTrigger>
+            <AccordionContent>
+              Failing to report your crypto taxes can result in penalties, fines, and interest on unpaid taxes. In severe cases, it could lead to legal action by tax authorities.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Can I deduct losses from my crypto investments?</AccordionTrigger>
+            <AccordionContent>
+              Yes, you can deduct capital losses from your cryptocurrency investments against your capital gains. If your losses exceed your gains, you may be able to use the remaining losses to offset other income.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger>Do I need to pay taxes on crypto gifts?</AccordionTrigger>
+            <AccordionContent>
+              Yes, if you receive cryptocurrency as a gift, you may need to pay taxes if you sell or trade it later. The person giving the gift may also have tax obligations depending on the value of the gift.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </div>
   );
 };
