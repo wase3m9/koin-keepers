@@ -10,8 +10,8 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/a20a1d4a-4223-408f-add6-c4e465311f69.png" 
-                alt="CoinKeepers Logo" 
+                src="/lovable-uploads/dee6891c-3b27-4d2d-9f51-2188e70c2919.png" 
+                alt="KoinKeepers Logo" 
                 className="h-8 object-contain"
               />
             </div>
@@ -90,7 +90,7 @@ export const Footer = () => {
 
         <div className="border-t border-white/10 mt-12 pt-8">
           <p className="text-center text-sm text-white/60">
-            © {currentYear} CoinKeepers. All rights reserved.
+            © {currentYear} KoinKeepers. All rights reserved.
           </p>
         </div>
       </div>
