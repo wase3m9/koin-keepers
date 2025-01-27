@@ -30,7 +30,7 @@ export const QuickServices = () => {
   ];
 
   return (
-    <section className="py-12 bg-[#FFD700]/80 backdrop-blur-sm relative">
+    <section className="py-12 bg-white backdrop-blur-sm relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold mb-8 text-center text-black">
           Our Services

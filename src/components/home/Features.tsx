@@ -20,8 +20,8 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#FFD700] relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#FFD700]/40 pointer-events-none" />
+    <section className="py-20 bg-white relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-black">
