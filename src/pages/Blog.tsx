@@ -40,9 +40,9 @@ const Blog = () => {
         <meta name="description" content="Stay informed about cryptocurrency tax regulations, tips, and best practices. Expert insights from our team of crypto tax specialists." />
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
         {/* Hero Section */}
-        <div className="text-center mb-16 bg-[#FEF7CD]/40 p-12 rounded-2xl">
+        <div className="text-center mb-16 bg-[#FEF7CD]/20 p-12 rounded-2xl">
           <h1 className="text-4xl font-bold mb-4">Latest Crypto Tax Insights</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Stay up to date with the latest cryptocurrency tax news, regulations, and expert advice.
@@ -63,7 +63,7 @@ const Blog = () => {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
                 <div className="absolute top-4 right-4">
-                  <span className="bg-[#FEF7CD] px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-[#FEF7CD]/60 px-3 py-1 rounded-full text-sm font-medium">
                     {post.category}
                   </span>
                 </div>
