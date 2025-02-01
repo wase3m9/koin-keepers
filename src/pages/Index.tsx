@@ -75,7 +75,7 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mx-auto mb-6 hover-jiggle cursor-pointer">
                   <span className="text-black text-xl font-bold">STEP 01</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">CONTACT</h3>
@@ -84,7 +84,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mx-auto mb-6 hover-jiggle cursor-pointer">
                   <span className="text-black text-xl font-bold">STEP 02</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">CONFIRM</h3>
@@ -93,7 +93,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center mx-auto mb-6 hover-jiggle cursor-pointer">
                   <span className="text-black text-xl font-bold">STEP 03</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">COMPLETE</h3>
