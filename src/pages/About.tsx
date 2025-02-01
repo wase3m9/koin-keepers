@@ -7,22 +7,22 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Xrypto - Your Trusted Cryptocurrency Tax Partner</title>
-        <meta name="description" content="Learn about Xrypto's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
-        <meta name="keywords" content="crypto tax experts, cryptocurrency accounting, blockchain tax specialists, crypto tax company, about xrypto" />
+        <title>About KoinKeepers - Your Trusted Cryptocurrency Tax Partner</title>
+        <meta name="description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
+        <meta name="keywords" content="crypto tax experts, cryptocurrency accounting, blockchain tax specialists, crypto tax company, about koinkeepers" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://xrypto.com/about" />
-        <meta property="og:title" content="About Xrypto - Your Trusted Cryptocurrency Tax Partner" />
-        <meta property="og:description" content="Learn about Xrypto's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
+        <meta property="og:url" content="https://koinkeepers.com/about" />
+        <meta property="og:title" content="About KoinKeepers - Your Trusted Cryptocurrency Tax Partner" />
+        <meta property="og:description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
         <meta property="og:image" content="/og-image.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://xrypto.com/about" />
-        <meta property="twitter:title" content="About Xrypto - Your Trusted Cryptocurrency Tax Partner" />
-        <meta property="twitter:description" content="Learn about Xrypto's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
+        <meta property="twitter:url" content="https://koinkeepers.com/about" />
+        <meta property="twitter:title" content="About KoinKeepers - Your Trusted Cryptocurrency Tax Partner" />
+        <meta property="twitter:description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
         <meta property="twitter:image" content="/og-image.png" />
       </Helmet>
 
@@ -32,7 +32,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                About Xrypto
+                About KoinKeepers
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
                 Since 2017, we've been helping traders and investors navigate the complex world of cryptocurrency taxation.
@@ -116,17 +116,17 @@ const About = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
+              <h2 className="text-3xl font-bold mb-4">Our Crypto Team</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Meet the experts who are revolutionizing cryptocurrency tax compliance
+                Meet the experts who are revolutionising cryptocurrency tax compliance
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Sarah Johnson",
-                  role: "CEO & Founder",
-                  bio: "Former Big Four tax partner with 15 years of crypto experience"
+                  name: "Waseem Choudhary",
+                  role: "Crypto Tax Director",
+                  bio: "Certified tax specialist with focus on DeFi and NFTs"
                 },
                 {
                   name: "Michael Chen",
@@ -155,9 +155,13 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Simplify Your Crypto Taxes?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied clients who trust Xrypto with their cryptocurrency tax compliance
+              Join thousands of satisfied clients who trust KoinKeepers with their cryptocurrency tax compliance
             </p>
-            <Button asChild size="lg" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary">
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-secondary text-primary hover:bg-secondary/90 rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:shadow-xl"
+            >
               <Link to="/contact">
                 Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
