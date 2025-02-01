@@ -11,26 +11,24 @@ export const CryptoTicker = () => {
   ];
 
   return (
-    <section className="py-8 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+    <section className="py-6 bg-[#000000e6] relative overflow-hidden">
       {/* First row - Original direction */}
-      <div className="flex gap-8 animate-scroll whitespace-nowrap mb-8">
+      <div className="flex gap-12 animate-scroll whitespace-nowrap mb-8">
         {[...Array(2)].map((_, i) => (
-          <div key={`row1-${i}`} className="flex gap-8">
+          <div key={`row1-${i}`} className="flex gap-12">
             {cryptoList.map((crypto, index) => (
               <div
                 key={`row1-${i}-${index}`}
-                className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
-                  index % 3 === 0 ? 'animate-float-slow' :
-                  index % 3 === 1 ? 'animate-float-medium' :
-                  'animate-float-fast'
-                }`}
+                className="flex items-center gap-3 min-w-[160px] hover:scale-110 transition-transform duration-300"
               >
-                <img 
-                  src={crypto.image} 
-                  alt={crypto.name}
-                  className="w-12 h-12 object-contain"
-                />
-                <span className="text-sm font-medium text-white">
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <img 
+                    src={crypto.image} 
+                    alt={crypto.name}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+                <span className="text-sm font-medium text-white/90">
                   {crypto.name}
                 </span>
               </div>
@@ -40,24 +38,22 @@ export const CryptoTicker = () => {
       </div>
 
       {/* Second row - Reverse direction */}
-      <div className="flex gap-8 animate-scroll-reverse whitespace-nowrap">
+      <div className="flex gap-12 animate-scroll-reverse whitespace-nowrap">
         {[...Array(2)].map((_, i) => (
-          <div key={`row2-${i}`} className="flex gap-8">
+          <div key={`row2-${i}`} className="flex gap-12">
             {[...cryptoList].reverse().map((crypto, index) => (
               <div
                 key={`row2-${i}-${index}`}
-                className={`glass-card p-4 rounded-xl min-w-[120px] flex flex-col items-center justify-center gap-2 ${
-                  index % 3 === 0 ? 'animate-float-fast' :
-                  index % 3 === 1 ? 'animate-float-medium' :
-                  'animate-float-slow'
-                }`}
+                className="flex items-center gap-3 min-w-[160px] hover:scale-110 transition-transform duration-300"
               >
-                <img 
-                  src={crypto.image} 
-                  alt={crypto.name}
-                  className="w-12 h-12 object-contain"
-                />
-                <span className="text-sm font-medium text-white">
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <img 
+                    src={crypto.image} 
+                    alt={crypto.name}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
+                <span className="text-sm font-medium text-white/90">
                   {crypto.name}
                 </span>
               </div>
