@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { Bell, ArrowRight, X } from "lucide-react";
 import { useState } from "react";
 
 export const AnnouncementPill = () => {
@@ -7,23 +7,22 @@ export const AnnouncementPill = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="relative bg-black/95 text-primary border border-primary/20">
-      <div className="max-w-7xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
-        <div className="pr-16 sm:text-center sm:px-16">
-          <p className="font-medium">
-            <span>🚨 UK Tax Return deadline: January 31st - Don't leave it too late!</span>
-          </p>
-        </div>
-        <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button
-            type="button"
-            className="flex rounded-md p-2 hover:bg-primary/10 focus:outline-none"
-            onClick={() => setIsVisible(false)}
-          >
-            <span className="sr-only">Dismiss</span>
-            <X className="h-5 w-5 text-primary" aria-hidden="true" />
-          </button>
-        </div>
+    <div className="flex justify-center w-full py-2">
+      <div className="relative flex items-center gap-2 bg-[#E5F5F5] text-[#0A7B83] px-4 py-2 rounded-full max-w-fit">
+        <Bell className="h-4 w-4" />
+        <span className="font-medium">Announcement</span>
+        <span className="text-[#0A7B83]/80">
+          Introducing Budget.ai
+        </span>
+        <ArrowRight className="h-4 w-4" />
+        <button
+          type="button"
+          className="ml-2 rounded-full p-1 hover:bg-[#0A7B83]/10 focus:outline-none"
+          onClick={() => setIsVisible(false)}
+        >
+          <span className="sr-only">Dismiss</span>
+          <X className="h-4 w-4" aria-hidden="true" />
+        </button>
       </div>
     </div>
   );
