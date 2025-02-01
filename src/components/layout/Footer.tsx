@@ -89,9 +89,14 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8">
-          <p className="text-center text-sm text-white/60">
-            © {currentYear} KoinKeepers. All rights reserved.
-          </p>
+          <div className="space-y-2 text-center">
+            <p className="text-sm text-white/60">
+              © {currentYear} KoinKeepers. All rights reserved.
+            </p>
+            <p className="text-sm text-white/60">
+              © KoinKeepers is a trading name of Cloudkeepers London Ltd, a company registered in England and Wales; reg number 11047263
+            </p>
+          </div>
         </div>
       </div>
     </footer>
