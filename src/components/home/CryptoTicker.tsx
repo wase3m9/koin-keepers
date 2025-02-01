@@ -11,7 +11,7 @@ export const CryptoTicker = () => {
   ];
 
   return (
-    <section className="py-6 bg-[#000000e6] relative overflow-hidden">
+    <section className="py-6 bg-[#F1F0FB] relative overflow-hidden">
       {/* First row - Original direction */}
       <div className="flex gap-12 animate-scroll whitespace-nowrap mb-8">
         {[...Array(2)].map((_, i) => (
@@ -28,7 +28,7 @@ export const CryptoTicker = () => {
                     className="w-8 h-8 object-contain"
                   />
                 </div>
-                <span className="text-sm font-medium text-white/90">
+                <span className="text-sm font-medium text-gray-800">
                   {crypto.name}
                 </span>
               </div>
@@ -53,7 +53,7 @@ export const CryptoTicker = () => {
                     className="w-8 h-8 object-contain"
                   />
                 </div>
-                <span className="text-sm font-medium text-white/90">
+                <span className="text-sm font-medium text-gray-800">
                   {crypto.name}
                 </span>
               </div>
