@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -14,12 +13,10 @@ export const CTASection = () => {
           Get started with a free consultation and let us help you navigate your
           crypto tax obligations.
         </p>
-        <Button asChild size="lg" className="bg-black text-primary hover:bg-black/90 border-2 border-black">
-          <Link to="/contact">
-            Book Your Free Consultation{" "}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
+        <Link to="/contact" className="animated-button dark">
+          <span>Book Your Free Consultation <ArrowRight className="inline-block ml-2 h-4 w-4" /></span>
+          <span></span>
+        </Link>
       </div>
     </section>
   );
