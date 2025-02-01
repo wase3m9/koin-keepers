@@ -39,6 +39,36 @@ const FAQ = () => {
               Yes, if you receive cryptocurrency as a gift, you may need to pay taxes if you sell or trade it later. The person giving the gift may also have tax obligations depending on the value of the gift.
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger>How are mining rewards taxed?</AccordionTrigger>
+            <AccordionContent>
+              Mining rewards are typically treated as self-employed income and must be declared on your tax return. The value of the cryptocurrency at the time of receipt is considered taxable income.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-7">
+            <AccordionTrigger>What records do I need to keep for crypto taxes?</AccordionTrigger>
+            <AccordionContent>
+              You should keep detailed records of all cryptocurrency transactions, including dates, amounts, values in GBP at the time of transaction, and the nature of each transaction (purchase, sale, trade, mining reward, etc.).
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-8">
+            <AccordionTrigger>How are staking rewards taxed in the UK?</AccordionTrigger>
+            <AccordionContent>
+              Staking rewards are typically treated as miscellaneous income at the time they are received. The value in GBP at the time of receipt is taxable. When you later sell these tokens, you may also need to pay capital gains tax on any increase in value.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-9">
+            <AccordionTrigger>Do I need to pay tax on each crypto trade?</AccordionTrigger>
+            <AccordionContent>
+              You need to calculate capital gains or losses on each disposal of cryptocurrency, whether you're trading for another cryptocurrency or selling for fiat currency. However, you only pay tax on your total gains above the annual allowance.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-10">
+            <AccordionTrigger>What is the crypto tax deadline in the UK?</AccordionTrigger>
+            <AccordionContent>
+              The UK tax year runs from 6 April to 5 April the following year. If you need to file a Self Assessment tax return, the deadline is 31 January following the tax year. For example, for the 2023/24 tax year, the deadline would be 31 January 2025.
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </div>

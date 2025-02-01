@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, Calendar, User, ArrowRight } from "lucide-react";
 
 const Blog = () => {
-  // This would typically come from an API or CMS
   const blogPosts = [
     {
       id: 1,
@@ -32,21 +31,19 @@ const Blog = () => {
       category: "DeFi",
       image: "https://images.unsplash.com/photo-1639322537228-f710d846310a",
     },
-    // Add more blog posts as needed
   ];
 
   return (
     <>
       <Helmet>
-        <title>Crypto Tax Blog - Latest Insights & Updates | Xrypto</title>
+        <title>Crypto Tax Blog - Latest Insights & Updates | KoinKeepers</title>
         <meta name="description" content="Stay informed about cryptocurrency tax regulations, tips, and best practices. Expert insights from our team of crypto tax specialists." />
-        <meta name="keywords" content="crypto tax blog, cryptocurrency tax news, crypto tax updates, crypto tax tips, cryptocurrency tax advice" />
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Crypto Tax Insights</h1>
+        <div className="text-center mb-16 bg-[#FEF7CD]/40 p-12 rounded-2xl">
+          <h1 className="text-4xl font-bold mb-4">Latest Crypto Tax Insights</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Stay up to date with the latest cryptocurrency tax news, regulations, and expert advice.
           </p>
@@ -57,13 +54,20 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-100 shadow-sm transition-transform hover:scale-105"
+              className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="absolute top-4 right-4">
+                  <span className="bg-[#FEF7CD] px-3 py-1 rounded-full text-sm font-medium">
+                    {post.category}
+                  </span>
+                </div>
+              </div>
               <div className="p-6">
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                   <span className="flex items-center gap-1">
@@ -75,11 +79,11 @@ const Blog = () => {
                     {post.author}
                   </span>
                 </div>
-                <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <h2 className="text-xl font-semibold mb-2 line-clamp-2">{post.title}</h2>
+                <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                 <Link
                   to={`/blog/${post.id}`}
-                  className="inline-flex items-center text-primary hover:text-primary/80"
+                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
                 >
                   Read More <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -89,7 +93,7 @@ const Blog = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-20 bg-primary/5 rounded-xl p-8 text-center">
+        <div className="mt-20 bg-[#FEF7CD]/20 rounded-xl p-8 text-center">
           <div className="max-w-2xl mx-auto">
             <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-semibold mb-4">
@@ -106,7 +110,7 @@ const Blog = () => {
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                className="px-6 py-2 bg-primary text-black rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Subscribe
               </button>

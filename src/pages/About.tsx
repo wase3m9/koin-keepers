@@ -29,7 +29,7 @@ const About = () => {
 
       <div className="animate-fade-in">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 to-transparent">
+        <section className="relative py-20 bg-[#FEF7CD]/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
