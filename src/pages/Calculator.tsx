@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Calculator = () => {
   const [purchasePrice, setPurchasePrice] = useState<string>('');
@@ -26,10 +27,9 @@ const Calculator = () => {
 
     const gain = sale - purchase;
     
-    // UK Tax rates for 2024/25
     const basicRateThreshold = 50270;
-    const basicRateTax = 0.10; // 10% for basic rate
-    const higherRateTax = 0.20; // 20% for higher rate
+    const basicRateTax = 0.10;
+    const higherRateTax = 0.20;
     
     let taxAmount = 0;
     
@@ -135,6 +135,40 @@ const Calculator = () => {
                   </div>
                 )}
               </div>
+            </div>
+          </div>
+
+          <div className="mt-12 space-y-8">
+            <div className="bg-white/80 backdrop-blur-sm shadow-xl rounded-lg p-8">
+              <h2 className="text-2xl font-bold mb-4">About Capital Gains Tax</h2>
+              <p className="text-gray-600 mb-6">
+                Calculate your capital gains tax liability for various assets including residential property, commercial property, shares, and cryptocurrency. Our calculator uses the latest HMRC rates and allowances for 2024/25.
+              </p>
+
+              <div className="bg-[#FEF7CD]/40 p-6 rounded-lg mb-8">
+                <h3 className="text-xl font-semibold mb-4">Current Tax Rates (2024/25)</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Basic rate taxpayers: 10% (18% for residential property)</li>
+                  <li>• Higher rate taxpayers: 20% (28% for residential property)</li>
+                  <li>• Annual exempt amount: £6,000</li>
+                </ul>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>What is Capital Gains Tax?</AccordionTrigger>
+                  <AccordionContent>
+                    Capital Gains Tax (CGT) is a tax on the profit when you sell an asset that has increased in value. It's the gain you make that's taxed, not the amount of money you receive.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How is Capital Gains Tax calculated in the UK?</AccordionTrigger>
+                  <AccordionContent>
+                    CGT is calculated by subtracting the purchase price from the sale price, considering allowable deductions. The rate depends on your income tax band and the type of asset.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </div>
