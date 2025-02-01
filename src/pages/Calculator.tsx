@@ -50,10 +50,9 @@ const Calculator = () => {
         <meta name="description" content="Calculate your cryptocurrency capital gains tax easily with our UK tax calculator." />
       </Helmet>
       
-      <div className="min-h-screen py-12">
+      <div className="min-h-screen py-12 bg-[#FEF7CD]/40">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            <div className="absolute inset-0 bg-[#FEF7CD]/40 rounded-lg" />
             <div className="relative bg-white/80 backdrop-blur-sm shadow-xl rounded-lg p-8">
               <div className="text-center mb-8">
                 <CalculatorIcon className="mx-auto h-12 w-12 text-primary mb-4" />
@@ -71,6 +70,7 @@ const Calculator = () => {
                       placeholder="0.00"
                       value={purchasePrice}
                       onChange={(e) => setPurchasePrice(e.target.value)}
+                      className="bg-white"
                     />
                   </div>
 
@@ -82,6 +82,7 @@ const Calculator = () => {
                       placeholder="0.00"
                       value={salePrice}
                       onChange={(e) => setSalePrice(e.target.value)}
+                      className="bg-white"
                     />
                   </div>
 
@@ -92,6 +93,7 @@ const Calculator = () => {
                       type="date"
                       value={purchaseDate}
                       onChange={(e) => setPurchaseDate(e.target.value)}
+                      className="bg-white"
                     />
                   </div>
 
@@ -102,6 +104,7 @@ const Calculator = () => {
                       type="date"
                       value={saleDate}
                       onChange={(e) => setSaleDate(e.target.value)}
+                      className="bg-white"
                     />
                   </div>
                 </div>
@@ -114,6 +117,7 @@ const Calculator = () => {
                     placeholder="Enter your annual income"
                     value={annualIncome}
                     onChange={(e) => setAnnualIncome(e.target.value)}
+                    className="bg-white"
                   />
                 </div>
 
@@ -125,7 +129,7 @@ const Calculator = () => {
                 </Button>
 
                 {calculatedTax !== null && (
-                  <div className="mt-6 p-4 bg-primary/10 rounded-lg">
+                  <div className="mt-6 p-4 bg-[#FEF7CD]/60 rounded-lg">
                     <h3 className="text-lg font-semibold mb-2">Estimated Capital Gains Tax:</h3>
                     <p className="text-2xl font-bold">£{calculatedTax.toFixed(2)}</p>
                   </div>
