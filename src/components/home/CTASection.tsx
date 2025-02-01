@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const CTASection = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-primary">
-      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-[#FEF7CD]/40" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-3xl font-bold mb-4 text-black">
           Ready to Simplify Your Crypto Taxes?
