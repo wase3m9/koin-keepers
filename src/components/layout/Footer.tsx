@@ -5,14 +5,14 @@ export const Footer = () => {
 
   return (
     <footer className="bg-black text-white/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="space-y-3">
+            <div className="flex items-center">
               <img 
                 src="/lovable-uploads/c32bdb0f-2218-49ac-8e7f-81e46d8cc068.png" 
                 alt="KoinKeepers Logo" 
-                className="h-32 object-contain brightness-0 invert"
+                className="h-24 object-contain brightness-0 invert"
               />
             </div>
             <p className="text-sm text-white/60">
@@ -21,8 +21,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-medium mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="font-medium mb-2 text-white">Quick Links</h4>
+            <ul className="space-y-1">
               <li>
                 <Link to="/" className="text-sm text-white/60 hover:text-primary">
                   Home
@@ -48,8 +48,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-medium mb-4 text-white">Resources</h4>
-            <ul className="space-y-2">
+            <h4 className="font-medium mb-2 text-white">Resources</h4>
+            <ul className="space-y-1">
               <li>
                 <Link
                   to="/blog"
@@ -78,8 +78,8 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-medium mb-4 text-white">Contact</h4>
-            <ul className="space-y-2">
+            <h4 className="font-medium mb-2 text-white">Contact</h4>
+            <ul className="space-y-1">
               <li className="text-sm text-white/60">
                 Email: hello@coin-keepers.co.uk
               </li>
@@ -88,12 +88,12 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8">
-          <div className="space-y-2 text-center">
-            <p className="text-sm text-white/60">
+        <div className="border-t border-white/10 mt-6 pt-6">
+          <div className="text-center space-y-1">
+            <p className="text-xs text-white/60">
               © {currentYear} KoinKeepers. All rights reserved.
             </p>
-            <p className="text-sm text-white/60">
+            <p className="text-xs text-white/60">
               © KoinKeepers is a trading name of Cloudkeepers London Ltd, a company registered in England and Wales; reg number 11047263
             </p>
           </div>
