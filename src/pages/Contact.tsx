@@ -57,7 +57,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Your name"
-                    className="focus:ring-[#FEF7CD]/60 focus:border-[#FEF7CD]/60"
+                    className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
                   />
                 </div>
 
@@ -73,6 +73,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="your@email.com"
+                    className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
                   />
                 </div>
 
@@ -87,6 +88,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="How can we help?"
+                    className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
                   />
                 </div>
 
@@ -101,7 +103,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Tell us more about your needs..."
-                    className="min-h-[150px]"
+                    className="min-h-[150px] focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
                   />
                 </div>
 
