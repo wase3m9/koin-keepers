@@ -164,8 +164,9 @@ const About = () => {
         <Partners />
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-primary/10 to-transparent">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-16 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[#FEF7CD]/40" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-3xl font-bold mb-6">Ready to Simplify Your Crypto Taxes?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Join thousands of satisfied clients who trust KoinKeepers with their cryptocurrency tax compliance
