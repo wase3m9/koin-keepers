@@ -50,11 +50,9 @@ export const ProcessSteps = () => {
         </div>
 
         <div className="text-center">
-          <Link
-            to="/contact"
-            className="inline-block bg-primary text-black px-8 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
-          >
-            GET STARTED TODAY TO STAY COMPLIANT AND SAFE →
+          <Link to="/contact" className="animated-button dark">
+            <span>GET STARTED TODAY TO STAY COMPLIANT AND SAFE →</span>
+            <span></span>
           </Link>
         </div>
       </div>

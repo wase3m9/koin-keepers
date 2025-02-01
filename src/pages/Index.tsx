@@ -7,7 +7,6 @@ import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { ClientStories } from "@/components/home/ClientStories";
 import { Partners } from "@/components/home/Partners";
 import { CTASection } from "@/components/home/CTASection";
-import { AnnouncementPill } from "@/components/home/AnnouncementPill";
 import FAQ from "./FAQ";
 
 const Index = () => {
@@ -58,7 +57,6 @@ const Index = () => {
         </script>
       </Helmet>
       <div className="animate-fade-in">
-        <AnnouncementPill />
         <Hero />
         <CryptoTicker />
         <Features />
