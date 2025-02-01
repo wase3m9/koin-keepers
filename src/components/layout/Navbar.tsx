@@ -36,7 +36,7 @@ export const Navbar = () => {
               ))}
               <Button 
                 asChild
-                className="bg-white text-black hover:bg-white/80"
+                className="bg-primary text-black hover:bg-primary/90"
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>
@@ -69,7 +69,7 @@ export const Navbar = () => {
                 ))}
                 <Button 
                   asChild 
-                  className="w-full mt-4 bg-white text-black hover:bg-white/80"
+                  className="w-full mt-4 bg-primary text-black hover:bg-primary/90"
                 >
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Contact Us
