@@ -27,35 +27,35 @@ export const CryptoTickerBar = () => {
 
   if (isLoading) {
     return (
-      <div className="w-full bg-black py-1 overflow-hidden">
-        <div className="text-center text-[#FFD700]">Loading crypto prices...</div>
+      <div className="w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 py-3 overflow-hidden border-y border-gray-800">
+        <div className="text-center text-primary/80">Loading crypto prices...</div>
       </div>
     );
   }
 
   return (
-    <div className="w-full bg-black py-1 overflow-hidden">
-      <div className="animate-scroll flex space-x-8 whitespace-nowrap">
+    <div className="w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 py-3 overflow-hidden border-y border-gray-800">
+      <div className="animate-scroll flex space-x-12 whitespace-nowrap">
         {cryptoData?.map((crypto) => (
           <div
             key={crypto.id}
-            className="flex items-center space-x-2 text-sm"
+            className="flex items-center space-x-3 px-4 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-gray-800"
           >
-            <span className="text-[#FFD700] uppercase">{crypto.symbol}:</span>
-            <span className="text-white">
+            <span className="text-primary font-medium uppercase">{crypto.symbol}:</span>
+            <span className="text-white font-medium">
               ${crypto.current_price.toLocaleString()}
             </span>
             <span
-              className={`flex items-center ${
+              className={`flex items-center font-medium ${
                 crypto.price_change_percentage_24h >= 0
-                  ? "text-green-500"
-                  : "text-red-500"
+                  ? "text-green-400"
+                  : "text-red-400"
               }`}
             >
               {crypto.price_change_percentage_24h >= 0 ? (
-                <ArrowUpIcon className="h-3 w-3" />
+                <ArrowUpIcon className="h-3 w-3 mr-1" />
               ) : (
-                <ArrowDownIcon className="h-3 w-3" />
+                <ArrowDownIcon className="h-3 w-3 mr-1" />
               )}
               {Math.abs(crypto.price_change_percentage_24h).toFixed(2)}%
             </span>
