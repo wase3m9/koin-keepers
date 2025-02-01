@@ -126,21 +126,30 @@ const About = () => {
                 {
                   name: "Waseem Choudhary",
                   role: "Crypto Tax Director",
-                  bio: "Certified tax specialist with focus on DeFi and NFTs"
+                  bio: "Certified tax specialist with focus on DeFi and NFTs",
+                  image: "/lovable-uploads/c5b6d5a2-8b1a-4265-a584-fe5fba4c2067.png"
                 },
                 {
                   name: "Michael Chen",
                   role: "Chief Technology Officer",
-                  bio: "Blockchain developer and cryptocurrency expert"
+                  bio: "Blockchain developer and cryptocurrency expert",
+                  image: "/lovable-uploads/2391ca69-3322-4648-a703-f3f530939d91.png"
                 },
                 {
                   name: "Emma Williams",
                   role: "Head of Tax Advisory",
-                  bio: "Certified tax specialist with focus on DeFi and NFTs"
+                  bio: "Certified tax specialist with focus on DeFi and NFTs",
+                  image: "/lovable-uploads/df9ae568-0265-4307-ac47-b9028e215441.png"
                 }
               ].map((member) => (
                 <div key={member.name} className="text-center">
-                  <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-4" />
+                  <div className="w-48 h-48 mx-auto mb-4 rounded-xl overflow-hidden">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold">{member.name}</h3>
                   <p className="text-primary mb-2">{member.role}</p>
                   <p className="text-gray-600">{member.bio}</p>
@@ -160,7 +169,7 @@ const About = () => {
             <Button 
               asChild 
               size="lg" 
-              className="bg-secondary text-primary hover:bg-secondary/90 rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:shadow-xl"
+              className="bg-black text-yellow-400 hover:bg-black/90 rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:shadow-xl"
             >
               <Link to="/contact">
                 Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
