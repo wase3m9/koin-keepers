@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Users, Trophy, Clock, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Partners } from "@/components/home/Partners";
 
 const About = () => {
   return (
@@ -158,6 +159,9 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Partners Section */}
+        <Partners />
 
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-primary/10 to-transparent">
