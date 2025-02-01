@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Receipt, Calculator, ShieldCheck, LineChart, CreditCard, HeadphonesIcon, Clock, FileCheck, Wallet, Users } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ProcessSteps } from "@/components/shared/ProcessSteps";
 
 const Services = () => {
   const services = [
@@ -107,7 +107,7 @@ const Services = () => {
       </Helmet>
       
       <div className="min-h-screen bg-white">
-        {/* Existing Services Grid */}
+        {/* Services Grid */}
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
@@ -134,26 +134,8 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Features Section */}
-        <div className="bg-gray-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <div className="flex items-center justify-center mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-center text-sm">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Pricing Section */}
-        <div className="py-20">
+        <div className="bg-gray-50 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -183,8 +165,29 @@ const Services = () => {
           </div>
         </div>
 
-        {/* FAQ Preview */}
+        {/* Process Steps Section */}
+        <ProcessSteps />
+
+        {/* Features Section */}
         <div className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                  <div className="flex items-center justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-center text-sm">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Preview */}
+        <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">Have Questions?</h2>
             <p className="text-gray-600 mb-8">Check out our frequently asked questions or contact our support team.</p>

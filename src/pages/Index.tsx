@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/Hero";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { Features } from "@/components/home/Features";
 import { QuickServices } from "@/components/home/QuickServices";
+import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { ClientStories } from "@/components/home/ClientStories";
 import { Partners } from "@/components/home/Partners";
 import { CTASection } from "@/components/home/CTASection";
@@ -60,9 +61,10 @@ const Index = () => {
         <CryptoTicker />
         <Features />
         <QuickServices />
+        <ProcessSteps />
         <ClientStories />
         <Partners />
-        <div className="space-y-2"> {/* Changed from space-y-4 to space-y-2 to reduce the gap further */}
+        <div className="space-y-2">
           <FAQ />
           <CTASection />
         </div>
