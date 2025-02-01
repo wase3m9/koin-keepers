@@ -25,7 +25,7 @@ export const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-black">
-            Your Trusted Partner Since 2017
+            Your Trusted Partner
           </h2>
           <p className="text-black/80 max-w-2xl mx-auto">
             Our team of dedicated crypto tax specialists and accountants is here

@@ -2,6 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +40,18 @@ export const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <Link to="/calculator" className="nav-link text-white/80 hover:text-[#FFD700] active:text-[#FFD700]">
-                <Calculator className="w-5 h-5" />
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link to="/calculator" className="nav-link text-white/80 hover:text-[#FFD700] active:text-[#FFD700]">
+                      <Calculator className="w-5 h-5" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="text-sm">Crypto Tax Calculator</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               <Button 
                 asChild
                 className="bg-primary text-black hover:bg-primary/90"
