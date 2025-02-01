@@ -6,22 +6,6 @@ export const Partners = () => {
     },
     {
       name: "Koinly",
-      logo: "/lovable-uploads/2f400325-9009-4b45-b977-50ed4c5a
-
-Let's update the Partners section in the About page to match the modern design from the reference image while maintaining the website's style.
-
-<lov-code>
-Let's update the Partners component to match the new design:
-
-<lov-write file_path="src/components/home/Partners.tsx">
-export const Partners = () => {
-  const partners = [
-    {
-      name: "CoinTracking",
-      logo: "/lovable-uploads/63cbe847-a138-490e-8d81-bec625ec428d.png"
-    },
-    {
-      name: "Koinly",
       logo: "/lovable-uploads/2f400325-9009-4b45-b977-50ed4c5a1b44.png"
     },
     {
