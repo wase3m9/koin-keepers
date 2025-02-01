@@ -81,7 +81,7 @@ export const Footer = () => {
             <h4 className="font-medium mb-2 text-white">Contact</h4>
             <ul className="space-y-1">
               <li className="text-sm text-white/60">
-                Email: hello@coin-keepers.co.uk
+                Email: hello@koin-keepers.co.uk
               </li>
               <li className="text-sm text-white/60">Phone: +44 207 118 9799</li>
             </ul>
