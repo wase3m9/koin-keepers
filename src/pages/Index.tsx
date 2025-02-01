@@ -62,7 +62,7 @@ const Index = () => {
         <QuickServices />
         <ClientStories />
         <Partners />
-        <div className="space-y-8"> {/* Reduced space between FAQ and CTA */}
+        <div className="space-y-4"> {/* Changed from space-y-8 to space-y-4 to reduce the gap */}
           <FAQ />
           <CTASection />
         </div>
