@@ -10,9 +10,9 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/dee6891c-3b27-4d2d-9f51-2188e70c2919.png" 
+                src="/lovable-uploads/c32bdb0f-2218-49ac-8e7f-81e46d8cc068.png" 
                 alt="KoinKeepers Logo" 
-                className="h-32 object-contain"
+                className="h-32 object-contain brightness-0 invert"
               />
             </div>
             <p className="text-sm text-white/60">
