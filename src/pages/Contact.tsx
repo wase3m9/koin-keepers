@@ -57,6 +57,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Your name"
+                    className="focus:ring-[#FEF7CD]/60 focus:border-[#FEF7CD]/60"
                   />
                 </div>
 
@@ -104,7 +105,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#FFD700] text-black hover:bg-[#FFD700]/90">
+                <Button type="submit" className="w-full bg-[#FEF7CD] text-black hover:bg-[#FEF7CD]/90">
                   Send Message
                 </Button>
               </form>

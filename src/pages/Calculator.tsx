@@ -50,7 +50,7 @@ const Calculator = () => {
         <meta name="description" content="Calculate your cryptocurrency capital gains tax easily with our UK tax calculator." />
       </Helmet>
       
-      <div className="min-h-screen py-12 bg-[#FEF7CD]/40">
+      <div className="min-h-screen py-12 bg-[#F2FCE2]/40">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             <div className="relative bg-white/80 backdrop-blur-sm shadow-xl rounded-lg p-8">
