@@ -30,7 +30,7 @@ export const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <Link key={item.label} to={item.path} className="nav-link text-white/80 hover:text-white">
+                <Link key={item.label} to={item.path} className="nav-link text-white/80 hover:text-[#FFD700] active:text-[#FFD700]">
                   {item.label}
                 </Link>
               ))}
@@ -46,7 +46,7 @@ export const Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-md text-white/80 hover:text-white hover:bg-white/10"
+                className="p-2 rounded-md text-white/80 hover:text-[#FFD700]"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -61,7 +61,7 @@ export const Navbar = () => {
                   <Link
                     key={item.label}
                     to={item.path}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-white hover:bg-white/10"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-[#FFD700] active:text-[#FFD700]"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
