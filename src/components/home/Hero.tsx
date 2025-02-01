@@ -13,12 +13,13 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/20 z-0 mix-blend-multiply" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <HeroPill 
-            href="/contact"
-            announcement="🗓️ Reminder"
-            label="UK Tax Return Deadline - 31st January 2024"
-            className="mb-8"
-          />
+          <div className="flex justify-center mb-8">
+            <HeroPill 
+              href="/contact"
+              announcement="🗓️ Reminder"
+              label="UK Tax Return Deadline - 31st January 2024"
+            />
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white drop-shadow-lg">
             We Do Your Crypto Taxes For You
           </h1>
