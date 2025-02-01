@@ -7,7 +7,7 @@ import { CryptoTickerBar } from "@/components/layout/CryptoTickerBar";
 export const Hero = () => {
   return (
     <>
-      <section className="relative py-20 sm:py-32 overflow-hidden">
+      <main className="relative py-20 sm:py-32 overflow-hidden">
         <ParticleBackground />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/20 z-0 mix-blend-multiply" />
         
@@ -21,12 +21,12 @@ export const Hero = () => {
             regulations.
           </p>
           <Button asChild size="lg" className="animate-fade-in bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary shadow-xl">
-            <Link to="/contact">
-              Book a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+            <Link to="/contact" aria-label="Book a consultation for crypto tax services">
+              Book a Consultation <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>
         </div>
-      </section>
+      </main>
       <CryptoTickerBar />
     </>
   );
