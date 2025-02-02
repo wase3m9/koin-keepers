@@ -3,8 +3,21 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
+type BlogPost = {
+  title: string;
+  content: string;
+  author: string;
+  date: string;
+  category: string;
+  image: string;
+}
+
+type BlogPosts = {
+  [key: number]: BlogPost;
+}
+
 // This would typically come from an API or database
-const blogPosts = {
+const blogPosts: BlogPosts = {
   1: {
     title: "Understanding Cryptocurrency Tax Obligations in 2024",
     content: `
@@ -48,7 +61,7 @@ const blogPosts = {
 
 const BlogPost = () => {
   const { id } = useParams();
-  const post = id ? blogPosts[id as keyof typeof blogPosts] : null;
+  const post = id ? blogPosts[parseInt(id)] : null;
 
   if (!post) {
     return (
