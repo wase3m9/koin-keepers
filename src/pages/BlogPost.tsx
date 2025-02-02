@@ -24,6 +24,14 @@ const blogPosts: BlogPosts = {
     title: "Understanding Cryptocurrency Tax Obligations in 2024",
     content: `
       <article class="space-y-8">
+        <div class="mb-8">
+          <img
+            src="/lovable-uploads/f92bb30c-ccba-4592-8077-f52bcd1b97dd.png"
+            alt="Bitcoin on Circuit Board"
+            class="w-full h-[400px] object-cover rounded-xl"
+          />
+        </div>
+
         <section>
           <h2 class="text-3xl font-bold mb-6">Why Cryptocurrency Tax Compliance Matters</h2>
           <p>As digital assets become mainstream, governments worldwide have tightened regulations to ensure fair taxation. In the UK, HM Revenue & Customs (HMRC) considers cryptocurrency as an asset, meaning transactions involving crypto can trigger taxable events. Ignoring these obligations could lead to fines, penalties, or even legal action. By understanding the rules, you can plan your investments more effectively and avoid unnecessary complications.</p>
@@ -141,7 +149,7 @@ const blogPosts: BlogPosts = {
     author: "John Smith",
     date: "March 15, 2024",
     category: "Tax Guide",
-    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a",
+    image: "/lovable-uploads/f92bb30c-ccba-4592-8077-f52bcd1b97dd.png",
     keywords: "cryptocurrency tax 2024, UK crypto tax, HMRC crypto regulations, crypto tax compliance, cryptocurrency taxation guide",
     description: "Comprehensive guide to cryptocurrency tax obligations in 2024. Learn about UK tax regulations, rates, and compliance requirements for crypto investments."
   },
