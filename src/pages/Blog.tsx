@@ -22,7 +22,7 @@ const Blog = () => {
       author: "Sarah Johnson",
       date: "March 10, 2024",
       category: "NFTs",
-      image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28",
+      image: "/lovable-uploads/0ba0eea6-c491-447b-9792-f8146a52b466.png",
       keywords: "NFT tax, NFT trading, cryptocurrency tax, crypto tax implications",
       description: "Explore the tax implications of NFT trading and how to navigate the complexities of NFT taxation."
     },
