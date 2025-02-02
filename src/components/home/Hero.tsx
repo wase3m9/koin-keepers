@@ -4,8 +4,26 @@ import { ArrowRight } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
 import { CryptoTickerBar } from "@/components/layout/CryptoTickerBar";
 import { HeroPill } from "@/components/ui/hero-pill";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const [daysLeft, setDaysLeft] = useState<number>(0);
+
+  useEffect(() => {
+    const calculateDaysLeft = () => {
+      const deadline = new Date('2026-01-31T23:59:59');
+      const now = new Date();
+      const diffTime = deadline.getTime() - now.getTime();
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      setDaysLeft(diffDays);
+    };
+
+    calculateDaysLeft();
+    // Update every day
+    const interval = setInterval(calculateDaysLeft, 86400000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <main className="relative py-20 sm:py-32 overflow-hidden">
@@ -16,8 +34,8 @@ export const Hero = () => {
           <div className="flex justify-center mb-8">
             <HeroPill 
               href="/contact"
-              announcement="🗓️ Reminder"
-              label="UK Tax Return Deadline - 31st January 2024"
+              announcement="🗓️ Deadline"
+              label={`${daysLeft} days until UK Tax Return (31 Jan 2026)`}
             />
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white drop-shadow-lg">
