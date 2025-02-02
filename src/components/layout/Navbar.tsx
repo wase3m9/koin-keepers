@@ -36,14 +36,14 @@ export const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <Link key={item.label} to={item.path} className="nav-link text-white/80 hover:text-[#FFD700] active:text-[#FFD700]">
+                <Link key={item.label} to={item.path} className="nav-link text-white hover:text-primary active:text-primary">
                   {item.label}
                 </Link>
               ))}
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link to="/calculator" className="nav-link text-white/80 hover:text-[#FFD700] active:text-[#FFD700]">
+                    <Link to="/calculator" className="nav-link text-white hover:text-primary active:text-primary">
                       <Calculator className="w-5 h-5" />
                     </Link>
                   </TooltipTrigger>
@@ -64,7 +64,7 @@ export const Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-md text-white/80 hover:text-[#FFD700]"
+                className="p-2 rounded-md text-white hover:text-primary"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -79,7 +79,7 @@ export const Navbar = () => {
                   <Link
                     key={item.label}
                     to={item.path}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-[#FFD700] active:text-[#FFD700]"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary active:text-primary"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -87,7 +87,7 @@ export const Navbar = () => {
                 ))}
                 <Link
                   to="/calculator"
-                  className="flex items-center px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-[#FFD700] active:text-[#FFD700]"
+                  className="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary active:text-primary"
                   onClick={() => setIsOpen(false)}
                 >
                   <Calculator className="w-5 h-5 mr-2" />
