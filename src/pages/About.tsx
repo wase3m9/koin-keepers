@@ -50,7 +50,7 @@ const About = () => {
                 <div className="flex justify-center">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h2 className="mt-4 text-3xl font-bold">10,000+</h2>
+                <h2 className="mt-4 text-3xl font-bold">1,000</h2>
                 <p className="mt-2 text-gray-600">Happy Clients</p>
               </div>
               <div className="text-center">
@@ -64,14 +64,14 @@ const About = () => {
                 <div className="flex justify-center">
                   <Clock className="h-8 w-8 text-primary" />
                 </div>
-                <h2 className="mt-4 text-3xl font-bold">6+ Years</h2>
+                <h2 className="mt-4 text-3xl font-bold">4+ Years</h2>
                 <p className="mt-2 text-gray-600">Experience</p>
               </div>
               <div className="text-center">
                 <div className="flex justify-center">
                   <Building className="h-8 w-8 text-primary" />
                 </div>
-                <h2 className="mt-4 text-3xl font-bold">5</h2>
+                <h2 className="mt-4 text-3xl font-bold">2</h2>
                 <p className="mt-2 text-gray-600">Global Offices</p>
               </div>
             </div>
