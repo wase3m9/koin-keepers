@@ -42,14 +42,20 @@ const Blog = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
         {/* Hero Section */}
-        <div className="text-center mb-16 bg-[#E5DEFF]/40 p-12 rounded-2xl">
-          <h1 className="text-4xl font-bold mb-4">Latest Crypto Tax Insights</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Stay up to date with the latest cryptocurrency tax news, regulations, and expert advice.
-          </p>
+        <div className="py-20 bg-[#FEF7CD]/40 -mx-4 sm:-mx-6 lg:-mx-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                Latest Crypto Tax Insights
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+                Stay up to date with the latest cryptocurrency tax news, regulations, and expert advice
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Blog Grid */}
+        {/* Rest of the content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <article

@@ -4,6 +4,19 @@ import { Helmet } from 'react-helmet-async';
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-white">
+      <div className="py-20 bg-[#FEF7CD]/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              Frequently Asked Questions
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+              Find answers to common questions about cryptocurrency taxation
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold mb-12 text-center text-black">
           Frequently Asked Questions

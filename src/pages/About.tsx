@@ -36,7 +36,7 @@ const About = () => {
                 About KoinKeepers
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                Since 2017, we've been helping traders and investors navigate the complex world of cryptocurrency taxation.
+                Since 2020, we've been helping traders and investors navigate the complex world of cryptocurrency taxation.
               </p>
             </div>
           </div>
