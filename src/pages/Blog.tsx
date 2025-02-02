@@ -11,7 +11,7 @@ const Blog = () => {
       author: "John Smith",
       date: "March 15, 2024",
       category: "Tax Guide",
-      image: "https://images.unsplash.com/photo-1639322537228-f710d846310a",
+      image: "/lovable-uploads/0995fd32-f723-40d6-a337-dc17a750bbae.png",
       keywords: "cryptocurrency tax, crypto tax 2024, UK crypto tax, HMRC crypto",
       description: "Learn about cryptocurrency tax obligations in 2024, including key taxable events, rates, and compliance requirements for UK crypto investors."
     },
@@ -22,7 +22,7 @@ const Blog = () => {
       author: "Sarah Johnson",
       date: "March 10, 2024",
       category: "NFTs",
-      image: "/lovable-uploads/0ba0eea6-c491-447b-9792-f8146a52b466.png",
+      image: "/lovable-uploads/0995fd32-f723-40d6-a337-dc17a750bbae.png",
       keywords: "NFT tax, NFT trading, cryptocurrency tax, crypto tax implications",
       description: "Explore the tax implications of NFT trading and how to navigate the complexities of NFT taxation."
     },
@@ -33,7 +33,7 @@ const Blog = () => {
       author: "Michael Brown",
       date: "March 5, 2024",
       category: "DeFi",
-      image: "https://images.unsplash.com/photo-1639322537228-f710d846310a",
+      image: "/lovable-uploads/0995fd32-f723-40d6-a337-dc17a750bbae.png",
       keywords: "DeFi tax, decentralized finance taxation, crypto tax, yield farming",
       description: "Understand the taxation of DeFi activities and how to comply with regulations in the evolving crypto landscape."
     },
