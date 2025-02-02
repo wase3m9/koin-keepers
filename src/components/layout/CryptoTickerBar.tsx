@@ -2,20 +2,27 @@ import { useQuery } from "@tanstack/react-query";
 import { ArrowDownIcon, ArrowUpIcon } from "lucide-react";
 
 interface CryptoData {
-  id: string;
   symbol: string;
-  current_price: number;
-  price_change_percentage_24h: number;
+  lastPrice: string;
+  priceChangePercent: string;
 }
+
+const CRYPTO_SYMBOLS = ["BTCUSDT", "ETHUSDT", "BNBUSDT", "XRPUSDT", "ADAUSDT", "DOGEUSDT", "MATICUSDT", "SOLUSDT"];
 
 const fetchCryptoData = async (): Promise<CryptoData[]> => {
   const response = await fetch(
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+    "https://api.binance.com/api/v3/ticker/24hr"
   );
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }
-  return response.json();
+  const data: CryptoData[] = await response.json();
+  // Filter for our wanted symbols and sort them in the same order as our CRYPTO_SYMBOLS array
+  return data
+    .filter(crypto => CRYPTO_SYMBOLS.includes(crypto.symbol))
+    .sort((a, b) => 
+      CRYPTO_SYMBOLS.indexOf(a.symbol) - CRYPTO_SYMBOLS.indexOf(b.symbol)
+    );
 };
 
 export const CryptoTickerBar = () => {
@@ -38,26 +45,31 @@ export const CryptoTickerBar = () => {
       <div className="animate-scroll flex space-x-12 whitespace-nowrap">
         {cryptoData?.map((crypto) => (
           <div
-            key={crypto.id}
+            key={crypto.symbol}
             className="flex items-center space-x-3 px-4 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-gray-800"
           >
-            <span className="text-primary font-medium uppercase">{crypto.symbol}:</span>
+            <span className="text-primary font-medium uppercase">
+              {crypto.symbol.replace('USDT', '')}:
+            </span>
             <span className="text-white font-medium">
-              ${crypto.current_price.toLocaleString()}
+              ${parseFloat(crypto.lastPrice).toLocaleString(undefined, { 
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2 
+              })}
             </span>
             <span
               className={`flex items-center font-medium ${
-                crypto.price_change_percentage_24h >= 0
+                parseFloat(crypto.priceChangePercent) >= 0
                   ? "text-green-400"
                   : "text-red-400"
               }`}
             >
-              {crypto.price_change_percentage_24h >= 0 ? (
+              {parseFloat(crypto.priceChangePercent) >= 0 ? (
                 <ArrowUpIcon className="h-3 w-3 mr-1" />
               ) : (
                 <ArrowDownIcon className="h-3 w-3 mr-1" />
               )}
-              {Math.abs(crypto.price_change_percentage_24h).toFixed(2)}%
+              {Math.abs(parseFloat(crypto.priceChangePercent)).toFixed(2)}%
             </span>
           </div>
         ))}
