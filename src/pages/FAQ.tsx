@@ -18,9 +18,6 @@ const FAQ = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold mb-12 text-center text-black">
-          Frequently Asked Questions
-        </h2>
         <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
           <AccordionItem value="item-1">
             <AccordionTrigger>What is cryptocurrency tax?</AccordionTrigger>
