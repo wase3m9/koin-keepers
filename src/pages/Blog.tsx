@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { FileText, Calendar, User, ArrowRight } from "lucide-react";
+import StaticNetworkBackground from "@/components/StaticNetworkBackground";
 
 const Blog = () => {
   const blogPosts = [
@@ -40,81 +41,84 @@ const Blog = () => {
         <meta name="description" content="Stay informed about cryptocurrency tax regulations, tips, and best practices. Expert insights from our team of crypto tax specialists." />
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white">
-        {/* Hero Section */}
-        <div className="text-center mb-16 bg-[#E5DEFF]/40 p-12 rounded-2xl">
-          <h1 className="text-4xl font-bold mb-4">Latest Crypto Tax Insights</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Stay up to date with the latest cryptocurrency tax news, regulations, and expert advice.
-          </p>
-        </div>
-
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-105"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-[#E5DEFF]/60 px-3 py-1 rounded-full text-sm font-medium">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {post.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <User className="w-4 h-4" />
-                    {post.author}
-                  </span>
-                </div>
-                <h2 className="text-xl font-semibold mb-2 line-clamp-2">{post.title}</h2>
-                <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                <Link
-                  to={`/blog/${post.id}`}
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Read More <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="mt-20 bg-[#E5DEFF]/40 rounded-xl p-8 text-center">
-          <div className="max-w-2xl mx-auto">
-            <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold mb-4">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Get the latest crypto tax insights delivered straight to your inbox.
+      <div className="relative">
+        <StaticNetworkBackground />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          {/* Hero Section */}
+          <div className="text-center mb-16 bg-[#E5DEFF]/40 p-12 rounded-2xl">
+            <h1 className="text-4xl font-bold mb-4">Latest Crypto Tax Insights</h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Stay up to date with the latest cryptocurrency tax news, regulations, and expert advice.
             </p>
-            <form className="flex gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button
-                type="submit"
-                className="px-6 py-2 bg-primary text-black rounded-lg hover:bg-primary/90 transition-colors"
+          </div>
+
+          {/* Blog Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-105"
               >
-                Subscribe
-              </button>
-            </form>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-[#E5DEFF]/60 px-3 py-1 rounded-full text-sm font-medium">
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {post.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
+                      {post.author}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-2 line-clamp-2">{post.title}</h2>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                  >
+                    Read More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Newsletter Section */}
+          <div className="mt-20 bg-[#E5DEFF]/40 rounded-xl p-8 text-center">
+            <div className="max-w-2xl mx-auto">
+              <FileText className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h2 className="text-2xl font-semibold mb-4">
+                Subscribe to Our Newsletter
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Get the latest crypto tax insights delivered straight to your inbox.
+              </p>
+              <form className="flex gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <button
+                  type="submit"
+                  className="px-6 py-2 bg-primary text-black rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

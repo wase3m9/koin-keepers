@@ -3,6 +3,7 @@ import { ArrowRight, Users, Trophy, Clock, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Partners } from "@/components/home/Partners";
+import StaticNetworkBackground from "@/components/StaticNetworkBackground";
 
 const About = () => {
   return (
@@ -27,7 +28,10 @@ const About = () => {
         <meta property="twitter:image" content="/og-image.png" />
       </Helmet>
 
-      <div className="animate-fade-in">
+      <div className="animate-fade-in relative">
+        <StaticNetworkBackground />
+        <div className="relative z-10">
+          {/* Rest of the component content */}
         {/* Hero Section */}
         <section className="relative py-20 bg-[#FEF7CD]/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,6 +186,7 @@ const About = () => {
             </Button>
           </div>
         </section>
+        </div>
       </div>
     </>
   );
