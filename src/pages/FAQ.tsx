@@ -1,13 +1,10 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from 'react-helmet-async';
-import StaticNetworkBackground from "@/components/StaticNetworkBackground";
 
 const FAQ = () => {
   return (
-    <div className="min-h-screen relative">
-      <StaticNetworkBackground />
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold mb-12 text-center text-black">
           Frequently Asked Questions
         </h2>
@@ -73,7 +70,6 @@ const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        </div>
       </div>
     </div>
   );

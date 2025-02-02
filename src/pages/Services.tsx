@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { Receipt, Calculator, ShieldCheck, LineChart, CreditCard, HeadphonesIcon, Clock, FileCheck, Wallet, Users } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
-import StaticNetworkBackground from "@/components/StaticNetworkBackground";
 
 const Services = () => {
   const services = [
@@ -107,101 +106,98 @@ const Services = () => {
         <meta name="description" content="Comprehensive cryptocurrency tax services including tax preparation, planning, and consultation." />
       </Helmet>
       
-      <div className="min-h-screen relative">
-        <StaticNetworkBackground />
-        <div className="relative z-10">
-          {/* Services Grid */}
-          <div className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service, index) => (
-                  <Card 
-                    key={index}
-                    className="transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-white border-2 border-primary/20"
-                  >
-                    <CardHeader>
-                      <div className="flex items-center justify-center mb-4">
-                        {service.icon}
-                      </div>
-                      <CardTitle className="text-xl font-semibold text-center mb-2">
-                        {service.title}
-                      </CardTitle>
-                      <CardDescription className="text-center text-gray-600">
-                        {service.description}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Pricing Section */}
-          <div className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {pricingPlans.map((plan, index) => (
-                  <Card 
-                    key={index}
-                    className={`transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
-                      index === 1 ? 'border-2 border-primary' : 'border border-gray-200'
-                    }`}
-                  >
-                    <CardHeader>
-                      <CardTitle className="text-2xl font-bold text-center">{plan.name}</CardTitle>
-                      <div className="text-3xl font-bold text-center my-4">{plan.price}</div>
-                      <CardDescription className="text-center mb-4">{plan.description}</CardDescription>
-                      <ul className="space-y-3">
-                        {plan.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-sm">
-                            <ShieldCheck className="h-4 w-4 text-primary mr-2" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardHeader>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Process Steps Section */}
-          <ProcessSteps />
-
-          {/* Features Section */}
-          <div className="bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+      <div className="min-h-screen bg-white">
+        {/* Services Grid */}
+        <div className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <Card 
+                  key={index}
+                  className="transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-white border-2 border-primary/20"
+                >
+                  <CardHeader>
                     <div className="flex items-center justify-center mb-4">
-                      {feature.icon}
+                      {service.icon}
                     </div>
-                    <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
-                    <p className="text-gray-600 text-center text-sm">{feature.description}</p>
-                  </div>
-                ))}
-              </div>
+                    <CardTitle className="text-xl font-semibold text-center mb-2">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-center text-gray-600">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* FAQ Preview */}
-          <div className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h2 className="text-3xl font-bold mb-6">Have Questions?</h2>
-              <p className="text-gray-600 mb-8">Check out our frequently asked questions or contact our support team.</p>
-              <div className="flex justify-center space-x-4">
-                <a href="/faq" className="bg-primary text-black px-6 py-2 rounded-md hover:bg-primary/90 transition-colors">
-                  View FAQ
-                </a>
-                <a href="/contact" className="bg-black text-primary px-6 py-2 rounded-md hover:bg-black/90 transition-colors">
-                  Contact Us
-                </a>
-              </div>
+        {/* Pricing Section */}
+        <div className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <Card 
+                  key={index}
+                  className={`transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
+                    index === 1 ? 'border-2 border-primary' : 'border border-gray-200'
+                  }`}
+                >
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-bold text-center">{plan.name}</CardTitle>
+                    <div className="text-3xl font-bold text-center my-4">{plan.price}</div>
+                    <CardDescription className="text-center mb-4">{plan.description}</CardDescription>
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm">
+                          <ShieldCheck className="h-4 w-4 text-primary mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Process Steps Section */}
+        <ProcessSteps />
+
+        {/* Features Section */}
+        <div className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                  <div className="flex items-center justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-center text-sm">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Preview */}
+        <div className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Have Questions?</h2>
+            <p className="text-gray-600 mb-8">Check out our frequently asked questions or contact our support team.</p>
+            <div className="flex justify-center space-x-4">
+              <a href="/faq" className="bg-primary text-black px-6 py-2 rounded-md hover:bg-primary/90 transition-colors">
+                View FAQ
+              </a>
+              <a href="/contact" className="bg-black text-primary px-6 py-2 rounded-md hover:bg-black/90 transition-colors">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>
