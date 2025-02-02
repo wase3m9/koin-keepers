@@ -11,8 +11,8 @@ interface Particle {
 const ParticleBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const particles: Particle[] = [];
-  const numParticles = 100;
-  const connectionDistance = 150;
+  const numParticles = 200; // Increased from 100 to 200
+  const connectionDistance = 180; // Increased from 150 to 180
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -28,30 +28,30 @@ const ParticleBackground = () => {
           particles.push({
             x: p.random(p.width),
             y: p.random(p.height),
-            vx: p.random(-1, 1),
-            vy: p.random(-1, 1)
+            vx: p.random(-1.2, 1.2), // Increased velocity range
+            vy: p.random(-1.2, 1.2)  // Increased velocity range
           });
         }
       };
 
       p.draw = () => {
         p.clear();
-        p.background(26, 31, 44, 240); // Dark background #1A1F2C with alpha
+        p.background(26, 31, 44, 240);
         
         // Update and draw particles
         for (let i = 0; i < particles.length; i++) {
           const particle = particles[i];
 
           // Move towards mouse when nearby
-          const mouseInfluenceDistance = 200;
+          const mouseInfluenceDistance = 250; // Increased from 200 to 250
           const dx = p.mouseX - particle.x;
           const dy = p.mouseY - particle.y;
           const distance = p.sqrt(dx * dx + dy * dy);
 
           if (distance < mouseInfluenceDistance) {
             const influence = (mouseInfluenceDistance - distance) / mouseInfluenceDistance;
-            particle.vx += (dx / distance) * influence * 0.5;
-            particle.vy += (dy / distance) * influence * 0.5;
+            particle.vx += (dx / distance) * influence * 0.6; // Increased influence
+            particle.vy += (dy / distance) * influence * 0.6;
           }
 
           // Update position
@@ -59,8 +59,8 @@ const ParticleBackground = () => {
           particle.y += particle.vy;
 
           // Add some randomness to movement
-          particle.vx += p.random(-0.1, 0.1);
-          particle.vy += p.random(-0.1, 0.1);
+          particle.vx += p.random(-0.15, 0.15); // Increased randomness
+          particle.vy += p.random(-0.15, 0.15);
 
           // Dampen velocity
           particle.vx *= 0.99;
@@ -72,12 +72,12 @@ const ParticleBackground = () => {
           if (particle.y < 0) particle.y = p.height;
           if (particle.y > p.height) particle.y = 0;
 
-          // Draw particle with higher opacity
-          p.fill(255, 255, 255, 180); // Increased opacity from 50 to 180
+          // Draw particle
+          p.fill(255, 255, 255, 180);
           p.noStroke();
-          p.ellipse(particle.x, particle.y, 4, 4);
+          p.ellipse(particle.x, particle.y, 3, 3); // Slightly smaller particles
 
-          // Draw connections with higher opacity
+          // Draw connections
           for (let j = i + 1; j < particles.length; j++) {
             const other = particles[j];
             const dx = other.x - particle.x;
@@ -86,7 +86,7 @@ const ParticleBackground = () => {
 
             if (distance < connectionDistance) {
               const alpha = p.map(distance, 0, connectionDistance, 255, 0);
-              p.stroke(255, 255, 255, alpha * 0.8); // Increased opacity multiplier from 0.5 to 0.8
+              p.stroke(255, 255, 255, alpha * 0.8);
               p.line(particle.x, particle.y, other.x, other.y);
             }
           }
