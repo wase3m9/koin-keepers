@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Receipt, Calculator, ShieldCheck, LineChart, CreditCard, HeadphonesIcon, Clock, FileCheck, Wallet, Users } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -63,7 +64,7 @@ const Services = () => {
   const pricingPlans = [
     {
       name: "Basic",
-      price: "$99",
+      price: "£299",
       description: "Perfect for beginners",
       features: [
         "Up to 100 transactions",
@@ -74,7 +75,7 @@ const Services = () => {
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "£399",
       description: "For active traders",
       features: [
         "Up to 1000 transactions",
