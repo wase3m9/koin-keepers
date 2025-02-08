@@ -104,7 +104,7 @@ export const Footer = () => {
               >
                 Cloudkeepers London Ltd
               </a>
-              , a company registered in England and Wales; reg number 11047263
+              , a company registered in England and Wales; Reg Number 11047263
             </p>
           </div>
         </div>
