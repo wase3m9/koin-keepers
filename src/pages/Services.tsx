@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Calculator, Shield, Clock, DollarSign, Receipt, ShieldCheck, LineChart, HeadphonesIcon, FileText, Wallet, Users } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -197,13 +198,23 @@ const Services = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <div className="flex items-center justify-center mb-4">
-                    {feature.icon}
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="hover-jiggle"
+                >
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div className="flex items-center justify-center mb-4">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
+                    <p className="text-gray-600 text-center text-sm">{feature.description}</p>
                   </div>
-                  <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-center text-sm">{feature.description}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -230,3 +241,4 @@ const Services = () => {
 };
 
 export default Services;
+
