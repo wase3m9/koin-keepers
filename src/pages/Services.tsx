@@ -1,9 +1,11 @@
 
 import { Helmet } from 'react-helmet-async';
-import { Calculator, Shield, Clock, DollarSign, Receipt, ShieldCheck, LineChart, HeadphonesIcon, FileText, Wallet, Users } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Calculator, Receipt, ShieldCheck, LineChart, DollarSign, HeadphonesIcon, Clock, FileText, Wallet, Users } from 'lucide-react';
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
-import { motion } from "framer-motion";
+import { ServiceCard } from "@/components/services/ServiceCard";
+import { FeatureCard } from "@/components/services/FeatureCard";
+import { PricingCard } from "@/components/services/PricingCard";
+import { ServicesHeader } from "@/components/services/ServicesHeader";
 
 const Services = () => {
   const services = [
@@ -109,50 +111,20 @@ const Services = () => {
       </Helmet>
       
       <div className="min-h-screen bg-white">
-        {/* Header Section */}
-        <div className="py-20 bg-[#FEF7CD]/40">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                Our Services
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                Comprehensive solutions for all your cryptocurrency tax needs
-              </p>
-            </div>
-          </div>
-        </div>
+        <ServicesHeader />
 
         {/* Services Grid */}
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <motion.div
+                <ServiceCard
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="hover-jiggle"
-                >
-                  <Card className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    <CardHeader className="space-y-4">
-                      <div className="mb-6">
-                        <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center transform -rotate-6 group-hover:rotate-0 transition-transform duration-300">
-                          <service.icon className="h-7 w-7 text-black transform rotate-6 group-hover:rotate-0 transition-transform duration-300" />
-                        </div>
-                      </div>
-                      <CardTitle className="text-xl font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                        {service.title}
-                      </CardTitle>
-                      <CardDescription className="text-gray-600 text-sm leading-relaxed">
-                        {service.description}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                </motion.div>
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -164,26 +136,14 @@ const Services = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <Card 
+                <PricingCard
                   key={index}
-                  className={`transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
-                    index === 1 ? 'border-2 border-primary' : 'border border-gray-200'
-                  }`}
-                >
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-center">{plan.name}</CardTitle>
-                    <div className="text-3xl font-bold text-center my-4">{plan.price}</div>
-                    <CardDescription className="text-center mb-4">{plan.description}</CardDescription>
-                    <ul className="space-y-3">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm">
-                          <ShieldCheck className="h-4 w-4 text-primary mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardHeader>
-                </Card>
+                  name={plan.name}
+                  price={plan.price}
+                  description={plan.description}
+                  features={plan.features}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -198,23 +158,13 @@ const Services = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <motion.div
+                <FeatureCard
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="hover-jiggle"
-                >
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <div className="flex items-center justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-lg font-semibold text-center mb-2">{feature.title}</h3>
-                    <p className="text-gray-600 text-center text-sm">{feature.description}</p>
-                  </div>
-                </motion.div>
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -241,4 +191,3 @@ const Services = () => {
 };
 
 export default Services;
-
