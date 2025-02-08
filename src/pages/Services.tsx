@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Calculator, Shield, Clock, DollarSign, Receipt, ShieldCheck, LineChart, HeadphonesIcon, FileText, Wallet, Users } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -134,6 +133,8 @@ const Services = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="hover-jiggle"
                 >
                   <Card className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
                     <CardHeader className="space-y-4">
