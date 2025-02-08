@@ -1,5 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Shield, Calculator, Clock, DollarSign } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const QuickServices = () => {
   const services = [
@@ -30,24 +32,48 @@ export const QuickServices = () => {
   ];
 
   return (
-    <section className="py-12 bg-white backdrop-blur-sm relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold mb-8 text-center text-black">
-          Our Services
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <section className="py-16 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+            Our Services
+          </h2>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Link
+            <motion.div
               key={index}
-              to="/services"
-              className="bg-white/90 backdrop-blur-sm p-4 rounded-xl text-center transform transition-all duration-300 hover:scale-105 cursor-pointer hover-jiggle border-2 border-black"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center ${service.color} bg-[#FFD700] mb-3`}>
-                <service.icon className="h-5 w-5" />
-              </div>
-              <h3 className="text-sm font-semibold mb-1 text-black">{service.title}</h3>
-              <p className="text-xs text-black/70">{service.description}</p>
-            </Link>
+              <Link
+                to="/services"
+                className="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              >
+                <div className="mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center transform -rotate-6 group-hover:rotate-0 transition-transform duration-300">
+                    <service.icon className="h-7 w-7 text-black transform rotate-6 group-hover:rotate-0 transition-transform duration-300" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
