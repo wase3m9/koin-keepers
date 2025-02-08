@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Users, Trophy, Clock, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -125,19 +126,19 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Waseem Choudhary",
+                  name: "Waseem",
                   role: "Crypto Tax Director",
                   bio: "Certified tax specialist with focus on DeFi and NFTs",
                   image: "/lovable-uploads/c5b6d5a2-8b1a-4265-a584-fe5fba4c2067.png"
                 },
                 {
-                  name: "Michael Chen",
+                  name: "Michael",
                   role: "Chief Technology Officer",
                   bio: "Blockchain developer and cryptocurrency expert",
                   image: "/lovable-uploads/2391ca69-3322-4648-a703-f3f530939d91.png"
                 },
                 {
-                  name: "Emma Williams",
+                  name: "Emma",
                   role: "Head of Tax Advisory",
                   bio: "Certified tax specialist with focus on DeFi and NFTs",
                   image: "/lovable-uploads/df9ae568-0265-4307-ac47-b9028e215441.png"
