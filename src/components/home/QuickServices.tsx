@@ -20,7 +20,7 @@ export const QuickServices = () => {
     {
       icon: Clock,
       title: "Tax Return",
-      description: "Professional preparation and filing",
+      description: "Professional preparation and filing with HMRC directly",
       color: "text-black"
     },
     {
