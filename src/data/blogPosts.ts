@@ -22,14 +22,6 @@ export const blogPosts: BlogPosts = {
     excerpt: "Get a comprehensive overview of cryptocurrency tax obligations and regulations in 2024. Learn about key taxable events, rates, and compliance requirements.",
     content: `
       <article class="space-y-8">
-        <div class="mb-8">
-          <img
-            src="/lovable-uploads/f92bb30c-ccba-4592-8077-f52bcd1b97dd.png"
-            alt="Bitcoin on Circuit Board"
-            class="w-full h-[400px] object-cover rounded-xl"
-          />
-        </div>
-
         <section>
           <h2 class="text-3xl font-bold mb-6">Why Cryptocurrency Tax Compliance Matters</h2>
           <p>As digital assets become mainstream, governments worldwide have tightened regulations to ensure fair taxation. In the UK, HM Revenue & Customs (HMRC) considers cryptocurrency as an asset, meaning transactions involving crypto can trigger taxable events. Ignoring these obligations could lead to fines, penalties, or even legal action. By understanding the rules, you can plan your investments more effectively and avoid unnecessary complications.</p>
@@ -157,14 +149,6 @@ export const blogPosts: BlogPosts = {
     excerpt: "Discover the tax implications of NFT trading across different jurisdictions. Learn about taxable events, reporting requirements, and compliance best practices.",
     content: `
       <article class="space-y-8">
-        <div class="mb-8">
-          <img
-            src="/lovable-uploads/724af005-eed3-4712-a075-3a394baadd6c.png"
-            alt="NFT Trading and Cryptocurrency Illustration"
-            class="w-full h-auto rounded-xl shadow-lg mb-8"
-          />
-        </div>
-
         <section>
           <h2 class="text-3xl font-bold mb-6">What Are NFTs?</h2>
           <p class="text-gray-600 leading-relaxed">NFTs are unique digital assets stored on blockchain technology. They can represent art, music, videos, in-game items, and more. Unlike cryptocurrencies such as Bitcoin, NFTs are not interchangeable due to their uniqueness. This distinct nature means they often fall under different tax rules compared to other digital assets.</p>
@@ -296,24 +280,9 @@ export const blogPosts: BlogPosts = {
     excerpt: "Navigate the complex world of DeFi taxation with our comprehensive guide. Learn about yield farming, liquidity pools, and global tax regulations.",
     content: `
       <article class="space-y-8">
-        <div class="mb-8">
-          <img
-            src="/lovable-uploads/0995fd32-f723-40d6-a337-dc17a750bbae.png"
-            alt="Futuristic cityscape with cryptocurrency symbols"
-            class="w-full h-auto rounded-xl shadow-lg mb-8"
-          />
-        </div>
-
         <section>
           <h2 class="text-3xl font-bold mb-6">What Is DeFi?</h2>
-          <p class="text-gray-600 leading-relaxed">DeFi refers to a range of financial services built on blockchain technology, enabling users to transact directly without intermediaries like banks. Popular DeFi activities include:</p>
-          
-          <ul class="list-disc pl-6 space-y-2 mt-4 text-gray-600">
-            <li><strong>Yield Farming:</strong> Earning rewards by providing liquidity to decentralized exchanges (DEXs).</li>
-            <li><strong>Liquidity Pools:</strong> Contributing funds to pools that facilitate trading on DEXs.</li>
-            <li><strong>Staking:</strong> Locking up cryptocurrency to earn rewards or secure a blockchain network.</li>
-            <li><strong>Borrowing and Lending:</strong> Using platforms like Aave or Compound for decentralized loans.</li>
-          </ul>
+          <p class="text-gray-600 leading-relaxed">DeFi refers to a range of financial services built on blockchain technology, enabling users to transact directly without intermediaries like banks.</p>
         </section>
 
         <section>
