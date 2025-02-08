@@ -8,6 +8,7 @@ export type BlogPost = {
   image: string;
   keywords: string;
   description: string;
+  excerpt: string;
 }
 
 export type BlogPosts = {
@@ -18,6 +19,7 @@ export const blogPosts: BlogPosts = {
   1: {
     id: 1,
     title: "Understanding Cryptocurrency Tax Obligations in 2024",
+    excerpt: "Get a comprehensive overview of cryptocurrency tax obligations and regulations in 2024. Learn about key taxable events, rates, and compliance requirements.",
     content: `
       <article class="space-y-8">
         <div class="mb-8">
@@ -152,6 +154,7 @@ export const blogPosts: BlogPosts = {
   2: {
     id: 2,
     title: "NFT Trading and Tax Implications",
+    excerpt: "Discover the tax implications of NFT trading across different jurisdictions. Learn about taxable events, reporting requirements, and compliance best practices.",
     content: `
       <article class="space-y-8">
         <div class="mb-8">
@@ -290,6 +293,7 @@ export const blogPosts: BlogPosts = {
   3: {
     id: 3,
     title: "DeFi Taxation: What You Need to Know",
+    excerpt: "Navigate the complex world of DeFi taxation with our comprehensive guide. Learn about yield farming, liquidity pools, and global tax regulations.",
     content: `
       <article class="space-y-8">
         <div class="mb-8">
