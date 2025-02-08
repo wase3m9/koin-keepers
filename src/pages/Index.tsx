@@ -14,22 +14,22 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>KoinKeepers - Professional Cryptocurrency Tax Services London</title>
-        <meta name="description" content="Expert cryptocurrency tax services in London. We handle your crypto taxes while you focus on trading. Professional tax preparation, consultation, and HMRC compliance services from our London office." />
-        <meta name="keywords" content="crypto tax London, cryptocurrency tax London, bitcoin tax London, ethereum tax London, crypto tax service London, cryptocurrency accounting London, crypto tax professional London, HMRC crypto tax" />
+        <title>KoinKeepers - Professional Cryptocurrency Tax Services London, United Kingdom</title>
+        <meta name="description" content="Expert cryptocurrency tax services in London, United Kingdom. We handle your crypto taxes while you focus on trading. Professional tax preparation, consultation, and HMRC compliance services from our London office." />
+        <meta name="keywords" content="crypto tax London, cryptocurrency tax London, bitcoin tax London, ethereum tax London, crypto tax service London, cryptocurrency accounting UK, crypto tax professional United Kingdom, HMRC crypto tax" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koinkeepers.co.uk/" />
-        <meta property="og:title" content="KoinKeepers - Professional Cryptocurrency Tax Services London" />
-        <meta property="og:description" content="Expert cryptocurrency tax services in London. We handle your crypto taxes while you focus on trading. Professional tax preparation and HMRC compliance services." />
+        <meta property="og:title" content="KoinKeepers - Professional Cryptocurrency Tax Services London, United Kingdom" />
+        <meta property="og:description" content="Expert cryptocurrency tax services in London, United Kingdom. We handle your crypto taxes while you focus on trading. Professional tax preparation and HMRC compliance services." />
         <meta property="og:image" content="/og-image.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://koinkeepers.co.uk/" />
-        <meta property="twitter:title" content="KoinKeepers - Professional Cryptocurrency Tax Services London" />
-        <meta property="twitter:description" content="Expert cryptocurrency tax services in London. We handle your crypto taxes while you focus on trading. Professional tax preparation and HMRC compliance services." />
+        <meta property="twitter:title" content="KoinKeepers - Professional Cryptocurrency Tax Services London, United Kingdom" />
+        <meta property="twitter:description" content="Expert cryptocurrency tax services in London, United Kingdom. We handle your crypto taxes while you focus on trading. Professional tax preparation and HMRC compliance services." />
         <meta property="twitter:image" content="/og-image.png" />
 
         {/* Additional SEO tags */}
@@ -43,14 +43,14 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "KoinKeepers",
-            "description": "Expert cryptocurrency tax services and consultation in London",
+            "description": "Expert cryptocurrency tax services and consultation in London, United Kingdom",
             "image": "/og-image.png",
             "priceRange": "££",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "London",
-              "addressRegion": "London",
-              "addressCountry": "UK"
+              "addressRegion": "Greater London",
+              "addressCountry": "United Kingdom"
             },
             "geo": {
               "@type": "GeoCoordinates",
@@ -59,13 +59,16 @@ const Index = () => {
             },
             "url": "https://koinkeepers.co.uk",
             "telephone": "",
-            "areaServed": {
+            "areaServed": [{
               "@type": "City",
               "name": "London"
-            },
+            }, {
+              "@type": "Country",
+              "name": "United Kingdom"
+            }],
             "offers": {
               "@type": "Offer",
-              "description": "Cryptocurrency Tax Services in London"
+              "description": "Cryptocurrency Tax Services in London, United Kingdom"
             }
           })}
         </script>
