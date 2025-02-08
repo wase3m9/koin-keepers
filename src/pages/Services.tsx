@@ -1,40 +1,40 @@
-
 import { Helmet } from 'react-helmet-async';
-import { Receipt, Calculator, ShieldCheck, LineChart, CreditCard, HeadphonesIcon, Clock, FileCheck, Wallet, Users } from 'lucide-react';
+import { Calculator, Shield, Clock, DollarSign, Receipt, ShieldCheck, LineChart, HeadphonesIcon } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
     {
       title: "Tax Preparation",
       description: "Comprehensive cryptocurrency tax preparation services tailored to your portfolio.",
-      icon: <Receipt className="h-8 w-8 text-primary" />
+      icon: Receipt
     },
     {
       title: "Tax Planning",
       description: "Strategic tax planning to optimize your crypto investments and minimize liabilities.",
-      icon: <Calculator className="h-8 w-8 text-primary" />
+      icon: Calculator
     },
     {
       title: "Compliance Services",
       description: "Stay compliant with all cryptocurrency tax regulations and requirements.",
-      icon: <ShieldCheck className="h-8 w-8 text-primary" />
+      icon: ShieldCheck
     },
     {
       title: "Transaction Analysis",
       description: "Detailed analysis of your cryptocurrency transactions for accurate reporting.",
-      icon: <LineChart className="h-8 w-8 text-primary" />
+      icon: LineChart
     },
     {
       title: "Payment Solutions",
       description: "Flexible payment options for all our cryptocurrency tax services.",
-      icon: <CreditCard className="h-8 w-8 text-primary" />
+      icon: DollarSign
     },
     {
       title: "Technical Support",
       description: "Expert technical support for all your cryptocurrency tax needs.",
-      icon: <HeadphonesIcon className="h-8 w-8 text-primary" />
+      icon: HeadphonesIcon
     }
   ];
 
@@ -122,27 +122,34 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Rest of the content */}
+        {/* Services Grid */}
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <Card 
+                <motion.div
                   key={index}
-                  className="transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-white border-2 border-primary/20"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <CardHeader>
-                    <div className="flex items-center justify-center mb-4">
-                      {service.icon}
-                    </div>
-                    <CardTitle className="text-xl font-semibold text-center mb-2">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-center text-gray-600">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
+                  <Card className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <CardHeader className="space-y-4">
+                      <div className="mb-6">
+                        <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center transform -rotate-6 group-hover:rotate-0 transition-transform duration-300">
+                          <service.icon className="h-7 w-7 text-black transform rotate-6 group-hover:rotate-0 transition-transform duration-300" />
+                        </div>
+                      </div>
+                      <CardTitle className="text-xl font-semibold text-gray-900 group-hover:text-primary transition-colors">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 text-sm leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>
