@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -94,7 +95,16 @@ export const Footer = () => {
               © {currentYear} KoinKeepers. All rights reserved.
             </p>
             <p className="text-xs text-white/60">
-              © KoinKeepers is a trading name of Cloudkeepers London Ltd, a company registered in England and Wales; reg number 11047263
+              © KoinKeepers is a trading name of{" "}
+              <a 
+                href="https://www.cloud-keepers.co.uk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary underline"
+              >
+                Cloudkeepers London Ltd
+              </a>
+              , a company registered in England and Wales; reg number 11047263
             </p>
           </div>
         </div>
