@@ -1,5 +1,6 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Calculator, Shield, Clock, DollarSign, Receipt, ShieldCheck, LineChart, HeadphonesIcon } from 'lucide-react';
+import { Calculator, Shield, Clock, DollarSign, Receipt, ShieldCheck, LineChart, HeadphonesIcon, FileText, Wallet, Users } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { motion } from "framer-motion";
@@ -47,7 +48,7 @@ const Services = () => {
     {
       title: "Audit Support",
       description: "Full documentation and support in case of tax authority audits.",
-      icon: <FileCheck className="h-6 w-6 text-primary" />
+      icon: <FileText className="h-6 w-6 text-primary" />
     },
     {
       title: "Multi-Wallet Support",
