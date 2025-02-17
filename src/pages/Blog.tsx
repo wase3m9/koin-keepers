@@ -16,13 +16,13 @@ const Blog = () => {
         <meta property="og:title" content="Cryptocurrency Tax Blog | Expert Insights & Updates 2024" />
         <meta property="og:description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice. Get the latest insights on crypto taxation, DeFi, NFTs, and more." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://koinkeepers.com/blog" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/blog" />
         <meta property="og:image" content="/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cryptocurrency Tax Blog | Expert Insights & Updates 2024" />
         <meta name="twitter:description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice." />
         <meta name="twitter:image" content="/og-image.png" />
-        <link rel="canonical" href="https://koinkeepers.com/blog" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/blog" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="KoinKeepers" />
       </Helmet>

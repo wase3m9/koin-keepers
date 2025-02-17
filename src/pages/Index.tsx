@@ -20,14 +20,14 @@ const Index = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://koinkeepers.co.uk/" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/" />
         <meta property="og:title" content="KoinKeepers - Professional Cryptocurrency Tax Services London, United Kingdom" />
         <meta property="og:description" content="Expert cryptocurrency tax services in London, United Kingdom. We handle your crypto taxes while you focus on trading. Professional tax preparation and HMRC compliance services." />
         <meta property="og:image" content="/og-image.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://koinkeepers.co.uk/" />
+        <meta property="twitter:url" content="https://koin-keepers.co.uk/" />
         <meta property="twitter:title" content="KoinKeepers - Professional Cryptocurrency Tax Services London, United Kingdom" />
         <meta property="twitter:description" content="Expert cryptocurrency tax services in London, United Kingdom. We handle your crypto taxes while you focus on trading. Professional tax preparation and HMRC compliance services." />
         <meta property="twitter:image" content="/og-image.png" />
@@ -35,7 +35,7 @@ const Index = () => {
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://koinkeepers.co.uk/" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/" />
         
         {/* Local Business Schema */}
         <script type="application/ld+json">
@@ -57,7 +57,7 @@ const Index = () => {
               "latitude": "51.5074",
               "longitude": "-0.1278"
             },
-            "url": "https://koinkeepers.co.uk",
+            "url": "https://koin-keepers.co.uk",
             "telephone": "",
             "areaServed": [{
               "@type": "City",
