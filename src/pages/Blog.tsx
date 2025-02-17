@@ -11,20 +11,38 @@ const Blog = () => {
     <>
       <Helmet>
         <title>Cryptocurrency Tax Blog | Expert Insights & Updates 2024 | KoinKeepers</title>
-        <meta name="description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice. Get the latest insights on crypto taxation, DeFi, NFTs, and more." />
-        <meta name="keywords" content="crypto tax blog, cryptocurrency taxation, crypto tax updates, crypto tax advice, cryptocurrency tax guide" />
-        <meta property="og:title" content="Cryptocurrency Tax Blog | Expert Insights & Updates 2024" />
+        <meta name="description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice. Get the latest insights on crypto taxation, DeFi, NFTs, and more from KoinKeepers experts." />
+        <meta name="keywords" content="crypto tax blog, cryptocurrency taxation UK, crypto tax updates London, crypto tax advice UK, cryptocurrency tax guide 2024, HMRC crypto guidance" />
+        <meta property="og:title" content="Cryptocurrency Tax Blog | Expert Insights & Updates 2024 | KoinKeepers" />
         <meta property="og:description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice. Get the latest insights on crypto taxation, DeFi, NFTs, and more." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/blog" />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image" content="https://koin-keepers.co.uk/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cryptocurrency Tax Blog | Expert Insights & Updates 2024" />
         <meta name="twitter:description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice." />
-        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:image" content="https://koin-keepers.co.uk/og-image.png" />
         <link rel="canonical" href="https://koin-keepers.co.uk/blog" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="KoinKeepers" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "KoinKeepers Cryptocurrency Tax Blog",
+            "description": "Expert insights and updates on cryptocurrency taxation in the UK",
+            "url": "https://koin-keepers.co.uk/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "KoinKeepers",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://koin-keepers.co.uk/logo.png"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="py-20 bg-gradient-to-b from-[#E5DEFF]/40 to-transparent">
