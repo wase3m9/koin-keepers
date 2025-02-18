@@ -7,6 +7,41 @@ import { blogPosts } from "../data/blogPosts";
 const Blog = () => {
   const posts = Object.values(blogPosts);
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "KoinKeepers Cryptocurrency Tax Blog",
+    "description": "Expert insights and updates on cryptocurrency taxation in the UK",
+    "url": "https://koin-keepers.co.uk/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "KoinKeepers",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://koin-keepers.co.uk/logo.png"
+      }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://koin-keepers.co.uk/blog"
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -27,21 +62,10 @@ const Blog = () => {
         <meta name="author" content="KoinKeepers" />
 
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            "name": "KoinKeepers Cryptocurrency Tax Blog",
-            "description": "Expert insights and updates on cryptocurrency taxation in the UK",
-            "url": "https://koin-keepers.co.uk/blog",
-            "publisher": {
-              "@type": "Organization",
-              "name": "KoinKeepers",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://koin-keepers.co.uk/logo.png"
-              }
-            }
-          })}
+          {JSON.stringify(blogSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 

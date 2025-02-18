@@ -2,8 +2,71 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Helmet } from 'react-helmet-async';
 
 const FAQ = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is cryptocurrency tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cryptocurrency tax refers to the taxation of profits made from trading or investing in cryptocurrencies. This includes capital gains tax on profits from selling cryptocurrencies and income tax on earnings from mining or staking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I report my crypto taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You report your crypto taxes by calculating your capital gains and losses from your trades and reporting them on your tax return. It's important to keep accurate records of all your transactions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I don't report my crypto taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Failing to report your crypto taxes can result in penalties, fines, and interest on unpaid taxes. In severe cases, it could lead to legal action by tax authorities."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://koin-keepers.co.uk/faq"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Frequently Asked Questions | KoinKeepers</title>
+        <meta name="description" content="Find answers to common questions about cryptocurrency taxation" />
+        <meta name="keywords" content="crypto tax FAQ, cryptocurrency tax questions, HMRC crypto guidelines, UK crypto tax help" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
+
       <div className="py-20 bg-[#FEF7CD]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
