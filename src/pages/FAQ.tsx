@@ -1,3 +1,4 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from 'react-helmet-async';
 
@@ -55,9 +56,11 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Frequently Asked Questions | KoinKeepers</title>
-        <meta name="description" content="Find answers to common questions about cryptocurrency taxation" />
+        <title>FAQ | KoinKeepers - Crypto Tax Services</title>
+        <meta name="description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
         <meta name="keywords" content="crypto tax FAQ, cryptocurrency tax questions, HMRC crypto guidelines, UK crypto tax help" />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/" />
         
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
