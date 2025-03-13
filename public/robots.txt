@@ -1,0 +1,4 @@
+
+User-agent: *
+Allow: /
+Sitemap: https://koin-keepers.co.uk/sitemap.xml

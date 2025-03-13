@@ -96,6 +96,7 @@ const Index = () => {
         <title>KoinKeepers | Expert Crypto Accountants & Tax Advisors London</title>
         <meta name="description" content="KoinKeepers provides expert cryptocurrency tax and accounting services in London. Get professional guidance on cryptocurrency tax obligations and HMRC compliance from certified specialists." />
         <meta name="keywords" content="crypto tax London, cryptocurrency accountants, bitcoin tax advice, ethereum tax London, crypto tax service London, HMRC crypto compliance, cryptocurrency accounting UK, crypto tax experts" />
+        <meta name="robots" content="index, follow" />
         
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/" />

@@ -59,8 +59,8 @@ const FAQ = () => {
         <title>FAQ | KoinKeepers - Crypto Tax Services</title>
         <meta name="description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
         <meta name="keywords" content="crypto tax FAQ, cryptocurrency tax questions, HMRC crypto guidelines, UK crypto tax help" />
-        <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://koin-keepers.co.uk/" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/faq" />
         
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}

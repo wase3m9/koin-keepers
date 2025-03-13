@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Calculator, Receipt, ShieldCheck, LineChart, DollarSign, HeadphonesIcon, Clock, FileText, Wallet, Users } from 'lucide-react';
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
@@ -121,6 +122,7 @@ const Services = () => {
         <title>Cryptocurrency Tax Services | KoinKeepers London</title>
         <meta name="description" content="Expert cryptocurrency tax services including tax preparation, planning, and HMRC compliance consultation from certified specialists in London." />
         <meta name="keywords" content="crypto tax service, cryptocurrency tax preparation, bitcoin tax planning, HMRC crypto compliance, crypto accountants London" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://koin-keepers.co.uk/services" />
         
         <script type="application/ld+json">
