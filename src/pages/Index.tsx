@@ -11,6 +11,60 @@ import { CTASection } from "@/components/home/CTASection";
 import FAQ from "./FAQ";
 
 const Index = () => {
+  // LocalBusiness schema with more detailed information
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "KoinKeepers",
+    "description": "Expert cryptocurrency tax services and consultation in London, United Kingdom",
+    "image": "https://koin-keepers.co.uk/logo.png",
+    "url": "https://koin-keepers.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Fintech Avenue",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "EC2A 4NE",
+      "addressCountry": "United Kingdom"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "51.5074",
+      "longitude": "-0.1278"
+    },
+    "telephone": "+44 20 1234 5678",
+    "email": "info@koin-keepers.co.uk",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "London"
+      },
+      {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    ],
+    "priceRange": "££",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://twitter.com/koinkeepers",
+      "https://www.linkedin.com/company/koinkeepers",
+      "https://www.facebook.com/koinkeepers"
+    ]
+  };
+
+  // Enhanced Organization schema
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -20,8 +74,10 @@ const Index = () => {
     "url": "https://koin-keepers.co.uk",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "123 Fintech Avenue",
       "addressLocality": "London",
       "addressRegion": "Greater London",
+      "postalCode": "EC2A 4NE",
       "addressCountry": "United Kingdom"
     },
     "geo": {
@@ -54,13 +110,15 @@ const Index = () => {
     }
   };
 
+  // Enhanced service schema with more offer details
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Cryptocurrency Tax Services",
     "provider": {
       "@type": "ProfessionalService",
-      "name": "KoinKeepers"
+      "name": "KoinKeepers",
+      "url": "https://koin-keepers.co.uk"
     },
     "areaServed": {
       "@type": "Country",
@@ -76,7 +134,9 @@ const Index = () => {
             "@type": "Service",
             "name": "Crypto Tax Return Preparation",
             "description": "Complete cryptocurrency tax return preparation and filing service"
-          }
+          },
+          "price": "299.00",
+          "priceCurrency": "GBP"
         },
         {
           "@type": "Offer",
@@ -84,7 +144,19 @@ const Index = () => {
             "@type": "Service",
             "name": "Tax Consultation",
             "description": "Expert cryptocurrency tax consultation and planning"
-          }
+          },
+          "price": "399.00",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "HMRC Compliance",
+            "description": "Ensure full compliance with HMRC regulations for cryptocurrency"
+          },
+          "price": "349.00",
+          "priceCurrency": "GBP"
         }
       ]
     }
@@ -114,6 +186,9 @@ const Index = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://koin-keepers.co.uk/" />
         
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </script>

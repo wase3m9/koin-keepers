@@ -10,6 +10,25 @@ import { getServiceSchema } from "@/components/services/ServicesSchema";
 
 const Services = () => {
   const serviceSchema = getServiceSchema();
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://koin-keepers.co.uk/services"
+      }
+    ]
+  };
 
   return (
     <>
@@ -22,6 +41,9 @@ const Services = () => {
         
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
       
