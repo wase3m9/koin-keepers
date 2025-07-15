@@ -27,7 +27,7 @@ export const Hero = () => {
 
   return (
     <>
-      <main className="relative py-20 sm:py-32 overflow-hidden">
+      <main className="relative py-20 sm:py-32 overflow-hidden bg-gradient-to-br from-gray-900 to-black">
         <ParticleBackground />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/20 z-0 mix-blend-multiply" />
         
