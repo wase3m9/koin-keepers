@@ -6,18 +6,18 @@ export const Features = () => {
   const features = [
     {
       icon: Shield,
-      title: "Expert Guidance",
-      description: "Professional advice from certified crypto tax specialists",
+      title: "Expert HMRC Guidance",
+      description: "Professional crypto tax advice from certified specialists who understand HMRC regulations for Bitcoin, Ethereum, and Cardano",
     },
     {
       icon: Calculator,
-      title: "Accurate Calculations",
-      description: "Precise tax computations following HMRC guidelines",
+      title: "Accurate Tax Return Calculations",
+      description: "Precise crypto tax computations following HMRC guidelines, ensuring your tax return is compliant and optimized",
     },
     {
       icon: Clock,
-      title: "Time Saving",
-      description: "Focus on your investments while we handle the paperwork",
+      title: "Time Saving Tax Services",
+      description: "Focus on your cryptocurrency investments while we handle every step of your taxes and consultation needs",
     },
   ];
 
@@ -32,12 +32,12 @@ export const Features = () => {
           className="text-center mb-16"
         >
           <h2 id="features-heading" className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-            Your Trusted Partner
+            Your Trusted Crypto Tax Partner
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Our team of dedicated crypto tax specialists and accountants is here
-            to guide you through every aspect of managing your cryptocurrency tax
-            obligations.
+            to guide you through every step of managing your cryptocurrency taxes
+            and HMRC obligations.
           </p>
         </motion.div>
 

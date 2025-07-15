@@ -7,26 +7,26 @@ export const QuickServices = () => {
   const services = [
     {
       icon: Calculator,
-      title: "Crypto Tax Report",
-      description: "Comprehensive reporting of your crypto transactions",
+      title: "Crypto Tax Return Services",
+      description: "Comprehensive tax return preparation for Bitcoin, Cardano, and all cryptocurrency transactions",
       color: "text-black"
     },
     {
       icon: Shield,
-      title: "Crypto Tax Review",
-      description: "Expert review of your crypto tax documentation",
+      title: "Bitcoin & Cardano Tax Review",
+      description: "Expert review of your crypto taxes documentation and HMRC compliance consultation",
       color: "text-black"
     },
     {
       icon: Clock,
-      title: "Tax Return",
-      description: "Professional preparation and filing with HMRC directly",
+      title: "Tax Return Filing",
+      description: "Professional preparation and filing with HMRC directly - every step handled for you",
       color: "text-black"
     },
     {
       icon: DollarSign,
-      title: "Tax Advisory",
-      description: "Strategic tax planning and consultation",
+      title: "Crypto Tax Consultation",
+      description: "Strategic tax planning consultation and advice for cryptocurrency investors",
       color: "text-black"
     }
   ];
@@ -44,7 +44,7 @@ export const QuickServices = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-            Our Services
+            Our Crypto Tax Services
           </h2>
         </motion.div>
         

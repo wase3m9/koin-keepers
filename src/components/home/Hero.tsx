@@ -35,7 +35,7 @@ export const Hero = () => {
           <div className="flex justify-center mb-8">
             <HeroPill 
               href="/contact"
-              announcement="🗓️ Deadline"
+              announcement="🗓️ Tax Return Deadline"
               label={`${daysLeft} days until UK Tax Return (31 Jan 2026)`}
             />
           </div>
@@ -45,10 +45,10 @@ export const Hero = () => {
           <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto drop-shadow">
             No more tax software hassles or compliance headaches. We remove all the
             stress and uncertainty caused by constantly changing crypto tax
-            regulations.
+            regulations. From Bitcoin to Cardano, we handle every step of your tax return.
           </p>
           <Button asChild size="lg" className="animate-fade-in bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary shadow-xl">
-            <Link to="/contact" aria-label="Book a consultation for crypto tax services">
+            <Link to="/contact" aria-label="Book a crypto tax consultation">
               Book a Consultation <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </Button>

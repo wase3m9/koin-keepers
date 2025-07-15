@@ -5,33 +5,33 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 export const ServiceList = () => {
   const services = [
     {
-      title: "Tax Preparation",
-      description: "Comprehensive cryptocurrency tax preparation services tailored to your portfolio.",
+      title: "Crypto Tax Return Preparation",
+      description: "Comprehensive cryptocurrency tax return services tailored to your Bitcoin and Cardano portfolio.",
       icon: Receipt
     },
     {
-      title: "Tax Planning",
-      description: "Strategic tax planning to optimize your crypto investments and minimize liabilities.",
+      title: "Tax Planning Consultation",
+      description: "Strategic crypto tax planning consultation to optimize your investments and minimize tax liabilities.",
       icon: Calculator
     },
     {
-      title: "Compliance Services",
-      description: "Stay compliant with all cryptocurrency tax regulations and requirements.",
+      title: "HMRC Compliance Services",
+      description: "Stay compliant with all HMRC cryptocurrency tax regulations and requirements. Every step guided.",
       icon: ShieldCheck
     },
     {
-      title: "Transaction Analysis",
-      description: "Detailed analysis of your cryptocurrency transactions for accurate reporting.",
+      title: "Bitcoin & Cardano Analysis",
+      description: "Detailed analysis of your Bitcoin and Cardano transactions for accurate tax return reporting.",
       icon: LineChart
     },
     {
-      title: "Payment Solutions",
-      description: "Flexible payment options for all our cryptocurrency tax services.",
+      title: "Crypto Tax Payment Solutions",
+      description: "Flexible payment options for all our cryptocurrency tax services and consultation packages.",
       icon: DollarSign
     },
     {
-      title: "Technical Support",
-      description: "Expert technical support for all your cryptocurrency tax needs.",
+      title: "Technical Tax Support",
+      description: "Expert technical support for all your cryptocurrency taxes needs and HMRC queries.",
       icon: HeadphonesIcon
     }
   ];
