@@ -48,6 +48,7 @@ const Calculator = () => {
       <Helmet>
         <title>Crypto Tax Calculator | KoinKeepers</title>
         <meta name="description" content="Calculate your cryptocurrency capital gains tax easily with our UK tax calculator." />
+        <link rel="canonical" href="https://koin-keepers.co.uk/calculator" />
       </Helmet>
       
       <div className="min-h-screen py-12 bg-[#F2FCE2]/40">

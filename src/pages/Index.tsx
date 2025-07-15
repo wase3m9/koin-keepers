@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Hero } from "@/components/home/Hero";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
@@ -169,6 +168,8 @@ const Index = () => {
         <meta name="description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
         <meta name="keywords" content="crypto tax London, cryptocurrency accountants, bitcoin tax advice, ethereum tax London, crypto tax service London, HMRC crypto compliance, cryptocurrency accounting UK, crypto tax experts" />
         <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/" />
         
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/" />
@@ -181,10 +182,6 @@ const Index = () => {
         <meta property="twitter:title" content="KoinKeepers – Crypto Tax Services for UK Investors & Traders" />
         <meta property="twitter:description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
         <meta property="twitter:image" content="/og-image.png" />
-
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://koin-keepers.co.uk/" />
         
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
