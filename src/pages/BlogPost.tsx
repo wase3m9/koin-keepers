@@ -4,6 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { BlogHeader } from "../components/blog/BlogHeader";
 import { BlogContent } from "../components/blog/BlogContent";
 import { BlogArticleHeader } from "../components/blog/BlogArticleHeader";
+import { BlogSocialShare } from "../components/blog/BlogSocialShare";
+import { BlogNavigation } from "../components/blog/BlogNavigation";
 import { blogPosts } from "../data/blogPosts";
 import { Helmet } from 'react-helmet-async';
 
@@ -27,6 +29,7 @@ const BlogPost = () => {
   }
 
   const publishDate = new Date(post.date).toISOString();
+  const currentUrl = `${window.location.origin}/blog/${id}`;
 
   return (
     <>
@@ -58,6 +61,9 @@ const BlogPost = () => {
           />
           
           <BlogContent content={post.content} />
+          
+          <BlogSocialShare title={post.title} url={currentUrl} />
+          <BlogNavigation currentPostId={post.id} />
         </article>
       </div>
     </>
