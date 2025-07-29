@@ -11,12 +11,26 @@ export const cryptoTaxScenariosPost: BlogPost = {
         <p class="text-blue-800">In most cases, you'll pay Capital Gains Tax when you sell, trade, or spend cryptocurrency for a profit. However, the specific tax treatment depends on your individual circumstances and how HMRC classifies your activities.</p>
       </div>
 
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
+        <ul class="space-y-2">
+          <li><a href="#when-tax-triggered" class="text-primary hover:text-primary/80">When Tax is Triggered</a></li>
+          <li><a href="#common-scenarios" class="text-primary hover:text-primary/80">Common Scenarios: Do You Owe Tax?</a></li>
+          <li><a href="#understanding-tax-rate" class="text-primary hover:text-primary/80">Understanding Your Tax Rate</a></li>
+          <li><a href="#special-situations" class="text-primary hover:text-primary/80">Special Situations and Exemptions</a></li>
+          <li><a href="#red-flags" class="text-primary hover:text-primary/80">Red Flags: When You Definitely Owe Tax</a></li>
+          <li><a href="#calculating-tax-bill" class="text-primary hover:text-primary/80">Calculating Your Actual Tax Bill</a></li>
+          <li><a href="#what-to-do" class="text-primary hover:text-primary/80">What You Need to Do</a></li>
+          <li><a href="#faq" class="text-primary hover:text-primary/80">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
       <div class="prose prose-lg max-w-none">
         <p>One of the most confusing aspects of cryptocurrency for UK investors is understanding when you actually owe tax. With HMRC's guidance evolving and different rules applying to different situations, it's easy to get lost in the complexity.</p>
 
         <p>The reality is that <strong>most crypto activity in the UK triggers a tax event</strong>, but the amount you owe (if any) depends on several factors including your total gains, allowances, and how HMRC classifies your trading activity.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Fundamental Rule: When Tax is Triggered</h2>
+        <h2 id="when-tax-triggered" class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Fundamental Rule: When Tax is Triggered</h2>
         
         <p>According to HMRC, you potentially owe tax whenever you <strong>"dispose"</strong> of cryptocurrency. This includes:</p>
 
@@ -32,7 +46,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
           <p class="text-amber-800"><strong>Important:</strong> Simply buying and holding cryptocurrency doesn't trigger tax. You only potentially owe tax when you dispose of it.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Scenarios: Do You Owe Tax?</h2>
+        <h2 id="common-scenarios" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Scenarios: Do You Owe Tax?</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Scenario 1: Buying and Holding</h3>
         
@@ -79,7 +93,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
           <p class="text-red-800">HMRC may classify this as trading income rather than capital gains, resulting in higher tax rates.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Understanding Your Tax Rate</h2>
+        <h2 id="understanding-tax-rate" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Understanding Your Tax Rate</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Capital Gains Tax Rates (2024-25)</h3>
         
@@ -107,7 +121,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
           <p class="text-amber-800"><strong>Income Tax rates are typically higher:</strong> 20%, 40%, or 45% depending on your total income, with no annual allowance.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Special Situations and Exemptions</h2>
+        <h2 id="special-situations" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Special Situations and Exemptions</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Gifts Between Spouses</h3>
         
@@ -131,7 +145,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
           <li>Liquidity pool activities may trigger multiple disposals</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Flags: When You Definitely Owe Tax</h2>
+        <h2 id="red-flags" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Red Flags: When You Definitely Owe Tax</h2>
 
         <p>You almost certainly have a tax liability if:</p>
 
@@ -145,7 +159,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
           </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Calculating Your Actual Tax Bill</h2>
+        <h2 id="calculating-tax-bill" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Calculating Your Actual Tax Bill</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Step-by-Step Calculation</h3>
         
@@ -163,7 +177,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
           Tax at 10% (basic rate): £5,000 × 10% = £500</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">What You Need to Do</h2>
+        <h2 id="what-to-do" class="text-2xl font-bold text-gray-900 mt-8 mb-4">What You Need to Do</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Record Keeping Requirements</h3>
         
@@ -208,7 +222,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
       </div>
 
       <div class="bg-gray-50 p-8 rounded-lg mt-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <h2 id="faq" class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         
         <div class="space-y-6">
           <div>
@@ -242,7 +256,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
   author: "KoinKeepers Team",
   date: "January 20, 2025",
   category: "Tax Planning",
-  image: "/lovable-uploads/crypto-tax-scenarios.jpg",
+  image: "/src/assets/crypto-tax-scenarios.jpg",
   keywords: "crypto tax UK, cryptocurrency tax scenarios, do I owe tax on crypto, HMRC crypto rules, capital gains tax crypto, trading tax UK",
   description: "Practical guide to UK cryptocurrency tax scenarios. Learn when you owe tax on crypto activities, with real examples and clear explanations of HMRC rules."
 };

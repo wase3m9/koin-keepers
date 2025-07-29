@@ -11,12 +11,25 @@ export const whatIsCryptocurrencyPost: BlogPost = {
         <p class="text-blue-800">Cryptocurrency is digital money that uses advanced encryption to secure transactions. Unlike traditional currency, it's decentralised and operates independently of banks or governments. In the UK, crypto is treated as property for tax purposes, not currency.</p>
       </div>
 
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
+        <ul class="space-y-2">
+          <li><a href="#what-is-cryptocurrency" class="text-primary hover:text-primary/80">What is Cryptocurrency?</a></li>
+          <li><a href="#how-cryptocurrency-works" class="text-primary hover:text-primary/80">How Does Cryptocurrency Work?</a></li>
+          <li><a href="#getting-started-uk" class="text-primary hover:text-primary/80">Getting Started: What UK Beginners Need to Know</a></li>
+          <li><a href="#uk-regulatory-landscape" class="text-primary hover:text-primary/80">The UK Regulatory Landscape</a></li>
+          <li><a href="#common-misconceptions" class="text-primary hover:text-primary/80">Common Misconceptions About Cryptocurrency</a></li>
+          <li><a href="#risks-considerations" class="text-primary hover:text-primary/80">Risks and Considerations</a></li>
+          <li><a href="#faq" class="text-primary hover:text-primary/80">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
       <div class="prose prose-lg max-w-none">
         <p>If you've been hearing about Bitcoin, Ethereum, or other cryptocurrencies and wondering what all the fuss is about, you're not alone. With over 2.3 million UK adults now owning cryptocurrency according to the FCA, it's becoming increasingly mainstream.</p>
 
         <p>But what exactly is cryptocurrency? And more importantly for UK residents, what do you need to know before diving in?</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">What is Cryptocurrency?</h2>
+        <h2 id="what-is-cryptocurrency" class="text-2xl font-bold text-gray-900 mt-8 mb-4">What is Cryptocurrency?</h2>
         
         <p>Think of cryptocurrency as <strong>digital cash</strong> that exists only online. But unlike the pounds in your bank account, cryptocurrency doesn't rely on banks or the Bank of England to verify transactions.</p>
 
@@ -29,7 +42,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
           <li><strong>Global:</strong> Can be sent anywhere in the world, 24/7</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How Does Cryptocurrency Work?</h2>
+        <h2 id="how-cryptocurrency-works" class="text-2xl font-bold text-gray-900 mt-8 mb-4">How Does Cryptocurrency Work?</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">The Blockchain Explained Simply</h3>
         
@@ -54,7 +67,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
           </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Getting Started: What UK Beginners Need to Know</h2>
+        <h2 id="getting-started-uk" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Getting Started: What UK Beginners Need to Know</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Choosing a Platform</h3>
         
@@ -83,7 +96,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
           <li><strong>Never share your private keys</strong> with anyone</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The UK Regulatory Landscape</h2>
+        <h2 id="uk-regulatory-landscape" class="text-2xl font-bold text-gray-900 mt-8 mb-4">The UK Regulatory Landscape</h2>
 
         <p>Here's what every UK crypto investor should understand:</p>
 
@@ -106,7 +119,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
           <li>Risk warnings on marketing materials</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Misconceptions About Cryptocurrency</h2>
+        <h2 id="common-misconceptions" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Misconceptions About Cryptocurrency</h2>
 
         <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
           <h4 class="font-semibold text-red-900 mb-2">Myth: Cryptocurrency is anonymous</h4>
@@ -123,7 +136,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
           <p class="text-red-800">Reality: Modern crypto platforms are designed to be user-friendly. You don't need to understand the technical details to use cryptocurrency.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Risks and Considerations</h2>
+        <h2 id="risks-considerations" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Risks and Considerations</h2>
 
         <p>Before investing, understand these key risks:</p>
 
@@ -154,7 +167,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
       </div>
 
       <div class="bg-gray-50 p-8 rounded-lg mt-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <h2 id="faq" class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         
         <div class="space-y-6">
           <div>
@@ -188,7 +201,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
   author: "KoinKeepers Team",
   date: "January 15, 2025",
   category: "Cryptocurrency Basics",
-  image: "/lovable-uploads/what-is-crypto.jpg",
+  image: "/src/assets/what-is-cryptocurrency.jpg",
   keywords: "what is cryptocurrency, cryptocurrency explained, bitcoin basics UK, crypto for beginners, digital currency guide, blockchain explained, cryptocurrency UK legal",
   description: "Complete beginner's guide to cryptocurrency in the UK. Learn what crypto is, how it works, and what you need to know about regulations, taxes, and getting started safely."
 };

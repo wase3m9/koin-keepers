@@ -11,12 +11,27 @@ export const cryptoTaxObligations2025Post: BlogPost = {
         <p class="text-blue-800">The Capital Gains Tax annual allowance remains at £3,000 for 2024-25. HMRC has updated guidance on DeFi activities and introduced new reporting requirements for crypto businesses.</p>
       </div>
 
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
+        <ul class="space-y-2">
+          <li><a href="#key-changes-2025" class="text-primary hover:text-primary/80">Key Changes for 2025</a></li>
+          <li><a href="#tax-rates-allowances" class="text-primary hover:text-primary/80">Tax Rates and Allowances for 2025</a></li>
+          <li><a href="#determining-tax-treatment" class="text-primary hover:text-primary/80">Determining Your Tax Treatment</a></li>
+          <li><a href="#specific-tax-scenarios" class="text-primary hover:text-primary/80">Specific Tax Scenarios for 2025</a></li>
+          <li><a href="#compliance-requirements" class="text-primary hover:text-primary/80">Enhanced Compliance Requirements</a></li>
+          <li><a href="#self-assessment" class="text-primary hover:text-primary/80">Self Assessment Requirements</a></li>
+          <li><a href="#penalties-enforcement" class="text-primary hover:text-primary/80">Penalties and Enforcement</a></li>
+          <li><a href="#best-practices" class="text-primary hover:text-primary/80">Best Practices for 2025</a></li>
+          <li><a href="#faq" class="text-primary hover:text-primary/80">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
       <div class="prose prose-lg max-w-none">
         <p>As cryptocurrency becomes increasingly mainstream in the UK, understanding your tax obligations has never been more important. With HMRC tightening compliance requirements and introducing new guidance, 2025 brings both clarity and additional responsibilities for crypto investors.</p>
 
         <p>Whether you're a casual investor or active trader, this comprehensive guide covers everything you need to know about cryptocurrency tax obligations in 2025, including the latest rule changes and what they mean for your tax planning.</p>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Key Changes for 2025</h2>
+        <h2 id="key-changes-2025" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Key Changes for 2025</h2>
         
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Updated HMRC Guidance</h3>
         
@@ -44,7 +59,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           <p class="text-amber-800"><strong>Important:</strong> The reduced Capital Gains Tax allowance of £3,000 means more crypto investors will need to file Self Assessment returns in 2025.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Tax Rates and Allowances for 2025</h2>
+        <h2 id="tax-rates-allowances" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Tax Rates and Allowances for 2025</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Capital Gains Tax Rates</h3>
         
@@ -71,7 +86,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Determining Your Tax Treatment</h2>
+        <h2 id="determining-tax-treatment" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Determining Your Tax Treatment</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Investment vs Trading: The HMRC Tests</h3>
         
@@ -113,7 +128,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           <li><strong>Marketing activities:</strong> Promoting crypto services or expertise</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Specific Tax Scenarios for 2025</h2>
+        <h2 id="specific-tax-scenarios" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Specific Tax Scenarios for 2025</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">DeFi and Yield Farming</h3>
         
@@ -152,7 +167,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           <li><strong>Utility NFTs:</strong> Complex treatment depending on use case</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Enhanced Compliance Requirements</h2>
+        <h2 id="compliance-requirements" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Enhanced Compliance Requirements</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Record Keeping Standards</h3>
         
@@ -181,7 +196,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           <li><strong>Lost or stolen crypto:</strong> Evidence requirements for claiming losses</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Self Assessment Requirements</h2>
+        <h2 id="self-assessment" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Self Assessment Requirements</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">When You Must File</h3>
         
@@ -208,7 +223,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Penalties and Enforcement</h2>
+        <h2 id="penalties-enforcement" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Penalties and Enforcement</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">HMRC's Enhanced Powers</h3>
         
@@ -233,7 +248,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
           </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Best Practices for 2025</h2>
+        <h2 id="best-practices" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Best Practices for 2025</h2>
 
         <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Proactive Compliance Strategy</h3>
         
@@ -287,7 +302,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
       </div>
 
       <div class="bg-gray-50 p-8 rounded-lg mt-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <h2 id="faq" class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         
         <div class="space-y-6">
           <div>
@@ -321,7 +336,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
   author: "KoinKeepers Team",
   date: "January 25, 2025",
   category: "Tax Compliance",
-  image: "/lovable-uploads/crypto-tax-2025.jpg",
+  image: "/src/assets/crypto-tax-obligations-2025.jpg",
   keywords: "cryptocurrency tax 2025 UK, HMRC crypto guidance 2025, capital gains tax crypto, crypto tax compliance, digital asset taxation UK, crypto tax obligations",
   description: "Comprehensive guide to UK cryptocurrency tax obligations for 2025. Updated HMRC rules, compliance requirements, and tax planning strategies for crypto investors."
 };
