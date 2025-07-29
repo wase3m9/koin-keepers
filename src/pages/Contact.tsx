@@ -1,25 +1,20 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Helmet } from 'react-helmet-async';
 import { useState } from "react";
 import { toast } from "sonner";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: "",
+    message: ""
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
       const response = await fetch('https://formsubmit.co/ajax/info@cloud-keepers.co.uk', {
         method: 'POST',
@@ -31,13 +26,17 @@ const Contact = () => {
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
-          message: formData.message,
+          message: formData.message
         })
       });
-
       if (response.ok) {
         toast.success("Message sent successfully! We'll get back to you soon.");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
       } else {
         toast.error("Failed to send message. Please try again later.");
       }
@@ -48,14 +47,17 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Contact Us - CoinKeepers Tax Services</title>
         <meta name="description" content="Get in touch with our crypto tax experts. We're here to help you with all your cryptocurrency tax needs." />
@@ -79,68 +81,31 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Name
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                    className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your name" className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="your@email.com"
-                    className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="your@email.com" className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5" />
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Subject
                   </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="How can we help?"
-                    className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
-                  />
+                  <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} required placeholder="How can we help?" className="focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Tell us more about your needs..."
-                    className="min-h-[150px] focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5"
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us more about your needs..." className="min-h-[150px] focus:ring-[#FEF7CD]/20 focus:border-[#FEF7CD]/20 bg-[#FEF7CD]/5" />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-[#FEF7CD] text-black hover:bg-[#FEF7CD]/90"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" className="w-full bg-[#FEF7CD] text-black hover:bg-[#FEF7CD]/90" disabled={isSubmitting}>
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
@@ -158,7 +123,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-2">Email</h3>
-                    <p className="text-gray-600">hodl@koin-keepers.co.uk</p>
+                    <p className="text-gray-600">info@cloud-keepers.co.uk</p>
                   </div>
                   <div>
                     <h3 className="font-medium mb-2">Phone</h3>
@@ -185,8 +150,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default Contact;
