@@ -1,20 +1,12 @@
-
 import { Link } from "react-router-dom";
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-black text-white/80">
+  return <footer className="bg-black text-white/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="space-y-3">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/c32bdb0f-2218-49ac-8e7f-81e46d8cc068.png" 
-                alt="KoinKeepers Logo" 
-                className="h-24 object-contain brightness-0 invert"
-              />
+              <img src="/lovable-uploads/c32bdb0f-2218-49ac-8e7f-81e46d8cc068.png" alt="KoinKeepers Logo" className="h-24 object-contain brightness-0 invert" />
             </div>
             <p className="text-sm text-white/60">
               Your trusted partner for crypto tax solutions.
@@ -30,18 +22,12 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/services"
-                  className="text-sm text-white/60 hover:text-primary"
-                >
+                <Link to="/services" className="text-sm text-white/60 hover:text-primary">
                   Services
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/about"
-                  className="text-sm text-white/60 hover:text-primary"
-                >
+                <Link to="/about" className="text-sm text-white/60 hover:text-primary">
                   About
                 </Link>
               </li>
@@ -52,26 +38,17 @@ export const Footer = () => {
             <h4 className="font-medium mb-2 text-white">Resources</h4>
             <ul className="space-y-1">
               <li>
-                <Link
-                  to="/blog"
-                  className="text-sm text-white/60 hover:text-primary"
-                >
+                <Link to="/blog" className="text-sm text-white/60 hover:text-primary">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/faq"
-                  className="text-sm text-white/60 hover:text-primary"
-                >
+                <Link to="/faq" className="text-sm text-white/60 hover:text-primary">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contact"
-                  className="text-sm text-white/60 hover:text-primary"
-                >
+                <Link to="/contact" className="text-sm text-white/60 hover:text-primary">
                   Contact
                 </Link>
               </li>
@@ -81,9 +58,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-medium mb-2 text-white">Contact</h4>
             <ul className="space-y-1">
-              <li className="text-sm text-white/60">
-                Email: hodl@koin-keepers.co.uk
-              </li>
+              <li className="text-sm text-white/60">Email: info@cloud-keepers.co.uk</li>
               <li className="text-sm text-white/60">Phone: +44 207 118 9799</li>
             </ul>
           </div>
@@ -96,12 +71,7 @@ export const Footer = () => {
             </p>
             <p className="text-xs text-white/60">
               © KoinKeepers is a trading name of{" "}
-              <a 
-                href="https://www.cloud-keepers.co.uk" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary underline"
-              >
+              <a href="https://www.cloud-keepers.co.uk" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
                 Cloudkeepers London Ltd
               </a>
               , a company registered in England and Wales; Reg Number 11047263
@@ -109,6 +79,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
