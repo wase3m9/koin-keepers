@@ -26,16 +26,25 @@ export const BlogNavigation = ({ currentPostId }: BlogNavigationProps) => {
         {previousPost && (
           <Card className="p-6 hover:shadow-md transition-shadow">
             <Link to={`/blog/${previousPostId}`} className="block group">
-              <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
+              <div className="flex items-center gap-2 text-muted-foreground text-sm mb-3">
                 <ChevronLeft className="w-4 h-4" />
                 <span>Previous Article</span>
               </div>
-              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                {previousPost.title}
-              </h3>
-              <p className="text-muted-foreground text-sm mt-2 line-clamp-2">
-                {previousPost.excerpt}
-              </p>
+              <div className="flex gap-4">
+                <img 
+                  src={previousPost.image} 
+                  alt={previousPost.title}
+                  className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
+                />
+                <div className="flex-1">
+                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight">
+                    {previousPost.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs mt-2 line-clamp-2">
+                    {previousPost.excerpt}
+                  </p>
+                </div>
+              </div>
             </Link>
           </Card>
         )}
@@ -43,16 +52,25 @@ export const BlogNavigation = ({ currentPostId }: BlogNavigationProps) => {
         {nextPost && (
           <Card className="p-6 hover:shadow-md transition-shadow">
             <Link to={`/blog/${nextPostId}`} className="block group">
-              <div className="flex items-center justify-end gap-2 text-muted-foreground text-sm mb-2">
+              <div className="flex items-center justify-end gap-2 text-muted-foreground text-sm mb-3">
                 <span>Next Article</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
-              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-right">
-                {nextPost.title}
-              </h3>
-              <p className="text-muted-foreground text-sm mt-2 line-clamp-2 text-right">
-                {nextPost.excerpt}
-              </p>
+              <div className="flex gap-4">
+                <div className="flex-1 text-right">
+                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight">
+                    {nextPost.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs mt-2 line-clamp-2">
+                    {nextPost.excerpt}
+                  </p>
+                </div>
+                <img 
+                  src={nextPost.image} 
+                  alt={nextPost.title}
+                  className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
+                />
+              </div>
             </Link>
           </Card>
         )}
