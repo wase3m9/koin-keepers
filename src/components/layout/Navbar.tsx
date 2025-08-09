@@ -64,22 +64,25 @@ export const Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-md text-white hover:text-primary"
+                className="inline-flex items-center justify-center h-11 w-11 rounded-md text-white hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
               >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
+                {isOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation Menu */}
           {isOpen && (
-            <div className="md:hidden bg-black">
+            <div id="mobile-menu" className="md:hidden bg-black">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
                     to={item.path}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary active:text-primary"
+                    className="block px-4 py-3.5 rounded-md text-lg font-medium text-white hover:text-primary active:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -87,15 +90,15 @@ export const Navbar = () => {
                 ))}
                 <Link
                   to="/calculator"
-                  className="flex items-center px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary active:text-primary"
+                  className="flex items-center px-4 py-3.5 rounded-md text-lg font-medium text-white hover:text-primary active:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Calculator className="w-5 h-5 mr-2" />
+                  <Calculator className="w-7 h-7 mr-3" />
                   Calculator
                 </Link>
                 <Button 
                   asChild 
-                  className="w-full mt-4 bg-primary text-black hover:bg-primary/90"
+                  className="w-full mt-4 h-12 text-base bg-primary text-black hover:bg-primary/90"
                 >
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Contact Us

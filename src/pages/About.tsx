@@ -12,20 +12,22 @@ const About = () => {
         <title>About KoinKeepers - Your Trusted Cryptocurrency Tax Partner</title>
         <meta name="description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
         <meta name="keywords" content="crypto tax experts, cryptocurrency accounting, blockchain tax specialists, crypto tax company, about koinkeepers" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/about" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://koinkeepers.com/about" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/about" />
         <meta property="og:title" content="About KoinKeepers - Your Trusted Cryptocurrency Tax Partner" />
         <meta property="og:description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image" content="/favicon.ico" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://koinkeepers.com/about" />
+        <meta property="twitter:url" content="https://koin-keepers.co.uk/about" />
         <meta property="twitter:title" content="About KoinKeepers - Your Trusted Cryptocurrency Tax Partner" />
         <meta property="twitter:description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
-        <meta property="twitter:image" content="/og-image.png" />
+        <meta property="twitter:image" content="/favicon.ico" />
       </Helmet>
 
       <div className="animate-fade-in">

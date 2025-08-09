@@ -38,6 +38,16 @@ const Services = () => {
         <meta name="keywords" content="crypto tax service, cryptocurrency tax preparation, bitcoin tax planning, HMRC crypto compliance, crypto accountants London" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://koin-keepers.co.uk/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/services" />
+        <meta property="og:title" content="Cryptocurrency Tax Services | KoinKeepers London" />
+        <meta property="og:description" content="Expert cryptocurrency tax services including tax preparation, planning, and HMRC compliance consultation from certified specialists in London." />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://koin-keepers.co.uk/services" />
+        <meta name="twitter:title" content="Cryptocurrency Tax Services | KoinKeepers London" />
+        <meta name="twitter:description" content="Expert cryptocurrency tax services including tax preparation, planning, and HMRC compliance consultation from certified specialists in London." />
+        <meta name="twitter:image" content="/favicon.ico" />
         
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}

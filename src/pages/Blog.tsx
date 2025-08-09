@@ -52,11 +52,11 @@ const Blog = () => {
         <meta property="og:description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice. Get the latest insights on crypto taxation, DeFi, NFTs, and more." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/blog" />
-        <meta property="og:image" content="https://koin-keepers.co.uk/og-image.png" />
+        <meta property="og:image" content="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cryptocurrency Tax Blog | Expert Insights & Updates 2024" />
         <meta name="twitter:description" content="Stay informed about cryptocurrency tax regulations, compliance updates, and expert advice." />
-        <meta name="twitter:image" content="https://koin-keepers.co.uk/og-image.png" />
+        <meta name="twitter:image" content="/favicon.ico" />
         <link rel="canonical" href="https://koin-keepers.co.uk/blog" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="KoinKeepers" />

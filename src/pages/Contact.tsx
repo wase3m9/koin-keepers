@@ -59,9 +59,21 @@ const Contact = () => {
   };
   return <>
       <Helmet>
-        <title>Contact Us - CoinKeepers Tax Services</title>
+        <title>Contact Us - KoinKeepers Crypto Tax Experts</title>
         <meta name="description" content="Get in touch with our crypto tax experts. We're here to help you with all your cryptocurrency tax needs." />
         <meta name="keywords" content="crypto tax contact, cryptocurrency tax help, crypto tax consultation, crypto tax support" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://koin-keepers.co.uk/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/contact" />
+        <meta property="og:title" content="Contact Us - KoinKeepers Crypto Tax Experts" />
+        <meta property="og:description" content="Get in touch with our crypto tax experts. We're here to help you with all your cryptocurrency tax needs." />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://koin-keepers.co.uk/contact" />
+        <meta name="twitter:title" content="Contact Us - KoinKeepers Crypto Tax Experts" />
+        <meta name="twitter:description" content="Get in touch with our crypto tax experts. We're here to help you with all your cryptocurrency tax needs." />
+        <meta name="twitter:image" content="/favicon.ico" />
       </Helmet>
 
       <div className="min-h-screen bg-white">

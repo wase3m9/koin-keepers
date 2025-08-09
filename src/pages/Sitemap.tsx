@@ -24,6 +24,16 @@ const Sitemap = () => {
         <meta name="description" content="Complete sitemap of KoinKeepers website pages and resources." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://koin-keepers.co.uk/sitemap" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/sitemap" />
+        <meta property="og:title" content="Sitemap | KoinKeepers" />
+        <meta property="og:description" content="Complete sitemap of KoinKeepers website pages and resources." />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://koin-keepers.co.uk/sitemap" />
+        <meta name="twitter:title" content="Sitemap | KoinKeepers" />
+        <meta name="twitter:description" content="Complete sitemap of KoinKeepers website pages and resources." />
+        <meta name="twitter:image" content="/favicon.ico" />
       </Helmet>
 
       <div className="min-h-screen bg-white py-20">

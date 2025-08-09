@@ -86,6 +86,16 @@ const FAQ = () => {
         <meta name="keywords" content="crypto tax FAQ, cryptocurrency tax questions, HMRC crypto guidelines, UK crypto tax help" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://koin-keepers.co.uk/faq" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://koin-keepers.co.uk/faq" />
+        <meta property="og:title" content="FAQ | KoinKeepers - Crypto Tax Services" />
+        <meta property="og:description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://koin-keepers.co.uk/faq" />
+        <meta name="twitter:title" content="FAQ | KoinKeepers - Crypto Tax Services" />
+        <meta name="twitter:description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
+        <meta name="twitter:image" content="/favicon.ico" />
         
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}

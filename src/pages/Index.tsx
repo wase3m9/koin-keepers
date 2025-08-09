@@ -175,13 +175,13 @@ const Index = () => {
         <meta property="og:url" content="https://koin-keepers.co.uk/" />
         <meta property="og:title" content="KoinKeepers – Crypto Tax Services for UK Investors & Traders" />
         <meta property="og:description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image" content="/favicon.ico" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://koin-keepers.co.uk/" />
         <meta property="twitter:title" content="KoinKeepers – Crypto Tax Services for UK Investors & Traders" />
         <meta property="twitter:description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
-        <meta property="twitter:image" content="/og-image.png" />
+        <meta property="twitter:image" content="/favicon.ico" />
         
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
