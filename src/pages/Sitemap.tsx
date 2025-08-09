@@ -5,6 +5,32 @@ import { Button } from '@/components/ui/button';
 import { Download, ExternalLink } from 'lucide-react';
 
 const Sitemap = () => {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sitemap",
+    "description": "Complete sitemap of KoinKeepers cryptocurrency tax services website",
+    "url": "https://koin-keepers.co.uk/sitemap"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sitemap",
+        "item": "https://koin-keepers.co.uk/sitemap"
+      }
+    ]
+  };
   const sitemapContent = generateSitemap();
   
   const siteLinks = [
@@ -34,6 +60,13 @@ const Sitemap = () => {
         <meta name="twitter:title" content="Sitemap | KoinKeepers" />
         <meta name="twitter:description" content="Complete sitemap of KoinKeepers website pages and resources." />
         <meta name="twitter:image" content="/favicon.ico" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-white py-20">

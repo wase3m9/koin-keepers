@@ -6,6 +6,49 @@ import { Link } from "react-router-dom";
 import { Partners } from "@/components/home/Partners";
 
 const About = () => {
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About KoinKeepers",
+    "description": "Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide.",
+    "url": "https://koin-keepers.co.uk/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "KoinKeepers",
+      "foundingDate": "2020",
+      "description": "Leading cryptocurrency tax specialists providing expert consultation, tax preparation, and HMRC compliance services across the UK",
+      "numberOfEmployees": "10-50",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "United Kingdom"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "KoinKeepers Founding Team"
+      }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://koin-keepers.co.uk/about"
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -28,6 +71,13 @@ const About = () => {
         <meta property="twitter:title" content="About KoinKeepers - Your Trusted Cryptocurrency Tax Partner" />
         <meta property="twitter:description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
         <meta property="twitter:image" content="/favicon.ico" />
+
+        <script type="application/ld+json">
+          {JSON.stringify(aboutPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       <div className="animate-fade-in">

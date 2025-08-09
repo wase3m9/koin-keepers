@@ -30,6 +30,63 @@ const BlogPost = () => {
 
   const publishDate = new Date(post.date).toISOString();
   const currentUrl = `${window.location.origin}/blog/${id}`;
+  
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.description,
+    "image": {
+      "@type": "ImageObject",
+      "url": post.image
+    },
+    "datePublished": publishDate,
+    "dateModified": publishDate,
+    "author": {
+      "@type": "Organization",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "KoinKeepers",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://koin-keepers.co.uk/favicon.ico"
+      }
+    },
+    "url": currentUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    },
+    "articleSection": post.category,
+    "keywords": post.keywords
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://koin-keepers.co.uk/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": currentUrl
+      }
+    ]
+  };
 
   return (
     <>
@@ -42,6 +99,13 @@ const BlogPost = () => {
         date={post.date}
         publishDate={publishDate}
       />
+      
+      <script type="application/ld+json">
+        {JSON.stringify(articleSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link

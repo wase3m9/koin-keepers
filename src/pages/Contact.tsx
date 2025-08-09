@@ -5,6 +5,44 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from "react";
 import { toast } from "sonner";
 const Contact = () => {
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact KoinKeepers",
+    "description": "Get in touch with KoinKeepers for cryptocurrency tax consultation and services. We're here to help with all your crypto tax needs.",
+    "url": "https://koin-keepers.co.uk/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "KoinKeepers",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-20-1234-5678",
+        "email": "info@koin-keepers.co.uk",
+        "contactType": "customer service",
+        "areaServed": "GB",
+        "availableLanguage": "English"
+      }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://koin-keepers.co.uk/contact"
+      }
+    ]
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -74,6 +112,13 @@ const Contact = () => {
         <meta name="twitter:title" content="Contact Us - KoinKeepers Crypto Tax Experts" />
         <meta name="twitter:description" content="Get in touch with our crypto tax experts. We're here to help you with all your cryptocurrency tax needs." />
         <meta name="twitter:image" content="/favicon.ico" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(contactPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-white">

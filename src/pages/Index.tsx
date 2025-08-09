@@ -10,13 +10,110 @@ import { CTASection } from "@/components/home/CTASection";
 import FAQ from "./FAQ";
 
 const Index = () => {
-  // LocalBusiness schema with more detailed information
+  // Organization schema for the homepage
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KoinKeepers",
+    "alternateName": "KoinKeepers Crypto Tax Services",
+    "description": "Leading cryptocurrency tax specialists providing expert consultation, tax preparation, and HMRC compliance services across the UK",
+    "url": "https://koin-keepers.co.uk",
+    "logo": "https://koin-keepers.co.uk/favicon.ico",
+    "image": "https://koin-keepers.co.uk/favicon.ico",
+    "foundingDate": "2020",
+    "founder": {
+      "@type": "Person",
+      "name": "KoinKeepers Founding Team"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Fintech Avenue",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "EC2A 4NE",
+      "addressCountry": "GB"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+44-20-1234-5678",
+        "contactType": "customer service",
+        "areaServed": "GB",
+        "availableLanguage": "English"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "info@koin-keepers.co.uk",
+        "contactType": "customer service"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/koinkeepers",
+      "https://twitter.com/koinkeepers"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cryptocurrency Tax Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Crypto Tax Consultation",
+            "description": "Expert cryptocurrency tax advice and planning"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tax Preparation",
+            "description": "Professional crypto tax return preparation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "HMRC Compliance",
+            "description": "Ensure full compliance with UK tax regulations"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    }
+  };
+
+  // WebSite schema for search functionality
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KoinKeepers",
+    "url": "https://koin-keepers.co.uk",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://koin-keepers.co.uk/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // LocalBusiness schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "KoinKeepers",
     "description": "Expert cryptocurrency tax services and consultation in London, United Kingdom",
-    "image": "https://koin-keepers.co.uk/logo.png",
+    "image": "https://koin-keepers.co.uk/favicon.ico",
     "url": "https://koin-keepers.co.uk",
     "address": {
       "@type": "PostalAddress",
@@ -56,109 +153,11 @@ const Index = () => {
       "opens": "09:00",
       "closes": "17:00"
     },
-    "sameAs": [
-      "https://twitter.com/koinkeepers",
-      "https://www.linkedin.com/company/koinkeepers",
-      "https://www.facebook.com/koinkeepers"
+    "serviceType": [
+      "Cryptocurrency Tax Consultation",
+      "Tax Planning",
+      "HMRC Compliance"
     ]
-  };
-
-  // Enhanced Organization schema
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "KoinKeepers",
-    "description": "Expert cryptocurrency tax services and consultation in London, United Kingdom",
-    "image": "https://koin-keepers.co.uk/logo.png",
-    "url": "https://koin-keepers.co.uk",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Fintech Avenue",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
-      "postalCode": "EC2A 4NE",
-      "addressCountry": "United Kingdom"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "51.5074",
-      "longitude": "-0.1278"
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "London"
-      },
-      {
-        "@type": "Country",
-        "name": "United Kingdom"
-      }
-    ],
-    "priceRange": "££",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "09:00",
-      "closes": "17:00"
-    }
-  };
-
-  // Enhanced service schema with more offer details
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Cryptocurrency Tax Services",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "KoinKeepers",
-      "url": "https://koin-keepers.co.uk"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Cryptocurrency Tax Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Crypto Tax Return Preparation",
-            "description": "Complete cryptocurrency tax return preparation and filing service"
-          },
-          "price": "299.00",
-          "priceCurrency": "GBP"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Tax Consultation",
-            "description": "Expert cryptocurrency tax consultation and planning"
-          },
-          "price": "399.00",
-          "priceCurrency": "GBP"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "HMRC Compliance",
-            "description": "Ensure full compliance with HMRC regulations for cryptocurrency"
-          },
-          "price": "349.00",
-          "priceCurrency": "GBP"
-        }
-      ]
-    }
   };
 
   return (
@@ -184,13 +183,13 @@ const Index = () => {
         <meta property="twitter:image" content="/favicon.ico" />
         
         <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-        <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
+          {JSON.stringify(websiteSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
         </script>
       </Helmet>
       <div className="animate-fade-in">

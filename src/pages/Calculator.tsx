@@ -15,6 +15,44 @@ const Calculator = () => {
   const [annualIncome, setAnnualIncome] = useState<string>('');
   const [calculatedTax, setCalculatedTax] = useState<number | null>(null);
 
+  const webApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Crypto Tax Calculator",
+    "description": "Free cryptocurrency capital gains tax calculator for UK residents",
+    "url": "https://koin-keepers.co.uk/calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "KoinKeepers"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://koin-keepers.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Calculator",
+        "item": "https://koin-keepers.co.uk/calculator"
+      }
+    ]
+  };
+
   const calculateTax = () => {
     const purchase = parseFloat(purchasePrice);
     const sale = parseFloat(salePrice);
@@ -61,6 +99,13 @@ const Calculator = () => {
         <meta name="twitter:title" content="Crypto Tax Calculator | KoinKeepers" />
         <meta name="twitter:description" content="Calculate your cryptocurrency capital gains tax easily with our UK tax calculator." />
         <meta name="twitter:image" content="/favicon.ico" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(webApplicationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
       
       <div className="min-h-screen py-12 bg-[#F2FCE2]/40">
