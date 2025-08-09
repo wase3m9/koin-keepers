@@ -8,7 +8,7 @@ export const Footer = () => {
             <div className="flex items-center">
               <img src="/lovable-uploads/c32bdb0f-2218-49ac-8e7f-81e46d8cc068.png" alt="KoinKeepers Logo" className="h-24 object-contain brightness-0 invert" />
             </div>
-            <p className="text-sm text-white/60">
+            <p className="text-sm text-white/60 -mt-2 text-center">
               Your trusted partner for crypto tax solutions.
             </p>
           </div>
