@@ -1,4 +1,5 @@
 import { BlogPost } from '../../types/blog';
+import cryptoTaxScenariosImage from '../../assets/crypto-tax-scenarios.jpg';
 
 export const cryptoTaxScenariosPost: BlogPost = {
   id: 2,
@@ -256,7 +257,7 @@ export const cryptoTaxScenariosPost: BlogPost = {
   author: "KoinKeepers Team",
   date: "January 20, 2025",
   category: "Tax Planning",
-  image: "/src/assets/crypto-tax-scenarios.jpg",
+  image: cryptoTaxScenariosImage,
   keywords: "crypto tax UK, cryptocurrency tax scenarios, do I owe tax on crypto, HMRC crypto rules, capital gains tax crypto, trading tax UK",
   description: "Practical guide to UK cryptocurrency tax scenarios. Learn when you owe tax on crypto activities, with real examples and clear explanations of HMRC rules."
 };

@@ -1,4 +1,5 @@
 import { BlogPost } from '../../types/blog';
+import cryptoTaxObligations2025Image from '../../assets/crypto-tax-obligations-2025.jpg';
 
 export const cryptoTaxObligations2025Post: BlogPost = {
   id: 3,
@@ -336,7 +337,7 @@ export const cryptoTaxObligations2025Post: BlogPost = {
   author: "KoinKeepers Team",
   date: "January 25, 2025",
   category: "Tax Compliance",
-  image: "/src/assets/crypto-tax-obligations-2025.jpg",
+  image: cryptoTaxObligations2025Image,
   keywords: "cryptocurrency tax 2025 UK, HMRC crypto guidance 2025, capital gains tax crypto, crypto tax compliance, digital asset taxation UK, crypto tax obligations",
   description: "Comprehensive guide to UK cryptocurrency tax obligations for 2025. Updated HMRC rules, compliance requirements, and tax planning strategies for crypto investors."
 };

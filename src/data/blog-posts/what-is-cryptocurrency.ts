@@ -1,4 +1,5 @@
 import { BlogPost } from '../../types/blog';
+import whatIsCryptocurrencyImage from '../../assets/what-is-cryptocurrency.jpg';
 
 export const whatIsCryptocurrencyPost: BlogPost = {
   id: 1,
@@ -201,7 +202,7 @@ export const whatIsCryptocurrencyPost: BlogPost = {
   author: "KoinKeepers Team",
   date: "January 15, 2025",
   category: "Cryptocurrency Basics",
-  image: "/src/assets/what-is-cryptocurrency.jpg",
+  image: whatIsCryptocurrencyImage,
   keywords: "what is cryptocurrency, cryptocurrency explained, bitcoin basics UK, crypto for beginners, digital currency guide, blockchain explained, cryptocurrency UK legal",
   description: "Complete beginner's guide to cryptocurrency in the UK. Learn what crypto is, how it works, and what you need to know about regulations, taxes, and getting started safely."
 };
