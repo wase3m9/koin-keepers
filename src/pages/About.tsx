@@ -89,7 +89,7 @@ const About = () => {
                 About KoinKeepers
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                Since 2020, we've been helping traders and investors navigate the complex world of cryptocurrency taxation.
+                Since 2020, we've been helping UK traders and investors navigate the complex world of cryptocurrency taxation from our London headquarters.
               </p>
             </div>
           </div>
@@ -124,8 +124,8 @@ const About = () => {
                 <div className="flex justify-center">
                   <Building className="h-8 w-8 text-primary" />
                 </div>
-                <h2 className="mt-4 text-3xl font-bold">2</h2>
-                <p className="mt-2 text-gray-600">Global Offices</p>
+                <h2 className="mt-4 text-3xl font-bold">UK</h2>
+                <p className="mt-2 text-gray-600">Based & Focused</p>
               </div>
             </div>
           </div>
@@ -138,16 +138,16 @@ const About = () => {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
                 <p className="text-gray-600 mb-6">
-                  At Xrypto, we believe that cryptocurrency taxation shouldn't be a barrier to investment and innovation. Our mission is to make crypto tax compliance simple, accurate, and stress-free for everyone.
+                  At KoinKeepers, operating from our London office, we believe that cryptocurrency taxation shouldn't be a barrier to investment and innovation. Our mission is to make crypto tax compliance simple, accurate, and stress-free for UK investors and traders.
                 </p>
                 <p className="text-gray-600">
-                  We combine deep expertise in both cryptocurrency and taxation with cutting-edge technology to provide solutions that save you time, money, and peace of mind.
+                  We combine deep expertise in both UK cryptocurrency regulations and taxation with cutting-edge technology to provide solutions that save you time, money, and peace of mind.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-6">
                 <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
-                  <h3 className="text-xl font-semibold mb-3">Expertise</h3>
-                  <p className="text-gray-600">Certified tax professionals with deep crypto knowledge</p>
+                  <h3 className="text-xl font-semibold mb-3">UK Expertise</h3>
+                  <p className="text-gray-600">Certified UK tax professionals with deep crypto knowledge</p>
                 </div>
                 <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
                   <h3 className="text-xl font-semibold mb-3">Technology</h3>
@@ -158,8 +158,8 @@ const About = () => {
                   <p className="text-gray-600">Dedicated team for personalized assistance</p>
                 </div>
                 <div className="glass-card p-6 rounded-xl bg-white shadow-lg">
-                  <h3 className="text-xl font-semibold mb-3">Global</h3>
-                  <p className="text-gray-600">International tax compliance expertise</p>
+                  <h3 className="text-xl font-semibold mb-3">London Based</h3>
+                  <p className="text-gray-600">UK-focused expertise with international reach</p>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ const About = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Crypto Team</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Meet the experts who are revolutionising cryptocurrency tax compliance
+                Meet our London-based team of experts who are revolutionising UK cryptocurrency tax compliance
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -222,7 +222,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-3xl font-bold mb-6">Ready to Simplify Your Crypto Taxes?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied clients who trust KoinKeepers with their cryptocurrency tax compliance
+              Join thousands of satisfied UK clients who trust our London-based team with their cryptocurrency tax compliance
             </p>
             <Button 
               asChild 
