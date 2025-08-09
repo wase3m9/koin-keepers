@@ -89,7 +89,7 @@ const Blog = () => {
               key={post.id}
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-[#9b87f5]/20"
             >
-              <Link to={`/blog/${post.id}`} className="block">
+              <Link to={`/blog/${post.slug}`} className="block">
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={post.image}

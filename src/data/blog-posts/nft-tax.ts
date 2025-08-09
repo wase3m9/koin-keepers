@@ -2,6 +2,7 @@ import { BlogPost } from '../../types/blog';
 
 export const nftTaxPost: BlogPost = {
   id: 2,
+  slug: "nft-trading-tax-implications",
   title: "NFT Trading and Tax Implications",
   excerpt: "Discover the tax implications of NFT trading across different jurisdictions. Learn about taxable events, reporting requirements, and compliance best practices.",
   content: `

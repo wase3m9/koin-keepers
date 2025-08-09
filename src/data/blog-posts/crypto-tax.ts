@@ -2,6 +2,7 @@ import { BlogPost } from '../../types/blog';
 
 export const cryptoTaxPost: BlogPost = {
   id: 1,
+  slug: "understanding-cryptocurrency-tax-obligations-2024",
   title: "Understanding Cryptocurrency Tax Obligations in 2024",
   excerpt: "Get a comprehensive overview of cryptocurrency tax obligations and regulations in 2024. Learn about key taxable events, rates, and compliance requirements.",
   content: `

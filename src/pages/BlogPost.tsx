@@ -10,8 +10,8 @@ import { blogPosts } from "../data/blogPosts";
 import { Helmet } from 'react-helmet-async';
 
 const BlogPost = () => {
-  const { id } = useParams();
-  const post = id ? blogPosts[parseInt(id)] : null;
+  const { slug } = useParams();
+  const post = slug ? blogPosts[slug] : null;
 
   if (!post) {
     return (
@@ -29,7 +29,7 @@ const BlogPost = () => {
   }
 
   const publishDate = new Date(post.date).toISOString();
-  const currentUrl = `${window.location.origin}/blog/${id}`;
+  const currentUrl = `${window.location.origin}/blog/${slug}`;
   
   const articleSchema = {
     "@context": "https://schema.org",

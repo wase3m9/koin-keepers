@@ -2,6 +2,7 @@ import { BlogPost } from '../../types/blog';
 
 export const defiTaxPost: BlogPost = {
   id: 3,
+  slug: "defi-taxation-what-you-need-to-know",
   title: "DeFi Taxation: What You Need to Know",
   excerpt: "Navigate the complex world of DeFi taxation with our comprehensive guide. Learn about yield farming, liquidity pools, and global tax regulations.",
   content: `

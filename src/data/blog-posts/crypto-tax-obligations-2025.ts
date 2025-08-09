@@ -3,6 +3,7 @@ import cryptoTaxObligations2025Image from '../../assets/crypto-tax-obligations-2
 
 export const cryptoTaxObligations2025Post: BlogPost = {
   id: 3,
+  slug: "understanding-cryptocurrency-tax-obligations-2025",
   title: "Understanding Cryptocurrency Tax Obligations in 2025",
   excerpt: "Complete guide to UK cryptocurrency tax obligations for 2025, including new rules, rates, and compliance requirements that every crypto investor needs to know.",
   content: `

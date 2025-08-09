@@ -3,6 +3,7 @@ import cryptoTaxScenariosImage from '../../assets/crypto-tax-scenarios.jpg';
 
 export const cryptoTaxScenariosPost: BlogPost = {
   id: 2,
+  slug: "do-i-need-pay-tax-crypto-common-scenarios-explained",
   title: "Do I Need to Pay Tax on My Crypto? Common Scenarios Explained",
   excerpt: "Confused about when you owe tax on cryptocurrency? This practical guide covers the most common scenarios UK crypto holders face, with real examples and clear explanations.",
   content: `

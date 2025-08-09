@@ -9,14 +9,11 @@ interface BlogNavigationProps {
 }
 
 export const BlogNavigation = ({ currentPostId }: BlogNavigationProps) => {
-  const postIds = Object.keys(blogPosts).map(Number).sort((a, b) => a - b);
-  const currentIndex = postIds.indexOf(currentPostId);
+  const posts = Object.values(blogPosts).sort((a, b) => a.id - b.id);
+  const currentIndex = posts.findIndex(post => post.id === currentPostId);
   
-  const previousPostId = currentIndex > 0 ? postIds[currentIndex - 1] : null;
-  const nextPostId = currentIndex < postIds.length - 1 ? postIds[currentIndex + 1] : null;
-  
-  const previousPost = previousPostId ? blogPosts[previousPostId] : null;
-  const nextPost = nextPostId ? blogPosts[nextPostId] : null;
+  const previousPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 
   if (!previousPost && !nextPost) return null;
 
@@ -25,7 +22,7 @@ export const BlogNavigation = ({ currentPostId }: BlogNavigationProps) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {previousPost && (
           <Card className="p-6 hover:shadow-md transition-shadow">
-            <Link to={`/blog/${previousPostId}`} className="block group">
+            <Link to={`/blog/${previousPost.slug}`} className="block group">
               <div className="flex items-center gap-2 text-muted-foreground text-sm mb-3">
                 <ChevronLeft className="w-4 h-4" />
                 <span>Previous Article</span>
@@ -51,7 +48,7 @@ export const BlogNavigation = ({ currentPostId }: BlogNavigationProps) => {
         
         {nextPost && (
           <Card className="p-6 hover:shadow-md transition-shadow">
-            <Link to={`/blog/${nextPostId}`} className="block group">
+            <Link to={`/blog/${nextPost.slug}`} className="block group">
               <div className="flex items-center justify-end gap-2 text-muted-foreground text-sm mb-3">
                 <span>Next Article</span>
                 <ChevronRight className="w-4 h-4" />

@@ -3,6 +3,7 @@ import whatIsCryptocurrencyImage from '../../assets/what-is-cryptocurrency.jpg';
 
 export const whatIsCryptocurrencyPost: BlogPost = {
   id: 1,
+  slug: "what-is-cryptocurrency-simple-guide-beginners",
   title: "What is Cryptocurrency? A Simple Guide for Beginners",
   excerpt: "New to crypto? This beginner-friendly guide explains what cryptocurrency is, how it works, and what UK residents need to know before getting started.",
   content: `

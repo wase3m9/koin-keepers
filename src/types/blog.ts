@@ -1,6 +1,7 @@
 
 export type BlogPost = {
   id: number;
+  slug: string;
   title: string;
   content: string;
   author: string;
@@ -13,5 +14,5 @@ export type BlogPost = {
 }
 
 export type BlogPosts = {
-  [key: number]: BlogPost;
+  [key: string]: BlogPost;
 }
