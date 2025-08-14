@@ -1,5 +1,4 @@
 import { BlogPost } from '../../types/blog';
-import hmrcFineImage from '../../assets/hmrc-300-pound-crypto-fine.jpg';
 
 export const hmrcCarfFinePost: BlogPost = {
   id: 4,
@@ -295,9 +294,9 @@ export const hmrcCarfFinePost: BlogPost = {
     </div>
   `,
   author: "Sarah Mitchell, Crypto Tax Specialist",
-  date: "December 15, 2024",
+  date: "August 14, 2025",
   category: "HMRC Compliance",
-  image: hmrcFineImage,
+  image: "/lovable-uploads/87c16f31-9cc6-417d-91dc-797d0b87892f.png",
   keywords: "HMRC £300 crypto fine, CARF penalties UK, cryptocurrency tax compliance 2026, HMRC CARF requirements, UK crypto tax penalties, crypto compliance January 2026, OECD CARF framework UK",
   description: "HMRC's new £300 crypto fine starts January 2026 under CARF requirements. Learn who's at risk, what information you must provide, and how to ensure compliance before the deadline.",
   excerpt: "Starting January 1, 2026, HMRC will impose £300 fines on UK crypto holders who fail to comply with new CARF reporting requirements. This comprehensive guide explains who's at risk, what you must do, and how to avoid these automatic penalties."
