@@ -40,8 +40,8 @@ export const Hero = () => {
             />
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white drop-shadow-lg">
-            <span className="block text-3xl sm:text-4xl lg:text-5xl font-semibold mb-2 text-yellow-300">KoinKeepers</span>
-            We Do Your Crypto Taxes For You
+            <span className="sr-only">KoinKeepers</span>
+            London Crypto Accountant - We Do Your Crypto Taxes For You
           </h1>
           <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto drop-shadow">
             No more tax software hassles or compliance headaches. We remove all the
