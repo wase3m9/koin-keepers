@@ -163,24 +163,29 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>KoinKeepers - Expert Crypto Tax Services | UK Bitcoin & Digital Asset Tax Specialists</title>
-        <meta name="description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
-        <meta name="keywords" content="crypto tax London, cryptocurrency accountants, bitcoin tax advice, ethereum tax London, crypto tax service London, HMRC crypto compliance, cryptocurrency accounting UK, crypto tax experts" />
+        <title>KoinKeepers | Leading UK Cryptocurrency Tax Specialists | Bitcoin & Digital Asset Tax Services</title>
+        <meta name="description" content="KoinKeepers - Leading cryptocurrency tax specialists in London, UK. Expert crypto tax consultation, HMRC compliance, and digital asset accounting services for Bitcoin, Ethereum & all cryptocurrencies." />
+        <meta name="keywords" content="KoinKeepers, Koin Keepers, crypto tax London, cryptocurrency tax specialists UK, bitcoin tax advice London, HMRC crypto compliance, cryptocurrency accountants London, digital asset tax services" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://koin-keepers.co.uk/" />
+        <meta name="author" content="KoinKeepers" />
+        <meta name="copyright" content="KoinKeepers" />
+        <meta name="brand" content="KoinKeepers" />
         
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/" />
-        <meta property="og:title" content="KoinKeepers – Crypto Tax Services for UK Investors & Traders" />
-        <meta property="og:description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
+        <meta property="og:title" content="KoinKeepers | Leading UK Cryptocurrency Tax Specialists" />
+        <meta property="og:description" content="KoinKeepers - Leading cryptocurrency tax specialists in London, UK. Expert crypto tax consultation, HMRC compliance, and digital asset accounting services." />
         <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:site_name" content="KoinKeepers" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://koin-keepers.co.uk/" />
-        <meta property="twitter:title" content="KoinKeepers – Crypto Tax Services for UK Investors & Traders" />
-        <meta property="twitter:description" content="Got questions about crypto tax in the UK? Explore KoinKeepers' expert answers on reporting, HMRC rules, capital gains, and allowable expenses." />
+        <meta property="twitter:title" content="KoinKeepers | Leading UK Cryptocurrency Tax Specialists" />
+        <meta property="twitter:description" content="KoinKeepers - Leading cryptocurrency tax specialists in London, UK. Expert crypto tax consultation and HMRC compliance services." />
         <meta property="twitter:image" content="/favicon.ico" />
+        <meta property="twitter:site" content="@koinkeepers" />
         
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
