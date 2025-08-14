@@ -5,7 +5,9 @@ import { FileText, Calendar, User, ArrowRight } from "lucide-react";
 import { blogPosts } from "../data/blogPosts";
 
 const Blog = () => {
-  const posts = Object.values(blogPosts);
+  const posts = Object.values(blogPosts).sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   const blogSchema = {
     "@context": "https://schema.org",
