@@ -1,10 +1,8 @@
-
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Users, Trophy, Clock, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Partners } from "@/components/home/Partners";
-
 const About = () => {
   const aboutPageSchema = {
     "@context": "https://schema.org",
@@ -29,28 +27,22 @@ const About = () => {
       }
     }
   };
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://koin-keepers.co.uk"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": "https://koin-keepers.co.uk/about"
-      }
-    ]
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://koin-keepers.co.uk"
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://koin-keepers.co.uk/about"
+    }]
   };
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>About KoinKeepers - Your Trusted Cryptocurrency Tax Partner</title>
         <meta name="description" content="Learn about KoinKeepers's journey, our expert team, and our mission to simplify cryptocurrency tax compliance for traders and investors worldwide." />
@@ -88,9 +80,7 @@ const About = () => {
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
                 About KoinKeepers
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                Since 2020, we've been helping UK traders and investors navigate the complex world of cryptocurrency taxation from our London headquarters.
-              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">Since 2022, we've been helping UK traders and investors navigate the complex world of cryptocurrency taxation from our London headquarters.</p>
             </div>
           </div>
         </section>
@@ -176,39 +166,29 @@ const About = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Waseem",
-                  role: "Crypto Tax Director",
-                  bio: "Certified tax specialist with focus on DeFi and NFTs",
-                  image: "/lovable-uploads/c5b6d5a2-8b1a-4265-a584-fe5fba4c2067.png"
-                },
-                {
-                  name: "Michael",
-                  role: "Chief Technology Officer",
-                  bio: "Blockchain developer and cryptocurrency expert",
-                  image: "/lovable-uploads/2391ca69-3322-4648-a703-f3f530939d91.png"
-                },
-                {
-                  name: "Emma",
-                  role: "Head of Tax Advisory",
-                  bio: "Certified tax specialist with focus on DeFi and NFTs",
-                  image: "/lovable-uploads/df9ae568-0265-4307-ac47-b9028e215441.png"
-                }
-              ].map((member) => (
-                <div key={member.name} className="text-center">
+              {[{
+              name: "Waseem",
+              role: "Crypto Tax Director",
+              bio: "Certified tax specialist with focus on DeFi and NFTs",
+              image: "/lovable-uploads/c5b6d5a2-8b1a-4265-a584-fe5fba4c2067.png"
+            }, {
+              name: "Michael",
+              role: "Chief Technology Officer",
+              bio: "Blockchain developer and cryptocurrency expert",
+              image: "/lovable-uploads/2391ca69-3322-4648-a703-f3f530939d91.png"
+            }, {
+              name: "Emma",
+              role: "Head of Tax Advisory",
+              bio: "Certified tax specialist with focus on DeFi and NFTs",
+              image: "/lovable-uploads/df9ae568-0265-4307-ac47-b9028e215441.png"
+            }].map(member => <div key={member.name} className="text-center">
                   <div className="w-48 h-48 mx-auto mb-4 rounded-xl overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold">{member.name}</h3>
                   <p className="text-primary mb-2">{member.role}</p>
                   <p className="text-gray-600">{member.bio}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -224,11 +204,7 @@ const About = () => {
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Join thousands of satisfied UK clients who trust our London-based team with their cryptocurrency tax compliance
             </p>
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-black text-yellow-400 hover:bg-black/90 rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:shadow-xl"
-            >
+            <Button asChild size="lg" className="bg-black text-yellow-400 hover:bg-black/90 rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:shadow-xl">
               <Link to="/contact">
                 Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -236,8 +212,6 @@ const About = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default About;
