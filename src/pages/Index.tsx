@@ -163,29 +163,47 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>KoinKeepers | Leading UK Cryptocurrency Tax Specialists | Bitcoin & Digital Asset Tax Services</title>
-        <meta name="description" content="KoinKeepers - Leading cryptocurrency tax specialists in London, UK. Expert crypto tax consultation, HMRC compliance, and digital asset accounting services for Bitcoin, Ethereum & all cryptocurrencies." />
-        <meta name="keywords" content="KoinKeepers, Koin Keepers, crypto tax London, cryptocurrency tax specialists UK, bitcoin tax advice London, HMRC crypto compliance, cryptocurrency accountants London, digital asset tax services" />
-        <meta name="robots" content="index, follow" />
+        <title>KoinKeepers | Leading UK Cryptocurrency Tax Specialists | Expert Bitcoin & Digital Asset Tax Services</title>
+        <meta name="description" content="KoinKeepers - UK's leading cryptocurrency tax specialists based in London. Expert crypto tax consultation, HMRC compliance, and digital asset accounting for Bitcoin, Ethereum & all cryptocurrencies. Trusted by thousands of UK crypto investors." />
+        <meta name="keywords" content="KoinKeepers, Koin Keepers, crypto tax UK, cryptocurrency tax specialists London, bitcoin tax advice UK, HMRC crypto compliance, crypto tax accountants London, digital asset tax services UK, crypto tax experts London" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://koin-keepers.co.uk/" />
         <meta name="author" content="KoinKeepers" />
         <meta name="copyright" content="KoinKeepers" />
         <meta name="brand" content="KoinKeepers" />
+        <meta name="company" content="KoinKeepers" />
+        <meta name="geo.region" content="GB-LND" />
+        <meta name="geo.placename" content="London" />
+        <meta name="geo.position" content="51.5074;-0.1278" />
+        <meta name="ICBM" content="51.5074, -0.1278" />
+        <meta name="theme-color" content="#9b87f5" />
         
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/" />
         <meta property="og:title" content="KoinKeepers | Leading UK Cryptocurrency Tax Specialists" />
-        <meta property="og:description" content="KoinKeepers - Leading cryptocurrency tax specialists in London, UK. Expert crypto tax consultation, HMRC compliance, and digital asset accounting services." />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:description" content="KoinKeepers - UK's leading cryptocurrency tax specialists based in London. Expert crypto tax consultation, HMRC compliance, and digital asset accounting services." />
+        <meta property="og:image" content="https://koin-keepers.co.uk/favicon.ico" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="KoinKeepers" />
+        <meta property="og:locale" content="en_GB" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://koin-keepers.co.uk/" />
         <meta property="twitter:title" content="KoinKeepers | Leading UK Cryptocurrency Tax Specialists" />
-        <meta property="twitter:description" content="KoinKeepers - Leading cryptocurrency tax specialists in London, UK. Expert crypto tax consultation and HMRC compliance services." />
-        <meta property="twitter:image" content="/favicon.ico" />
+        <meta property="twitter:description" content="KoinKeepers - UK's leading cryptocurrency tax specialists. Expert crypto tax consultation and HMRC compliance services in London." />
+        <meta property="twitter:image" content="https://koin-keepers.co.uk/favicon.ico" />
         <meta property="twitter:site" content="@koinkeepers" />
+        <meta property="twitter:creator" content="@koinkeepers" />
+
+        <meta name="apple-mobile-web-app-title" content="KoinKeepers" />
+        <meta name="application-name" content="KoinKeepers" />
+        <meta name="msapplication-TileColor" content="#9b87f5" />
+
+        <link rel="alternate" hrefLang="en-gb" href="https://koin-keepers.co.uk/" />
+        <link rel="alternate" hrefLang="en" href="https://koin-keepers.co.uk/" />
+        <link rel="alternate" hrefLang="x-default" href="https://koin-keepers.co.uk/" />
         
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
