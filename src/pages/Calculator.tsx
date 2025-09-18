@@ -4,6 +4,7 @@ import { Calculator as CalculatorIcon } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { toast } from "sonner";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -108,6 +109,7 @@ const Calculator = () => {
         </script>
       </Helmet>
       
+      <PageBreadcrumbs items={[{ label: "Calculator" }]} />
       <div className="min-h-screen py-12 bg-[#F2FCE2]/40">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">

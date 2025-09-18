@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Users, Trophy, Clock, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { Partners } from "@/components/home/Partners";
 const About = () => {
   const aboutPageSchema = {
@@ -72,6 +73,7 @@ const About = () => {
         </script>
       </Helmet>
 
+      <PageBreadcrumbs items={[{ label: "About" }]} />
       <div className="animate-fade-in">
         {/* Hero Section */}
         <section className="relative py-20 bg-[#FEF7CD]/40">

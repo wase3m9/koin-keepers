@@ -6,6 +6,7 @@ import { BlogContent } from "../components/blog/BlogContent";
 import { BlogArticleHeader } from "../components/blog/BlogArticleHeader";
 import { BlogSocialShare } from "../components/blog/BlogSocialShare";
 import { BlogNavigation } from "../components/blog/BlogNavigation";
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { blogPosts } from "../data/blogPosts";
 import { Helmet } from 'react-helmet-async';
 
@@ -107,6 +108,10 @@ const BlogPost = () => {
         {JSON.stringify(breadcrumbSchema)}
       </script>
 
+      <PageBreadcrumbs items={[
+        { label: "Blog", href: "/blog" }, 
+        { label: post.title }
+      ]} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link
           to="/blog"

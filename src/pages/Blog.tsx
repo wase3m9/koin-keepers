@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { FileText, Calendar, User, ArrowRight } from "lucide-react";
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { blogPosts } from "../data/blogPosts";
 
 const Blog = () => {
@@ -71,6 +72,7 @@ const Blog = () => {
         </script>
       </Helmet>
 
+      <PageBreadcrumbs items={[{ label: "Blog" }]} />
       <div className="py-20 bg-gradient-to-b from-[#E5DEFF]/40 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

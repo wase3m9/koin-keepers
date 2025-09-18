@@ -6,6 +6,7 @@ import { ServiceList } from "@/components/services/ServiceList";
 import { PricingSection } from "@/components/services/PricingSection";
 import { FeaturesList } from "@/components/services/FeaturesList";
 import { FAQPreview } from "@/components/services/FAQPreview";
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { getServiceSchema } from "@/components/services/ServicesSchema";
 
 const Services = () => {
@@ -57,6 +58,7 @@ const Services = () => {
         </script>
       </Helmet>
       
+      <PageBreadcrumbs items={[{ label: "Services" }]} />
       <div className="min-h-screen bg-white">
         <ServicesHeader />
         <ServiceList />

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { generateSitemap, downloadSitemap } from '@/utils/sitemap';
 import { Button } from '@/components/ui/button';
 import { Download, ExternalLink } from 'lucide-react';
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 
 const Sitemap = () => {
   const webPageSchema = {
@@ -69,6 +70,7 @@ const Sitemap = () => {
         </script>
       </Helmet>
 
+      <PageBreadcrumbs items={[{ label: "Sitemap" }]} />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">

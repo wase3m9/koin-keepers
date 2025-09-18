@@ -1,5 +1,6 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { Helmet } from 'react-helmet-async';
 
 const FAQ = () => {
@@ -106,6 +107,7 @@ const FAQ = () => {
         </script>
       </Helmet>
 
+      <PageBreadcrumbs items={[{ label: "FAQ" }]} />
       <div className="py-20 bg-[#FEF7CD]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
