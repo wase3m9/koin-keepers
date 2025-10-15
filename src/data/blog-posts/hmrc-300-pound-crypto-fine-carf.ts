@@ -5,7 +5,8 @@ export const hmrcCarfFinePost: BlogPost = {
   slug: "hmrc-300-pound-crypto-fine-are-you-at-risk-carf-penalties",
   title: "HMRC's New £300 Crypto Fine: Are You at Risk?",
   content: `
-    <div class="alert-box bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+    <div class="space-y-8">
+      <div class="alert-box bg-red-50 border-l-4 border-red-500 p-6 mb-8">
       <div class="flex items-start">
         <div class="flex-shrink-0">
           <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
@@ -19,7 +20,24 @@ export const hmrcCarfFinePost: BlogPost = {
       </div>
     </div>
 
-    <h2>What is CARF and Why Should You Care?</h2>
+    <div class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
+      <ul class="space-y-2">
+        <li><a href="#what-is-carf" class="text-primary hover:text-primary/80">What is CARF and Why Should You Care?</a></li>
+        <li><a href="#who-must-comply" class="text-primary hover:text-primary/80">Who Must Comply with CARF?</a></li>
+        <li><a href="#information-required" class="text-primary hover:text-primary/80">What Information Must You Provide?</a></li>
+        <li><a href="#penalty-structure" class="text-primary hover:text-primary/80">The Penalty Structure</a></li>
+        <li><a href="#timeline" class="text-primary hover:text-primary/80">Critical Timeline</a></li>
+        <li><a href="#compliance-checklist" class="text-primary hover:text-primary/80">Your CARF Compliance Checklist</a></li>
+        <li><a href="#common-mistakes" class="text-primary hover:text-primary/80">Common Mistakes That Trigger Penalties</a></li>
+        <li><a href="#non-compliance" class="text-primary hover:text-primary/80">What Happens If You Don't Comply?</a></li>
+        <li><a href="#special-considerations" class="text-primary hover:text-primary/80">Special Considerations</a></li>
+        <li><a href="#faq" class="text-primary hover:text-primary/80">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
+      <h2 id="what-is-carf" class="text-2xl font-bold text-gray-900 mt-8 mb-4">What is CARF and Why Should You Care?</h2>
 
     <p>The OECD's <strong>Cryptoasset Reporting Framework (CARF)</strong> represents the most significant change to crypto taxation compliance since HMRC first recognised Bitcoin as property. Starting January 1, 2026, this framework will fundamentally alter how UK crypto holders must interact with cryptocurrency service providers and HMRC.</p>
 
@@ -33,7 +51,7 @@ export const hmrcCarfFinePost: BlogPost = {
       "The government is committed to ensuring tax compliance in the digital asset space. The £300 penalty reflects the seriousness with which we view CARF compliance." - HMRC Cryptoasset Guidelines 2024
     </blockquote>
 
-    <h2>Who Must Comply with CARF?</h2>
+    <h2 id="who-must-comply" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Who Must Comply with CARF?</h2>
 
     <p>CARF compliance affects a broader range of individuals than many realise. You must comply if you are:</p>
 
@@ -49,7 +67,7 @@ export const hmrcCarfFinePost: BlogPost = {
 
     <p>CARF requirements apply regardless of where your crypto service provider is based. Whether you use Coinbase (US), Binance (global), Kraken (US), or any DeFi protocol, if you're a UK tax resident, you must comply.</p>
 
-    <h2>What Information Must You Provide?</h2>
+    <h2 id="information-required" class="text-2xl font-bold text-gray-900 mt-8 mb-4">What Information Must You Provide?</h2>
 
     <p>Under CARF, crypto service providers must collect and verify specific information from all UK users. Failure to provide accurate information will result in account restrictions and automatic penalty triggers.</p>
 
@@ -73,7 +91,7 @@ export const hmrcCarfFinePost: BlogPost = {
       <li><strong>Registered Office Address</strong></li>
     </ul>
 
-    <h2>The Penalty Structure: More Than Just £300</h2>
+    <h2 id="penalty-structure" class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Penalty Structure: More Than Just £300</h2>
 
     <p>While the headline £300 penalty captures attention, the true cost of non-compliance extends far beyond this initial fine.</p>
 
@@ -95,7 +113,7 @@ export const hmrcCarfFinePost: BlogPost = {
       <li><strong>Reputational Risk</strong>: Potential impact on credit ratings and financial services access</li>
     </ul>
 
-    <h2>Critical Timeline: Key Dates You Cannot Miss</h2>
+    <h2 id="timeline" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Critical Timeline: Key Dates You Cannot Miss</h2>
 
     <div class="timeline-container bg-gray-50 p-6 rounded-lg mb-8">
       <h3 class="text-lg font-semibold mb-4">CARF Implementation Timeline</h3>
@@ -126,7 +144,7 @@ export const hmrcCarfFinePost: BlogPost = {
       </div>
     </div>
 
-    <h2>Your CARF Compliance Checklist</h2>
+    <h2 id="compliance-checklist" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Your CARF Compliance Checklist</h2>
 
     <p>Follow this step-by-step checklist to ensure full compliance before the January 2026 deadline:</p>
 
@@ -197,7 +215,7 @@ export const hmrcCarfFinePost: BlogPost = {
       </div>
     </div>
 
-    <h2>Common Mistakes That Trigger Penalties</h2>
+    <h2 id="common-mistakes" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Mistakes That Trigger Penalties</h2>
 
     <p>Based on early CARF implementations in other jurisdictions, these are the most common errors that result in automatic penalties:</p>
 
@@ -216,7 +234,7 @@ export const hmrcCarfFinePost: BlogPost = {
     <h3>5. DeFi Protocol Oversight</h3>
     <p>Many users focus on centralised exchanges while overlooking DeFi protocols that now require direct user compliance reporting.</p>
 
-    <h2>What Happens If You Don't Comply?</h2>
+    <h2 id="non-compliance" class="text-2xl font-bold text-gray-900 mt-8 mb-4">What Happens If You Don't Comply?</h2>
 
     <p>The consequences of CARF non-compliance extend far beyond the initial £300 penalty. Here's what you can expect:</p>
 
@@ -236,7 +254,7 @@ export const hmrcCarfFinePost: BlogPost = {
       <li><strong>Difficulty opening new crypto accounts</strong> due to shared compliance databases</li>
     </ul>
 
-    <h2>Special Considerations for Different User Types</h2>
+    <h2 id="special-considerations" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Special Considerations for Different User Types</h2>
 
     <h3>High-Volume Traders</h3>
     <p>If you trade across multiple platforms or engage in high-frequency trading, you'll need to ensure compliance across all platforms simultaneously. Consider working with a specialist who can coordinate compliance across your entire trading ecosystem.</p>
@@ -250,22 +268,40 @@ export const hmrcCarfFinePost: BlogPost = {
     <h3>Corporate Crypto Holdings</h3>
     <p>Companies must provide corporate information, not personal details of directors or employees. Ensure your corporate crypto accounts reflect proper company registration details.</p>
 
-    <h2>Frequently Asked Questions</h2>
+    </div>
 
-    <h3>Do I need to comply if I only hold crypto in a hardware wallet?</h3>
-    <p>If you've never used a crypto service provider (exchange, DeFi platform, mining pool), CARF may not directly apply. However, if you've ever bought, sold, or transferred crypto through any platform, you likely have compliance obligations.</p>
+    <div class="bg-gray-50 p-8 rounded-lg mt-12">
+      <h2 id="faq" class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Do I need to comply if I only hold crypto in a hardware wallet?</h3>
+          <p class="text-gray-600">If you've never used a crypto service provider (exchange, DeFi platform, mining pool), CARF may not directly apply. However, if you've ever bought, sold, or transferred crypto through any platform, you likely have compliance obligations.</p>
+        </div>
 
-    <h3>What if I moved to the UK after opening crypto accounts?</h3>
-    <p>You must update your tax residency status on all existing accounts within 30 days of becoming a UK tax resident. Failure to do so can result in retroactive penalties.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">What if I moved to the UK after opening crypto accounts?</h3>
+          <p class="text-gray-600">You must update your tax residency status on all existing accounts within 30 days of becoming a UK tax resident. Failure to do so can result in retroactive penalties.</p>
+        </div>
 
-    <h3>Can I close my accounts instead of complying?</h3>
-    <p>Account closure doesn't eliminate CARF obligations if the account was active during the reporting period. You may still face penalties for historical non-compliance.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Can I close my accounts instead of complying?</h3>
+          <p class="text-gray-600">Account closure doesn't eliminate CARF obligations if the account was active during the reporting period. You may still face penalties for historical non-compliance.</p>
+        </div>
 
-    <h3>What about privacy coins like Monero?</h3>
-    <p>CARF applies to all cryptoassets, including privacy coins. The reporting requirements focus on your relationship with service providers, not the transparency of the underlying blockchain.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">What about privacy coins like Monero?</h3>
+          <p class="text-gray-600">CARF applies to all cryptoassets, including privacy coins. The reporting requirements focus on your relationship with service providers, not the transparency of the underlying blockchain.</p>
+        </div>
 
-    <h3>How does CARF affect my annual tax return?</h3>
-    <p>CARF creates additional reporting streams to HMRC but doesn't change your obligation to accurately report crypto gains and losses on your annual return. Consider it complementary rather than replacement reporting.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">How does CARF affect my annual tax return?</h3>
+          <p class="text-gray-600">CARF creates additional reporting streams to HMRC but doesn't change your obligation to accurately report crypto gains and losses on your annual return. Consider it complementary rather than replacement reporting.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
 
     <h2>Professional Help: When to Seek Assistance</h2>
 
@@ -291,6 +327,7 @@ export const hmrcCarfFinePost: BlogPost = {
       <h3 class="text-lg font-semibold mb-3">Need Help with CARF Compliance?</h3>
       <p class="mb-4">Our London-based crypto tax specialists can help you navigate CARF requirements and ensure full compliance before the January 2026 deadline.</p>
       <p class="text-sm text-gray-600">Contact us today for a comprehensive CARF compliance review and personalised action plan.</p>
+    </div>
     </div>
   `,
   author: "Sarah Mitchell, Crypto Tax Specialist",

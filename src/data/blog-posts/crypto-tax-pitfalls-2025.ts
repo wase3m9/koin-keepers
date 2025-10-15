@@ -13,7 +13,8 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
   description: "Discover the 5 most common crypto tax pitfalls in 2025 and learn how to avoid costly HMRC penalties. Expert guidance on DeFi, NFT taxation, and proper reporting.",
   excerpt: "Thinking of filing your 2025 crypto taxes without a specialist? Here are the risks we keep seeing, plus what to do instead.",
   content: `
-    <div class="alert-box bg-amber-50 border-l-4 border-amber-500 p-6 mb-8">
+    <div class="space-y-8">
+      <div class="alert-box bg-amber-50 border-l-4 border-amber-500 p-6 mb-8">
       <div class="flex items-start">
         <div class="flex-shrink-0">
           <svg class="h-5 w-5 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
@@ -27,7 +28,21 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       </div>
     </div>
 
-    <h2>Why this matters in 2025</h2>
+    <div class="bg-gray-50 p-6 rounded-lg">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
+      <ul class="space-y-2">
+        <li><a href="#why-matters" class="text-primary hover:text-primary/80">Why this matters in 2025</a></li>
+        <li><a href="#five-pitfalls" class="text-primary hover:text-primary/80">The 5 pitfalls</a></li>
+        <li><a href="#specialist-does" class="text-primary hover:text-primary/80">What a specialist actually does</a></li>
+        <li><a href="#diy-workflow" class="text-primary hover:text-primary/80">DIY anyway? Use this safer workflow</a></li>
+        <li><a href="#quick-tips" class="text-primary hover:text-primary/80">2025 quick tips</a></li>
+        <li><a href="#examples" class="text-primary hover:text-primary/80">Examples we fix a lot</a></li>
+        <li><a href="#faq" class="text-primary hover:text-primary/80">Frequently Asked Questions</a></li>
+      </ul>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
+      <h2 id="why-matters" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Why this matters in 2025</h2>
 
     <p>HMRC is getting far better data from exchanges and platforms. If your records don't line up with what HMRC receives, you stand out. That's when penalties, interest, and enquiries become real problems.</p>
 
@@ -35,7 +50,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       "The gap between platform reporting and taxpayer returns is where most crypto tax problems begin. In 2025, that gap has consequences." - KoinKeepers Tax Advisory Team
     </blockquote>
 
-    <h2>The 5 pitfalls</h2>
+    <h2 id="five-pitfalls" class="text-2xl font-bold text-gray-900 mt-8 mb-4">The 5 pitfalls</h2>
 
     <h3>1) Misreporting complex transactions</h3>
 
@@ -102,7 +117,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       <p class="text-blue-900"><strong>How to avoid it:</strong> Separate personal and company wallets, classify activities with clear criteria, and apply consistent treatment backed by notes.</p>
     </div>
 
-    <h2>What a specialist actually does</h2>
+    <h2 id="specialist-does" class="text-2xl font-bold text-gray-900 mt-8 mb-4">What a specialist actually does</h2>
 
     <div class="bg-gray-50 p-6 rounded-lg mb-8">
       <ul class="space-y-3">
@@ -114,7 +129,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       </ul>
     </div>
 
-    <h2>DIY anyway? Use this safer workflow</h2>
+    <h2 id="diy-workflow" class="text-2xl font-bold text-gray-900 mt-8 mb-4">DIY anyway? Use this safer workflow</h2>
 
     <div class="checklist bg-green-50 p-6 rounded-lg mb-6">
       <div class="checklist-item flex items-start mb-3">
@@ -153,7 +168,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       </div>
     </div>
 
-    <h2>2025 quick tips</h2>
+    <h2 id="quick-tips" class="text-2xl font-bold text-gray-900 mt-8 mb-4">2025 quick tips</h2>
 
     <div class="bg-blue-50 p-6 rounded-lg mb-8">
       <ul class="space-y-2">
@@ -165,7 +180,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       </ul>
     </div>
 
-    <h2>Examples we fix a lot</h2>
+    <h2 id="examples" class="text-2xl font-bold text-gray-900 mt-8 mb-4">Examples we fix a lot</h2>
 
     <div class="timeline-container bg-gray-50 p-6 rounded-lg mb-8">
       <div class="timeline-item mb-4">
@@ -189,22 +204,40 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       </div>
     </div>
 
-    <h2>Frequently Asked Questions</h2>
+    </div>
 
-    <h3>Do I need a specialist if I only used one exchange?</h3>
-    <p>Not always. You still need correct UK pooling and fee treatment. A one-off review can be enough.</p>
+    <div class="bg-gray-50 p-8 rounded-lg mt-12">
+      <h2 id="faq" class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Do I need a specialist if I only used one exchange?</h3>
+          <p class="text-gray-600">Not always. You still need correct UK pooling and fee treatment. A one-off review can be enough.</p>
+        </div>
 
-    <h3>Are DeFi rewards always income?</h3>
-    <p>No. It depends on the protocol and your rights. Facts matter.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Are DeFi rewards always income?</h3>
+          <p class="text-gray-600">No. It depends on the protocol and your rights. Facts matter.</p>
+        </div>
 
-    <h3>Can software do it all?</h3>
-    <p>Software helps, but it guesses. Someone must validate, fix misclassifications, and document edge cases.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Can software do it all?</h3>
+          <p class="text-gray-600">Software helps, but it guesses. Someone must validate, fix misclassifications, and document edge cases.</p>
+        </div>
 
-    <h3>What if I'm missing records?</h3>
-    <p>Rebuild from chain explorers, bank statements, and exchange exports. Add a clear methodology note and keep it consistent.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">What if I'm missing records?</h3>
+          <p class="text-gray-600">Rebuild from chain explorers, bank statements, and exchange exports. Add a clear methodology note and keep it consistent.</p>
+        </div>
 
-    <h3>What if I hold through a company?</h3>
-    <p>Corporate rules apply. Keep wallets separate and follow the right accounting and disclosure steps.</p>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">What if I hold through a company?</h3>
+          <p class="text-gray-600">Corporate rules apply. Keep wallets separate and follow the right accounting and disclosure steps.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose prose-lg max-w-none">
 
     <h2>Final thoughts</h2>
 
@@ -214,6 +247,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
       <h3 class="text-lg font-semibold mb-3">Need Help with Your Crypto Tax Return?</h3>
       <p class="mb-4">Koin-Keepers can clean and reconcile your data across CEX, DEX and wallets, apply the correct UK treatment for DeFi, NFTs and staking, and produce an HMRC-ready evidence pack.</p>
       <p class="text-sm text-gray-600">Book a crypto tax review and file with confidence.</p>
+    </div>
     </div>
   `
 };
