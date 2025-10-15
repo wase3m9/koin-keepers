@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const ClientStories = () => {
   const testimonials = [
@@ -70,15 +71,26 @@ export const ClientStories = () => {
   return (
     <section className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-center text-black">
+        <motion.h2 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-3xl font-bold mb-12 text-center text-black"
+        >
           What Our Clients Say
-        </h2>
+        </motion.h2>
         
         <div className="flex space-x-6 animate-scroll">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`glass-card p-8 rounded-xl min-w-[350px] max-w-[350px] flex flex-col gap-4 transform transition-all duration-300 hover:scale-105 bg-gradient-to-br ${testimonial.bgColor} shadow-lg`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className={`glass-card p-8 rounded-xl min-w-[350px] max-w-[350px] flex flex-col gap-4 bg-gradient-to-br ${testimonial.bgColor} shadow-lg transition-all duration-500`}
             >
               <Quote className="w-10 h-10 text-primary" />
               <p className="text-gray-800">{testimonial.quote}</p>
@@ -87,7 +99,7 @@ export const ClientStories = () => {
                 <p className="text-sm text-gray-600">{testimonial.location}</p>
                 <p className="text-sm text-primary">{testimonial.type}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

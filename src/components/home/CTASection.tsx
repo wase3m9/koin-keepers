@@ -2,29 +2,50 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const CTASection = () => {
   return (
     <section aria-labelledby="cta-heading" className="py-20 relative overflow-hidden bg-primary">
       <div className="absolute inset-0 bg-[#FEF7CD]/40" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 id="cta-heading" className="text-3xl font-bold mb-4 text-black">
+        <motion.h2 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          id="cta-heading" 
+          className="text-3xl font-bold mb-4 text-black"
+        >
           Ready to Simplify Your Crypto Taxes?
-        </h2>
-        <p className="text-black/80 mb-8 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-black/80 mb-8 max-w-2xl mx-auto"
+        >
           Get started with a free crypto tax consultation and let us help you navigate your
           Bitcoin, Cardano, and cryptocurrency tax obligations with HMRC. Take the next step today.
-        </p>
-        <Button 
-          asChild 
-          size="lg" 
-          className="bg-black text-primary hover:bg-black/90 border-2 border-black"
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Link to="/contact" aria-label="Schedule your free crypto tax consultation">
-            Book Your Free Consultation{" "}
-            <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
-          </Link>
-        </Button>
+          <Button 
+            asChild 
+            size="lg" 
+            className="bg-black text-primary hover:bg-black/90 border-2 border-black transition-all duration-300 hover:scale-105"
+          >
+            <Link to="/contact" aria-label="Schedule your free crypto tax consultation">
+              Book Your Free Consultation{" "}
+              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+            </Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

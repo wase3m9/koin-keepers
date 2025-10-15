@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Partners = () => {
   const partners = [
     {
@@ -19,9 +21,15 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="py-20 bg-white/80 backdrop-blur-sm relative">
+    <section className="py-20 bg-white/80 backdrop-blur-sm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-center mb-16"
+        >
           <h3 className="text-primary uppercase tracking-wider font-medium mb-4">
             Partnership
           </h3>
@@ -32,20 +40,25 @@ export const Partners = () => {
             Our company has been at the forefront of crypto tax solutions since 2020. 
             We work daily to become better and we are ready to share best practices.
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center">
           {partners.map((partner, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="w-48 h-24 relative flex items-center justify-center transform transition-all duration-300 hover:scale-105 filter hover:brightness-75"
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+              whileHover={{ scale: 1.1, y: -5 }}
+              className="w-48 h-24 relative flex items-center justify-center filter hover:brightness-75 transition-all duration-300"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-opacity"
+                className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
