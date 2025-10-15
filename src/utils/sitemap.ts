@@ -33,7 +33,7 @@ export const generateSitemap = (): string => {
       loc: `${baseUrl}/faq`,
       lastmod: currentDate,
       changefreq: 'monthly',
-      priority: 0.7
+      priority: 0.2
     },
     {
       loc: `${baseUrl}/calculator`,

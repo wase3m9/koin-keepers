@@ -60,59 +60,43 @@ const FAQ = () => {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "FAQ",
+        "name": "Help centre",
         "item": "https://koin-keepers.co.uk/faq"
       }
     ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
   };
 
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>FAQ | KoinKeepers - Crypto Tax Services</title>
-        <meta name="description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
+        <title>Crypto tax FAQs | Help centre</title>
+        <meta name="description" content="Get answers to common cryptocurrency tax questions for UK investors and traders." />
         <meta name="keywords" content="crypto tax FAQ, cryptocurrency tax questions, HMRC crypto guidelines, UK crypto tax help" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://koin-keepers.co.uk/faq" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/faq" />
-        <meta property="og:title" content="FAQ | KoinKeepers - Crypto Tax Services" />
-        <meta property="og:description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
+        <meta property="og:title" content="Crypto tax FAQs | Help centre" />
+        <meta property="og:description" content="Get answers to common cryptocurrency tax questions for UK investors and traders." />
         <meta property="og:image" content="/favicon.ico" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://koin-keepers.co.uk/faq" />
-        <meta name="twitter:title" content="FAQ | KoinKeepers - Crypto Tax Services" />
-        <meta name="twitter:description" content="Frequently asked questions about cryptocurrency taxation and KoinKeepers services." />
+        <meta name="twitter:title" content="Crypto tax FAQs | Help centre" />
+        <meta name="twitter:description" content="Get answers to common cryptocurrency tax questions for UK investors and traders." />
         <meta name="twitter:image" content="/favicon.ico" />
         
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
 
-      <PageBreadcrumbs items={[{ label: "FAQ" }]} />
+      <PageBreadcrumbs items={[{ label: "Help centre", href: "/faq" }]} />
       <div className="py-20 bg-[#FEF7CD]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Frequently Asked Questions
+              Crypto tax FAQs
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
               Find answers to common questions about cryptocurrency taxation

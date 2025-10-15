@@ -44,7 +44,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/faq" className="text-sm text-white/60 hover:text-primary">
-                  FAQ
+                  Help centre
                 </Link>
               </li>
               <li>
