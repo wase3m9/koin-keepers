@@ -246,7 +246,7 @@ export const cryptoTaxPitfalls2025Post: BlogPost = {
     <div class="cta-box bg-primary/10 border border-primary/20 p-6 rounded-lg mt-8">
       <h3 class="text-lg font-semibold mb-3">Need Help with Your Crypto Tax Return?</h3>
       <p class="mb-4">Koin-Keepers can clean and reconcile your data across CEX, DEX and wallets, apply the correct UK treatment for DeFi, NFTs and staking, and produce an HMRC-ready evidence pack.</p>
-      <p class="text-sm text-gray-600">Book a crypto tax review and file with confidence.</p>
+      <p class="text-sm text-gray-600"><a href="/contact" class="text-primary hover:text-primary/80 underline">Book a crypto tax review and file with confidence.</a></p>
     </div>
     </div>
   `
