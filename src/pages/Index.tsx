@@ -163,9 +163,9 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Koin Keepers | Crypto Tax Accountants in London</title>
-        <meta name="description" content="KoinKeepers - UK's leading cryptocurrency tax specialists based in London. Expert crypto tax consultation, HMRC compliance, and digital asset accounting for Bitcoin, Ethereum & all cryptocurrencies. Trusted by thousands of UK crypto investors." />
-        <meta name="keywords" content="KoinKeepers, Koin Keepers, crypto tax UK, cryptocurrency tax specialists London, bitcoin tax advice UK, HMRC crypto compliance, crypto tax accountants London, digital asset tax services UK, crypto tax experts London" />
+        <title>KoinKeepers | UK's Leading Crypto Tax Specialists</title>
+        <meta name="description" content="KoinKeepers is the UK's trusted cryptocurrency tax specialists. Get expert crypto tax advice, HMRC-compliant tax returns, and professional accounting for Bitcoin, Ethereum & all digital assets. Serving UK crypto investors nationwide." />
+        <meta name="keywords" content="KoinKeepers, crypto tax UK, cryptocurrency tax specialists, bitcoin tax advice UK, HMRC crypto compliance, crypto tax accountants, digital asset tax services UK, crypto tax experts" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://koin-keepers.co.uk/" />
