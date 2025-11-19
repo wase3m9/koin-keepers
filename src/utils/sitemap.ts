@@ -1,3 +1,4 @@
+import { blogPosts } from '../data/blogPosts';
 
 interface SitemapUrl {
   loc: string;
@@ -55,15 +56,15 @@ export const generateSitemap = (): string => {
     }
   ];
 
-  // Add blog post URLs (assuming blog posts exist)
-  for (let i = 0; i <= 10; i++) {
+  // Add actual blog post URLs
+  Object.keys(blogPosts).forEach(slug => {
     urls.push({
-      loc: `${baseUrl}/blog/${i}`,
+      loc: `${baseUrl}/blog/${slug}`,
       lastmod: currentDate,
       changefreq: 'yearly',
-      priority: 0.6
+      priority: 0.7
     });
-  }
+  });
 
   const urlElements = urls.map(url => {
     return `  <url>
