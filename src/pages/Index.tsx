@@ -27,16 +27,16 @@ const Index = () => {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Fintech Avenue",
+      "streetAddress": "124 City Road",
       "addressLocality": "London",
       "addressRegion": "Greater London",
-      "postalCode": "EC2A 4NE",
+      "postalCode": "EC1V 2NX",
       "addressCountry": "GB"
     },
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+44-20-1234-5678",
+        "telephone": "+44 20 7118 9799",
         "contactType": "customer service",
         "areaServed": "GB",
         "availableLanguage": "English"
@@ -117,10 +117,10 @@ const Index = () => {
     "url": "https://koin-keepers.co.uk",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Fintech Avenue",
+      "streetAddress": "124 City Road",
       "addressLocality": "London",
       "addressRegion": "Greater London",
-      "postalCode": "EC2A 4NE",
+      "postalCode": "EC1V 2NX",
       "addressCountry": "United Kingdom"
     },
     "geo": {
@@ -128,7 +128,7 @@ const Index = () => {
       "latitude": "51.5074",
       "longitude": "-0.1278"
     },
-    "telephone": "+44 20 1234 5678",
+    "telephone": "+44 20 7118 9799",
     "email": "info@koin-keepers.co.uk",
     "areaServed": [
       {

@@ -19,7 +19,10 @@ const About = () => {
       "numberOfEmployees": "10-50",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "124 City Road",
         "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "EC1V 2NX",
         "addressCountry": "United Kingdom"
       },
       "founder": {

@@ -7,7 +7,16 @@ export const getServiceSchema = () => {
     "provider": {
       "@type": "ProfessionalService",
       "name": "KoinKeepers",
-      "url": "https://koin-keepers.co.uk"
+      "url": "https://koin-keepers.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "124 City Road",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "EC1V 2NX",
+        "addressCountry": "United Kingdom"
+      },
+      "telephone": "+44 20 7118 9799"
     },
     "description": "Professional cryptocurrency tax preparation and advisory services in London, UK",
     "areaServed": "United Kingdom",
