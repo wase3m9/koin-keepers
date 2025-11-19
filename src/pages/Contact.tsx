@@ -17,7 +17,7 @@ const Contact = () => {
       "name": "KoinKeepers",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+44-20-1234-5678",
+        "telephone": "+44 20 7118 9799",
         "email": "info@koin-keepers.co.uk",
         "contactType": "customer service",
         "areaServed": "GB",
