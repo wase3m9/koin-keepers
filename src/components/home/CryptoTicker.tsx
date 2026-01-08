@@ -11,49 +11,35 @@ export const CryptoTicker = () => {
   ];
 
   return (
-    <section className="py-4 sm:py-6 bg-[#F1F0FB] relative overflow-hidden">
-      {/* First row - Original direction */}
-      <div className="flex gap-6 sm:gap-12 animate-scroll whitespace-nowrap mb-4 sm:mb-8">
-        {[...Array(2)].map((_, i) => (
-          <div key={`row1-${i}`} className="flex gap-6 sm:gap-12">
-            {cryptoList.map((crypto, index) => (
-              <div
-                key={`row1-${i}-${index}`}
-                className="flex items-center gap-2 sm:gap-3 min-w-[120px] sm:min-w-[160px] hover:scale-110 transition-transform duration-300"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
-                  <img 
-                    src={crypto.image} 
-                    alt={crypto.name}
-                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                  />
-                </div>
-                <span className="text-xs sm:text-sm font-medium text-gray-800">
-                  {crypto.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        ))}
+    <section className="py-6 sm:py-10 bg-secondary relative overflow-hidden">
+      {/* Gradient edge overlays */}
+      <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-secondary to-transparent z-10 pointer-events-none" />
+
+      {/* Header */}
+      <div className="text-center mb-4 sm:mb-6 relative z-20">
+        <p className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest">
+          Cryptocurrencies We Support
+        </p>
       </div>
 
-      {/* Second row - Reverse direction */}
-      <div className="flex gap-6 sm:gap-12 animate-scroll-reverse whitespace-nowrap">
-        {[...Array(2)].map((_, i) => (
-          <div key={`row2-${i}`} className="flex gap-6 sm:gap-12">
-            {[...cryptoList].reverse().map((crypto, index) => (
+      {/* Single row ticker */}
+      <div className="flex gap-8 sm:gap-16 animate-scroll whitespace-nowrap">
+        {[...Array(3)].map((_, i) => (
+          <div key={`row-${i}`} className="flex gap-8 sm:gap-16">
+            {cryptoList.map((crypto, index) => (
               <div
-                key={`row2-${i}-${index}`}
-                className="flex items-center gap-2 sm:gap-3 min-w-[120px] sm:min-w-[160px] hover:scale-110 transition-transform duration-300"
+                key={`row-${i}-${index}`}
+                className="group flex items-center gap-2 sm:gap-3 min-w-[100px] sm:min-w-[140px]"
               >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 group-hover:border-primary/30 transition-all duration-300">
                   <img 
                     src={crypto.image} 
                     alt={crypto.name}
-                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+                    className="w-5 h-5 sm:w-6 sm:h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-gray-800">
+                <span className="text-xs sm:text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
                   {crypto.name}
                 </span>
               </div>
