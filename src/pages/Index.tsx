@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Hero } from "@/components/home/Hero";
+import SEOTextSection from "@/components/home/SEOTextSection";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { Features } from "@/components/home/Features";
 import { QuickServices } from "@/components/home/QuickServices";
@@ -9,119 +10,59 @@ import { Partners } from "@/components/home/Partners";
 import { CTASection } from "@/components/home/CTASection";
 import FAQ from "./FAQ";
 
+// Check if we're on a staging domain
+const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('lovable.app');
+
 const Index = () => {
-  // Organization schema for the homepage
+  // Organization schema for the homepage - clean, no fake ratings
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "KoinKeepers",
-    "alternateName": "KoinKeepers Crypto Tax Services",
-    "description": "Leading cryptocurrency tax specialists providing expert consultation, tax preparation, and HMRC compliance services across the UK",
+    "name": "Koin Keepers",
     "url": "https://koin-keepers.co.uk",
-    "logo": "https://koin-keepers.co.uk/favicon.ico",
-    "image": "https://koin-keepers.co.uk/favicon.ico",
-    "foundingDate": "2020",
-    "founder": {
-      "@type": "Person",
-      "name": "KoinKeepers Founding Team"
-    },
+    "logo": "https://koin-keepers.co.uk/lovable-uploads/eac84a30-233a-4695-b152-b8f046c75f78.png",
+    "description": "UK crypto tax accountants helping individuals and companies with Self Assessment, capital gains calculations, DeFi, staking and NFT taxation.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "124 City Road",
       "addressLocality": "London",
-      "addressRegion": "Greater London",
       "postalCode": "EC1V 2NX",
       "addressCountry": "GB"
     },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+44 20 7118 9799",
-        "contactType": "customer service",
-        "areaServed": "GB",
-        "availableLanguage": "English"
-      },
-      {
-        "@type": "ContactPoint",
-        "email": "info@koin-keepers.co.uk",
-        "contactType": "customer service"
-      }
-    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44 20 7118 9799",
+      "contactType": "customer service",
+      "email": "info@koin-keepers.co.uk"
+    },
     "sameAs": [
       "https://www.linkedin.com/company/koinkeepers",
       "https://twitter.com/koinkeepers"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Cryptocurrency Tax Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Crypto Tax Consultation",
-            "description": "Expert cryptocurrency tax advice and planning"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Tax Preparation",
-            "description": "Professional crypto tax return preparation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "HMRC Compliance",
-            "description": "Ensure full compliance with UK tax regulations"
-          }
-        }
-      ]
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    }
+    ]
   };
 
-  // WebSite schema for search functionality
+  // WebSite schema
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "KoinKeepers",
-    "url": "https://koin-keepers.co.uk",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://koin-keepers.co.uk/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "name": "Koin Keepers",
+    "url": "https://koin-keepers.co.uk"
   };
 
-  // LocalBusiness schema
+  // LocalBusiness schema - clean, no fake data
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "KoinKeepers",
-    "description": "Expert cryptocurrency tax services and consultation in London, United Kingdom",
-    "image": "https://koin-keepers.co.uk/favicon.ico",
+    "@type": "AccountingService",
+    "name": "Koin Keepers",
+    "description": "UK crypto tax accountants helping individuals and companies with Self Assessment, capital gains, DeFi, staking and NFT taxation.",
+    "image": "https://koin-keepers.co.uk/lovable-uploads/eac84a30-233a-4695-b152-b8f046c75f78.png",
     "url": "https://koin-keepers.co.uk",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "124 City Road",
       "addressLocality": "London",
-      "addressRegion": "Greater London",
       "postalCode": "EC1V 2NX",
-      "addressCountry": "United Kingdom"
+      "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -130,50 +71,30 @@ const Index = () => {
     },
     "telephone": "+44 20 7118 9799",
     "email": "info@koin-keepers.co.uk",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "London"
-      },
-      {
-        "@type": "Country",
-        "name": "United Kingdom"
-      }
-    ],
     "priceRange": "££",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "17:00"
-    },
-    "serviceType": [
-      "Cryptocurrency Tax Consultation",
-      "Tax Planning",
-      "HMRC Compliance"
-    ]
+    }
   };
 
   return (
     <>
       <Helmet>
-        <title>KoinKeepers | UK's Leading Crypto Tax Specialists</title>
-        <meta name="description" content="KoinKeepers is the UK's trusted cryptocurrency tax specialists. Get expert crypto tax advice, HMRC-compliant tax returns, and professional accounting for Bitcoin, Ethereum & all digital assets. Serving UK crypto investors nationwide." />
-        <meta name="keywords" content="KoinKeepers, crypto tax UK, cryptocurrency tax specialists, bitcoin tax advice UK, HMRC crypto compliance, crypto tax accountants, digital asset tax services UK, crypto tax experts" />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <title>Koin Keepers | Crypto Tax Accountants for UK Individuals & Companies</title>
+        <meta name="description" content="UK crypto tax accountants. We help with Self Assessment, capital gains calculations, and crypto activity like DeFi, staking and NFTs. Book a call and get your crypto tax sorted." />
+        <meta name="keywords" content="crypto tax UK, cryptocurrency accountant, Self Assessment crypto, capital gains crypto, DeFi tax, staking tax, NFT tax, HMRC crypto, Koin Keepers" />
+        {isStaging ? (
+          <meta name="robots" content="noindex, nofollow" />
+        ) : (
+          <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        )}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://koin-keepers.co.uk/" />
-        <meta name="author" content="KoinKeepers" />
-        <meta name="copyright" content="KoinKeepers" />
-        <meta name="brand" content="KoinKeepers" />
-        <meta name="company" content="KoinKeepers" />
-        <meta name="geo.region" content="GB-LND" />
+        <meta name="author" content="Koin Keepers" />
+        <meta name="geo.region" content="GB" />
         <meta name="geo.placename" content="London" />
         <meta name="geo.position" content="51.5074;-0.1278" />
         <meta name="ICBM" content="51.5074, -0.1278" />
@@ -181,25 +102,17 @@ const Index = () => {
         
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://koin-keepers.co.uk/" />
-        <meta property="og:title" content="KoinKeepers | Leading UK Cryptocurrency Tax Specialists" />
-        <meta property="og:description" content="KoinKeepers - UK's leading cryptocurrency tax specialists based in London. Expert crypto tax consultation, HMRC compliance, and digital asset accounting services." />
-        <meta property="og:image" content="https://koin-keepers.co.uk/favicon.ico" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="KoinKeepers" />
+        <meta property="og:title" content="Koin Keepers | Crypto Tax Accountants for UK Individuals & Companies" />
+        <meta property="og:description" content="UK crypto tax accountants. We help with Self Assessment, capital gains calculations, and crypto activity like DeFi, staking and NFTs. Book a call and get your crypto tax sorted." />
+        <meta property="og:image" content="https://koin-keepers.co.uk/og-image.png" />
+        <meta property="og:site_name" content="Koin Keepers" />
         <meta property="og:locale" content="en_GB" />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://koin-keepers.co.uk/" />
-        <meta property="twitter:title" content="KoinKeepers | Leading UK Cryptocurrency Tax Specialists" />
-        <meta property="twitter:description" content="KoinKeepers - UK's leading cryptocurrency tax specialists. Expert crypto tax consultation and HMRC compliance services in London." />
-        <meta property="twitter:image" content="https://koin-keepers.co.uk/favicon.ico" />
-        <meta property="twitter:site" content="@koinkeepers" />
-        <meta property="twitter:creator" content="@koinkeepers" />
-
-        <meta name="apple-mobile-web-app-title" content="KoinKeepers" />
-        <meta name="application-name" content="KoinKeepers" />
-        <meta name="msapplication-TileColor" content="#9b87f5" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://koin-keepers.co.uk/" />
+        <meta name="twitter:title" content="Koin Keepers | Crypto Tax Accountants for UK Individuals & Companies" />
+        <meta name="twitter:description" content="UK crypto tax accountants. We help with Self Assessment, capital gains calculations, and crypto activity like DeFi, staking and NFTs." />
+        <meta name="twitter:image" content="https://koin-keepers.co.uk/og-image.png" />
 
         <link rel="alternate" hrefLang="en-gb" href="https://koin-keepers.co.uk/" />
         <link rel="alternate" hrefLang="en" href="https://koin-keepers.co.uk/" />
@@ -217,6 +130,7 @@ const Index = () => {
       </Helmet>
       <div className="animate-fade-in">
         <Hero />
+        <SEOTextSection />
         <CryptoTicker />
         <Features />
         <QuickServices />
