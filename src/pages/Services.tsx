@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { ServicesHeader } from "@/components/services/ServicesHeader";
@@ -59,7 +58,7 @@ const Services = () => {
       </Helmet>
       
       <PageBreadcrumbs items={[{ label: "Services" }]} />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-secondary">
         <ServicesHeader />
         <ServiceList />
         <PricingSection />
