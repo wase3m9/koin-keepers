@@ -41,33 +41,33 @@ export const CryptoTickerBar = () => {
   }
 
   return (
-    <div className="w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 py-3 overflow-hidden border-y border-gray-800">
-      <div className="animate-scroll flex space-x-12 whitespace-nowrap">
+    <div className="w-full bg-gradient-to-r from-gray-900 via-black to-gray-900 py-2 sm:py-3 overflow-hidden border-y border-gray-800">
+      <div className="animate-scroll flex space-x-6 sm:space-x-12 whitespace-nowrap">
         {cryptoData?.map((crypto) => (
           <div
             key={crypto.symbol}
-            className="flex items-center space-x-3 px-4 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-gray-800"
+            className="flex items-center space-x-2 sm:space-x-3 px-3 sm:px-4 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-gray-800"
           >
-            <span className="text-primary font-medium uppercase">
+            <span className="text-primary font-medium uppercase text-xs sm:text-sm">
               {crypto.symbol.replace('USDT', '')}:
             </span>
-            <span className="text-white font-medium">
+            <span className="text-white font-medium text-xs sm:text-sm">
               ${parseFloat(crypto.lastPrice).toLocaleString(undefined, { 
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2 
               })}
             </span>
             <span
-              className={`flex items-center font-medium ${
+              className={`flex items-center font-medium text-xs sm:text-sm ${
                 parseFloat(crypto.priceChangePercent) >= 0
                   ? "text-green-400"
                   : "text-red-400"
               }`}
             >
               {parseFloat(crypto.priceChangePercent) >= 0 ? (
-                <ArrowUpIcon className="h-3 w-3 mr-1" />
+                <ArrowUpIcon className="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-0.5 sm:mr-1" />
               ) : (
-                <ArrowDownIcon className="h-3 w-3 mr-1" />
+                <ArrowDownIcon className="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-0.5 sm:mr-1" />
               )}
               {Math.abs(parseFloat(crypto.priceChangePercent)).toFixed(2)}%
             </span>

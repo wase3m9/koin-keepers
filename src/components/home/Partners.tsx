@@ -21,28 +21,28 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="py-20 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-white/80 backdrop-blur-sm relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h3 className="text-primary uppercase tracking-wider font-medium mb-4">
+          <h3 className="text-primary uppercase tracking-wider font-medium mb-3 sm:mb-4 text-sm sm:text-base">
             Partnership
           </h3>
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Meet our partners
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
             Our company has been at the forefront of crypto tax solutions since 2020. 
             We work daily to become better and we are ready to share best practices.
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12 items-center justify-items-center">
           {partners.map((partner, index) => (
             <motion.div 
               key={index}
@@ -51,7 +51,7 @@ export const Partners = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
               whileHover={{ scale: 1.1, y: -5 }}
-              className="w-48 h-24 relative flex items-center justify-center filter hover:brightness-75 transition-all duration-300"
+              className="w-28 h-16 sm:w-40 sm:h-20 md:w-48 md:h-24 relative flex items-center justify-center filter hover:brightness-75 transition-all duration-300"
             >
               <img
                 src={partner.logo}

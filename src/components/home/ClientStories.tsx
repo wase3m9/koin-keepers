@@ -69,19 +69,19 @@ export const ClientStories = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-3xl font-bold mb-12 text-center text-black"
+          className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-black"
         >
           What Our Clients Say
         </motion.h2>
         
-        <div className="flex space-x-6 animate-scroll">
+        <div className="flex space-x-4 sm:space-x-6 animate-scroll">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -90,14 +90,14 @@ export const ClientStories = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className={`glass-card p-8 rounded-xl min-w-[350px] max-w-[350px] flex flex-col gap-4 bg-gradient-to-br ${testimonial.bgColor} shadow-lg transition-all duration-500`}
+              className={`glass-card p-5 sm:p-8 rounded-xl min-w-[280px] max-w-[280px] sm:min-w-[350px] sm:max-w-[350px] flex flex-col gap-3 sm:gap-4 bg-gradient-to-br ${testimonial.bgColor} shadow-lg transition-all duration-500`}
             >
-              <Quote className="w-10 h-10 text-primary" />
-              <p className="text-gray-800">{testimonial.quote}</p>
+              <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
+              <p className="text-gray-800 text-sm sm:text-base">{testimonial.quote}</p>
               <div className="mt-auto">
-                <p className="font-semibold text-black">{testimonial.author}</p>
-                <p className="text-sm text-gray-600">{testimonial.location}</p>
-                <p className="text-sm text-primary">{testimonial.type}</p>
+                <p className="font-semibold text-black text-sm sm:text-base">{testimonial.author}</p>
+                <p className="text-xs sm:text-sm text-gray-600">{testimonial.location}</p>
+                <p className="text-xs sm:text-sm text-primary">{testimonial.type}</p>
               </div>
             </motion.div>
           ))}

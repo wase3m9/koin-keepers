@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const CTASection = () => {
   return (
-    <section aria-labelledby="cta-heading" className="py-20 relative overflow-hidden bg-primary">
+    <section aria-labelledby="cta-heading" className="py-12 sm:py-20 relative overflow-hidden bg-primary">
       <div className="absolute inset-0 bg-[#FEF7CD]/40" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.h2 
@@ -15,7 +15,7 @@ export const CTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           id="cta-heading" 
-          className="text-3xl font-bold mb-4 text-black"
+          className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-black px-2"
         >
           Ready to Simplify Your Crypto Taxes?
         </motion.h2>
@@ -24,7 +24,7 @@ export const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-black/80 mb-8 max-w-2xl mx-auto"
+          className="text-black/80 mb-6 sm:mb-8 max-w-2xl mx-auto text-sm sm:text-base px-4"
         >
           Get started with a free crypto tax consultation and let us help you navigate your
           Bitcoin, Cardano, and cryptocurrency tax obligations with HMRC. Take the next step today.

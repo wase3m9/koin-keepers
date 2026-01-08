@@ -32,7 +32,7 @@ export const QuickServices = () => {
   ];
 
   return (
-    <section className="py-16 bg-white relative overflow-hidden">
+    <section className="py-12 sm:py-16 bg-white relative overflow-hidden">
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -47,14 +47,14 @@ export const QuickServices = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80 px-2">
             Our Crypto Tax Services
           </h2>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -69,10 +69,10 @@ export const QuickServices = () => {
             >
               <Link
                 to="/services"
-                className="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full"
+                className="group block bg-white rounded-2xl p-5 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 h-full"
               >
                 <motion.div 
-                  className="mb-6"
+                  className="mb-4 sm:mb-6"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                 >
@@ -80,21 +80,21 @@ export const QuickServices = () => {
                     initial={{ rotate: -6 }}
                     whileHover={{ rotate: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="w-14 h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center"
+                    className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center"
                   >
                     <motion.div
                       initial={{ rotate: 6 }}
                       whileHover={{ rotate: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <service.icon className="h-7 w-7 text-black" />
+                      <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-black" />
                     </motion.div>
                   </motion.div>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                   {service.description}
                 </p>
               </Link>
