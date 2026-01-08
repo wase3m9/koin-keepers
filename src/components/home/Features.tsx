@@ -120,8 +120,8 @@ export const Features = () => {
           className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-3xl mx-auto"
         >
           {[
-            { value: "500+", label: "Clients Helped" },
-            { value: "£10M+", label: "Tax Savings" },
+            { value: "100+", label: "Clients Helped" },
+            { value: "£5M+", label: "Tax Savings" },
             { value: "100%", label: "HMRC Compliant" }
           ].map((stat, index) => (
             <div key={index} className="text-center">

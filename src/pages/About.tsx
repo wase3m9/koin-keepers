@@ -51,7 +51,7 @@ const About = () => {
   };
 
   const stats = [
-    { icon: Users, value: "1,000", label: "Happy Clients" },
+    { icon: Users, value: "150+", label: "Happy Clients" },
     { icon: Trophy, value: "98%", label: "Success Rate" },
     { icon: Clock, value: "4+ Years", label: "Experience" },
     { icon: Building, value: "UK", label: "Based & Focused" }
