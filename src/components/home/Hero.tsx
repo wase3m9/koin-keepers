@@ -32,7 +32,7 @@ export const Hero = () => {
 
   return (
     <>
-      <main className="relative py-20 sm:py-32 overflow-hidden">
+      <main className="relative py-16 sm:py-20 md:py-32 overflow-hidden">
         <ParticleBackground />
         <motion.div 
           style={{ y }}
@@ -47,7 +47,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex justify-center mb-8"
+            className="flex justify-center mb-4 sm:mb-8"
           >
             <HeroPill 
               href="/contact"
@@ -59,7 +59,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white drop-shadow-lg"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 sm:mb-6 text-white drop-shadow-lg px-2"
           >
             <span className="sr-only">KoinKeepers</span>
             Crypto Accountants - We Do Your Crypto Taxes For You
@@ -68,7 +68,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto drop-shadow"
+            className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 sm:mb-8 max-w-2xl mx-auto drop-shadow px-2"
           >
             No more tax software hassles or compliance headaches. We remove all the
             stress and uncertainty caused by constantly changing crypto tax

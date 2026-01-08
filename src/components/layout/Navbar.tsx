@@ -28,7 +28,7 @@ export const Navbar = () => {
               <img 
                 src="/lovable-uploads/dee6891c-3b27-4d2d-9f51-2188e70c2919.png" 
                 alt="KoinKeepers Logo" 
-                className="h-40 object-contain transition-all duration-300 hover:brightness-[1.75] active:brightness-[1.75] -my-2 brightness-0 invert"
+                className="h-24 sm:h-32 md:h-40 object-contain transition-all duration-300 hover:brightness-[1.75] active:brightness-[1.75] -my-2 brightness-0 invert"
               />
             </Link>
 
