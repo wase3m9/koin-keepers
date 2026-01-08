@@ -11,17 +11,10 @@ export const CryptoTicker = () => {
   ];
 
   return (
-    <section className="py-6 sm:py-10 bg-secondary relative overflow-hidden">
+    <section className="py-6 sm:py-8 bg-secondary relative overflow-hidden">
       {/* Gradient edge overlays */}
       <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-secondary to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-secondary to-transparent z-10 pointer-events-none" />
-
-      {/* Header */}
-      <div className="text-center mb-4 sm:mb-6 relative z-20">
-        <p className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest">
-          Cryptocurrencies We Support
-        </p>
-      </div>
 
       {/* Single row ticker */}
       <div className="flex gap-8 sm:gap-16 animate-scroll whitespace-nowrap">

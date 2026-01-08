@@ -1,4 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+import { HelpCircle } from "lucide-react";
 
 const FAQSection = () => {
   const faqItems = [
@@ -25,27 +27,53 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
+    <section className="py-12 sm:py-20 lg:py-24 bg-secondary relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px]" />
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-10 sm:mb-14"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full mb-4">
+            <HelpCircle className="w-3.5 h-3.5 text-primary" />
+            <span className="text-xs sm:text-sm font-medium text-white/80">FAQ</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
             Quick answers to common crypto tax questions
           </p>
-        </div>
+        </motion.div>
         
-        <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-          {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className="text-left text-sm sm:text-base">{item.question}</AccordionTrigger>
-              <AccordionContent className="text-sm sm:text-base">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Accordion type="single" collapsible className="w-full space-y-3">
+            {faqItems.map((item, index) => (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index + 1}`}
+                className="bg-white/5 border border-white/10 rounded-xl px-4 sm:px-6 hover:border-primary/20 transition-colors data-[state=open]:border-primary/30"
+              >
+                <AccordionTrigger className="text-left text-sm sm:text-base text-white hover:text-primary py-4 sm:py-5 [&[data-state=open]]:text-primary">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm sm:text-base text-gray-400 pb-4 sm:pb-5">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   );

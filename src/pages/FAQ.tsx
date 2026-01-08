@@ -1,7 +1,8 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PageBreadcrumbs } from "@/components/shared/PageBreadcrumbs";
 import { Helmet } from 'react-helmet-async';
+import { motion } from "framer-motion";
+import { HelpCircle } from "lucide-react";
 
 const FAQ = () => {
   const faqItems = [
@@ -79,9 +80,8 @@ const FAQ = () => {
     }))
   };
 
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-secondary">
       <Helmet>
         <title>Frequently Asked Questions | KoinKeepers Help Centre</title>
         <meta name="description" content="Find answers to your cryptocurrency tax questions in our KoinKeepers Help Centre. UK-specific guidance on crypto tax reporting, HMRC compliance, and tax obligations." />
@@ -98,7 +98,6 @@ const FAQ = () => {
         <meta name="twitter:title" content="Frequently Asked Questions | KoinKeepers Help Centre" />
         <meta name="twitter:description" content="Find answers to your cryptocurrency tax questions in our KoinKeepers Help Centre." />
         <meta name="twitter:image" content="/favicon.ico" />
-        
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>
@@ -108,31 +107,60 @@ const FAQ = () => {
       </Helmet>
 
       <PageBreadcrumbs items={[{ label: "Help centre", href: "/faq" }]} />
-      <div className="py-20 bg-[#FEF7CD]/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+      
+      {/* Hero */}
+      <section className="py-16 sm:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full mb-4">
+              <HelpCircle className="w-3.5 h-3.5 text-primary" />
+              <span className="text-xs sm:text-sm font-medium text-white/80">Help Centre</span>
+            </div>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               KoinKeepers Help Centre
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
               Find answers to common questions about cryptocurrency taxation
             </p>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-          {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+      {/* FAQ */}
+      <section className="pb-20 sm:pb-28">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Accordion type="single" collapsible className="w-full space-y-3">
+              {faqItems.map((item, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index + 1}`}
+                  className="bg-white/5 border border-white/10 rounded-xl px-5 sm:px-6 hover:border-primary/20 transition-colors data-[state=open]:border-primary/30"
+                >
+                  <AccordionTrigger className="text-left text-sm sm:text-base text-white hover:text-primary py-4 sm:py-5 [&[data-state=open]]:text-primary">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm sm:text-base text-gray-400 pb-4 sm:pb-5">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
