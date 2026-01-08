@@ -8,7 +8,7 @@ import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import { ClientStories } from "@/components/home/ClientStories";
 import { Partners } from "@/components/home/Partners";
 import { CTASection } from "@/components/home/CTASection";
-import FAQ from "./FAQ";
+import FAQSection from "@/components/home/FAQSection";
 
 // Check if we're on a staging domain
 const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('lovable.app');
@@ -137,10 +137,8 @@ const Index = () => {
         <ProcessSteps />
         <ClientStories />
         <Partners />
-        <div className="space-y-2">
-          <FAQ />
-          <CTASection />
-        </div>
+        <FAQSection />
+        <CTASection />
       </div>
     </>
   );
