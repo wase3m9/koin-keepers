@@ -1,6 +1,5 @@
 # Netlify configuration for Koin Keepers
 
-# Build settings
 [build]
   publish = "dist"
   command = "npm run build"
@@ -12,20 +11,26 @@
   status = 301
   force = true
 
-# Redirect http to https (handled automatically by Netlify, but explicit)
-[[redirects]]
-  from = "http://koin-keepers.co.uk/*"
-  to = "https://koin-keepers.co.uk/:splat"
-  status = 301
-  force = true
-
 [[redirects]]
   from = "http://www.koin-keepers.co.uk/*"
   to = "https://koin-keepers.co.uk/:splat"
   status = 301
   force = true
 
-# SPA fallback - serve index.html for all routes
+[[redirects]]
+  from = "http://koin-keepers.co.uk/*"
+  to = "https://koin-keepers.co.uk/:splat"
+  status = 301
+  force = true
+
+# Remove /lander as public homepage URL - redirect to root
+[[redirects]]
+  from = "/lander"
+  to = "/"
+  status = 301
+  force = true
+
+# SPA fallback LAST - serve index.html for all routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
